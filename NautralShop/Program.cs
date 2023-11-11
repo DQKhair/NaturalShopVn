@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using NautralShop.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews();
+builder.Services.AddMvc();
+builder.Services.AddMvcCore();
+builder.Services.AddDbContext<NaturalShopContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NaturalShop"));
+});
 
 var app = builder.Build();
 
@@ -13,12 +23,19 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+
+app.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+);
 
 app.MapControllerRoute(
     name: "default",
