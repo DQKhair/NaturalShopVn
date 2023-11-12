@@ -1,34 +1,64 @@
 ﻿@model NautralShop.Models.Category
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Thêm mới";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create</h1>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
 
-<h4>Category</h4>
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form{
+        width:80%;
+        margin:auto;
+        display:flex;
+        justify-content:center;
+    }
+
+    .header_categoryFormr p{
+        color: #b66dff;
+    }
+</style>
+<div class="container_content">
+    <div class="header_categoryFormr">
+        <div class="text-center"><p class="fs-4 fw-bold">Thêm mới danh mục</p></div>
+    </div>
 <hr />
-<div class="row">
+<div class="container_form">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CategoryName" class="control-label"></label>
-                <input asp-for="CategoryName" class="form-control" />
+                <label class="control-label">Tên danh mục</label>
+                <input asp-for="CategoryName" class="form-control" required />
                 <span asp-validation-for="CategoryName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group d-flex justify-content-center">
+                <input type="submit" value="Thêm mới" class="btn btn-gradient-primary" />
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+    <div>
+        <a asp-action="Index" asp-area="admin" asp-controller="categories" >Trở lại</a>
+    </div>
 </div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

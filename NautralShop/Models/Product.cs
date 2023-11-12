@@ -13,8 +13,6 @@ public partial class Product
 
     public string? ProductImage { get; set; }
 
-    public bool? ProductPromotion { get; set; }
-
     public double? ProductValuePromotion { get; set; }
 
     public string? ProductIngredient { get; set; }

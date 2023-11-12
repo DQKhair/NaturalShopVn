@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace NautralShop.Models;
@@ -38,6 +39,32 @@ public partial class NaturalShopContext : DbContext
     public virtual DbSet<Voucher> Vouchers { get; set; }
 
     public virtual DbSet<VoucherDetail> VoucherDetails { get; set; }
+
+    //Add Proc
+
+    //Categories
+    public async Task<IList<Category>> GetListCategories()
+    {
+        return await Categories.FromSqlRaw("EXEC GetListCaterories").ToListAsync();
+    }
+    public async Task AddCategory(string categoryName)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC AddCategory @categoryName", new SqlParameter("@categoryName", categoryName));
+    }
+    public async Task EditCategory(int categoryId, string categoryName)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC EditCategory @categoryId, @categoryName",
+            new SqlParameter("@categoryId", categoryId),
+            new SqlParameter("@categoryName",categoryName));
+    }
+    public async Task DeleteCategory(int categoryId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC DeleteCategory @categoryId", new SqlParameter("@categoryId", categoryId));
+    }
+    //Categories
+
+    //End Add Proc
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Server=K02\\MSSQLSERVER1;Database=NaturalShop;Trusted_Connection=True;Integrated Security=True;TrustServerCertificate=True;");

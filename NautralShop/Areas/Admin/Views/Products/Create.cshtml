@@ -1,0 +1,130 @@
+﻿@model NautralShop.Areas.Admin.Models.ProductsVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Thêm mới";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_categoryFormr p {
+        color: #b66dff;
+    }
+</style>
+<div class="container_content">
+    <div class="header_categoryFormr">
+        <div class="text-center"><p class="fs-4 fw-bold">Thêm mới sản phẩm</p></div>
+    </div>
+    <hr />
+    <div class="container_form">
+        <div>
+            <form asp-action="Create" asp-controller="Products" asp-area="admin" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Tên sản phẩm</label>
+                            <input asp-for="ProductName" class="form-control" required />
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                       
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Giá sản phẩm</label>
+                            <input asp-for="ProductPrice" class="form-control w-100" required />
+                            <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Giá trị khuyến mãi</label>
+                            <input asp-for="ProductValuePromotion" class="form-control" required />
+                            <span asp-validation-for="ProductValuePromotion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <div class="form-group">
+                        <label class="control-label">Hình ảnh</label>
+                        <input asp-for="IFormFileImage" type="file" class="form-control" required />
+                        <span asp-validation-for="IFormFileImage" class="text-danger"></span>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-group">
+                        <label class="control-label">Loại sản phẩm</label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Thành phần</label>
+                            <textarea asp-for="ProductIngredient" class="form-control"  ></textarea>
+                            <span asp-validation-for="ProductIngredient" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Công dụng</label>
+                            <textarea asp-for="ProductUseful" class="form-control" ></textarea>
+                            <span asp-validation-for="ProductUseful" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Cách dùng</label>
+                            <textarea asp-for="ProductUserManual" class="form-control" ></textarea>
+                            <span asp-validation-for="ProductUserManual" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Mô tả sản phẩm</label>
+                            <textarea asp-for="ProductDescription" class="form-control" ></textarea>
+                            <span asp-validation-for="ProductDescription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Mô tả chi tiết</label>
+                            <textarea asp-for="ProductDetailDescription" class="form-control" ></textarea>
+                            <span asp-validation-for="ProductDetailDescription" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+              
+                <div class="form-group d-flex justify-content-center">
+                    <input type="submit" value="Thêm mới" class="btn btn-gradient-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index" asp-area="admin" asp-controller="categories">Trở lại</a>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
