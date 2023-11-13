@@ -1,0 +1,80 @@
+﻿@model NautralShop.Models.Product
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Chỉnh sửa khuyến mãi";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_EditCate p {
+        color: #b66dff;
+    }
+
+    .container_bodyEdit {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<div class="container_content">
+    <div class="text-center header_EditCate"><p class="fw-bold fs-4">Sửa khuyến mãi</p></div>
+    <hr />
+    <div class="container_bodyEdit">
+        <div class="col-md-4">
+            <form asp-action="EditPromotion">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Tên sản phẩm</label>
+                            <input asp-for="ProductName" class="form-control bg-white" readonly />
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Giá trị khuyến mãi</label>
+                            <input asp-for="ProductValuePromotion" class="form-control" required />
+                            <span asp-validation-for="ProductValuePromotion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="form-group d-flex justify-content-center">
+                    <input type="submit" value="Lưu" class="btn btn-gradient-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" asp-controller="Promotions" asp-area="admin">Trở lại</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

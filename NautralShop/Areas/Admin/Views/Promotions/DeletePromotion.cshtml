@@ -1,7 +1,7 @@
 ﻿@model NautralShop.Models.Product
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Xóa sản phẩm";
+    ViewData["Title"] = "Delete";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -27,7 +27,7 @@
     </div>
     <hr />
     <div class="d-flex justify-content-center">
-        <form asp-action="DeleteProduct">
+        <form asp-action="DeletePromotion">
             <div class="d-flex flex-column">
                 <div class="my-3">
                     <input type="hidden" asp-for="ProductId" />
@@ -40,6 +40,6 @@
             </div>
         </form>
     </div>
-    <a asp-action="Index" asp-controller="Products" asp-area="admin">Trở lại</a>
+    <a asp-action="Index" asp-controller="Promotions" asp-area="admin">Trở lại</a>
 </div>
 

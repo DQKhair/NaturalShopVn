@@ -31,6 +31,8 @@ namespace NautralShop.Areas.Admin.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Create")]
