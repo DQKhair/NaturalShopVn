@@ -25,6 +25,7 @@ public partial class Product
 
     public string? ProductDetailDescription { get; set; }
 
+    public bool ProductStatus { get; set; }
     public int? CategoryId { get; set; }
 
     public virtual Category? Category { get; set; }

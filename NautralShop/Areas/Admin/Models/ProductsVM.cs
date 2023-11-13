@@ -22,6 +22,8 @@ namespace NautralShop.Areas.Admin.Models
 
         public string? ProductDetailDescription { get; set; }
 
+        public bool ProductStatus { get; set; }
+
         public int? CategoryId { get; set; }
 
 

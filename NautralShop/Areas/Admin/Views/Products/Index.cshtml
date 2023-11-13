@@ -73,17 +73,25 @@
             </tr>
         </thead>
         <tbody>
+            @{var count = 0;}
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        <p> @Html.DisplayFor(modelItem => item.ProductId)</p>
-                    </td>
+                    <tr>
+                    
+                        <td>
+                            @{
+                                ++count;
+                            }
+                            <p>@Convert.ToInt32(count) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.ProductName) </p>
+                        </td>
                     <td>
                             @{
                                 string pathImg = "https://localhost:7234";
                             }
-                            <div class="imgProduct">
+                            <div class="imgProduct w-25 mx-auto">
                                 <img src="@pathImg@Html.DisplayFor(modelItem => item.ProductImage)" alt="Hình sản phẩm" class="w-100 rounded h-100" />
                             </div>
                     </td>
@@ -95,8 +103,8 @@
                     </td>
                     <td>
                         <div class="fs-5 action">
-                            <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btnEditCategory"><i class="fa-regular fa-pen-to-square me-3"></i></a>
-                            <a asp-action="Delete" asp-route-id="@item.CategoryId" class="DeleteCategory"><i class="fa-solid fa-trash"></i></a>
+                            <a asp-action="EditProduct" asp-route-id="@item.ProductId" class="btnEditProduct"><i class="fa-regular fa-pen-to-square me-3"></i></a>
+                                <a asp-action="DeleteProduct" asp-route-id="@item.ProductId" class="DeleteProduct"><i class="fa-solid fa-trash"></i></a>
                         </div>
                     </td>
                 </tr>
