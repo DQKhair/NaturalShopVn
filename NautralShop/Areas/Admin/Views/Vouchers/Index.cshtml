@@ -1,0 +1,107 @@
+﻿@model IEnumerable<NautralShop.Models.Voucher>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Quản lý voucher";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+        .container_content div p {
+            color: #b66dff
+        }
+
+    .action i {
+        color: #b66dff;
+    }
+
+        .action i:hover {
+            color: #6921b1;
+        }
+
+    .action .fa-trash {
+        color: #6921b1;
+    }
+
+        .action .fa-trash:hover {
+            color: #cc0000;
+        }
+
+</style>
+<div class="container_content">
+    <div class="text-center"><p class="fs-4 fw-bold">Quản lý Voucher</p></div>
+
+    <p>
+        <a href="@Url.Action("CreateVoucher","vouchers",new {area = "admin"})" class="btn btn-gradient-primary mt-4">Thêm mới</a>
+    </p>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-borderless text-center">
+            <thead>
+                <tr>
+                    <th>
+                        <p class="fs-5">#</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Tên voucher")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Giá trị giảm giá")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Số lượng")</p>
+                    </th>
+                    <th> <p class="fs-5">Thao tác</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var count = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @{
+                                ++count;
+                            }
+                            <p>@Convert.ToInt32(count) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.VoucherName) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(model => item.VoucherValue)</p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.VoucherQuantity) VNĐ</p>
+                        </td>
+                        
+                        <td>
+                            <div class="fs-5 action">
+                                <a asp-action="EditProduct" asp-route-id="@item.VoucherId" class="btnEditVoucher"><i class="fa-regular fa-pen-to-square me-3"></i></a>
+                                <a asp-action="DeleteProduct" asp-route-id="@item.VoucherId" class="DeleteVoucher"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+﻿@model NautralShop.Models.Voucher
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Thêm mới";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_categoryFormr p {
+        color: #b66dff;
+    }
+</style>
+<div class="container_content">
+    <div class="header_categoryFormr">
+        <div class="text-center"><p class="fs-4 fw-bold">Thêm mới voucher</p></div>
+    </div>
+    <hr />
+    <div class="container_form">
+        <div>
+            <form asp-action="CreateVoucher" asp-controller="Vouchers" asp-area="admin">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Tên voucher</label>
+                            <input asp-for="VoucherName" class="form-control" required />
+                            <span asp-validation-for="VoucherName" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Giá trị giảm giá</label>
+                            <input asp-for="VoucherValue" class="form-control w-100" required />
+                            <span asp-validation-for="VoucherValue" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Số lượng </label>
+                            <input asp-for="VoucherQuantity" class="form-control" required />
+                            <span asp-validation-for="VoucherQuantity" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Điểm cần đổi</label>
+                            <input asp-for="VoucherPoint" class="form-control" required />
+                            <span asp-validation-for="VoucherPoint" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    <input type="submit" value="Thêm mới" class="btn btn-gradient-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index" asp-area="admin" asp-controller="vouchers">Trở lại</a>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

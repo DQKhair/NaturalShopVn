@@ -16,5 +16,6 @@ namespace NautralShop.Areas.Admin.Controllers
         {
             return View();
         }
+
     }
 }
