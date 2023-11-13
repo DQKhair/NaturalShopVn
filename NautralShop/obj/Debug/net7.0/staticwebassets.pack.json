@@ -5,6 +5,414 @@
       "PackagePath": "staticwebassets\\NautralShop.bundle.scp.css"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\css\\main.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\css\\main.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\css\\util.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\css\\util.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\animated.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\animated.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\core.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\core.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\icons.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\icons.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\larger.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\larger.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\list.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\list.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\mixins.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\path.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\path.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\stacked.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\variables.less",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\variables.less"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Black.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Black.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-BlackItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Bold.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Bold.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-BoldItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBold.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLight.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Italic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Italic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Light.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Light.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-LightItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-MediumItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Regular.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Regular.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-SemiBold.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Thin.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Thin.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ThinItalic.ttf"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\images\\icons\\favicon.ico",
+      "PackagePath": "staticwebassets\\LoginAssets\\images\\icons\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\js\\main.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animate\\animate.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\css\\animsition.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\css\\animsition.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\js\\animsition.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\js\\animsition.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\popper.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\tooltip.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\tooltip.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\countdowntime\\countdowntime.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\countdowntime\\countdowntime.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\moment.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\moment.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\jquery\\jquery-3.2.1.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\jquery\\jquery-3.2.1.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.js"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.css",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.min.css"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.js",
+      "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.min.js"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\css\\style.css"
     },
@@ -521,20 +929,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\1e5a343d-84aa-487f-93d3-e520a5794530_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
-      "PackagePath": "staticwebassets\\images\\1e5a343d-84aa-487f-93d3-e520a5794530_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
+      "PackagePath": "staticwebassets\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\31914249-058a-4db3-8eea-bfd5b21fa7f3_quantum_beauty_world_suaruamatloveworldnhau.jpg",
-      "PackagePath": "staticwebassets\\images\\31914249-058a-4db3-8eea-bfd5b21fa7f3_quantum_beauty_world_suaruamatloveworldnhau.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg",
+      "PackagePath": "staticwebassets\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\580d9b3d-d67a-4355-b0e8-286504dd43fb_quantum_beauty_world_suaruamatloveworldnhau.jpg",
-      "PackagePath": "staticwebassets\\images\\580d9b3d-d67a-4355-b0e8-286504dd43fb_quantum_beauty_world_suaruamatloveworldnhau.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\bg-01.jpg",
+      "PackagePath": "staticwebassets\\images\\bg-01.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\e658816e-a3a5-4fbd-9d71-ada2bb57284d_quantum_beauty_world_matnanguloveworldhoahong.jpg",
-      "PackagePath": "staticwebassets\\images\\e658816e-a3a5-4fbd-9d71-ada2bb57284d_quantum_beauty_world_matnanguloveworldhoahong.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\cb46c835-07c8-44e6-9536-2b699b499e4b_quantum_beauty_world_suaruamatloveworldnhau.jpg",
+      "PackagePath": "staticwebassets\\images\\cb46c835-07c8-44e6-9536-2b699b499e4b_quantum_beauty_world_suaruamatloveworldnhau.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\js\\site.js",

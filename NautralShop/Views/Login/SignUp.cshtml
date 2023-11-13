@@ -1,0 +1,85 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NautralShop.Models.CustomerVM
+@{
+	ViewData["Title"] = "Đăng nhập";
+	Layout = "~/views/Shared/_LayoutLogin.cshtml";
+}
+<div class="wrap-login100" style="background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);">
+	<form asp-action="SignUp" asp-controller="login" class="login100-form validate-form">
+		<span class="login100-form-logo">
+			<img class="w-100" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FlogoNaturalShop.png?alt=media&token=04c3a5b4-6740-4191-8408-fd6172665132" />
+		</span>
+
+		<span class="login100-form-title p-b-34 p-t-27">
+			Đăng ký
+		</span>
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrap-input100 validate-input" data-validate="Enter Name">
+					<input asp-for="CustomerLastName" id="lNameCus" class="input100" type="text" placeholder="Họ">
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					<span asp-validation-for="CustomerLastName" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="wrap-input100 validate-input" data-validate="Enter Name">
+					<input asp-for="CustomerFirstName" id="fnameCus" class="input100" type="text"  placeholder="Tên">
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					<span asp-validation-for="CustomerFirstName" class="text-danger"></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrap-input100 validate-input" data-validate="Enter Phone number">
+					<input asp-for="CustomerPhone" id="phoneCus" class="input100" type="tel" placeholder="Số điện thoại" pattern="((\+84)|(0))(\d{9,10})" title="Số điện thoại không hợp lệ">
+					<span class="focus-input100" data-placeholder="&#xf2b9"></span>
+					<span asp-validation-for="CustomerPhone" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="wrap-input100 validate-input" data-validate="Enter Email">
+					<input asp-for="CustomerEmail" id="emailCus" class="input100" type="email" placeholder="Email">
+					<span class="focus-input100" data-placeholder="&#xf15a;"></span>
+					<span asp-validation-for="CustomerEmail" class="text-danger"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Enter Address">
+			<input asp-for="CustomerAddress" id="adressCus" class="input100" type="text" placeholder="Địa chỉ">
+			<span class="focus-input100" data-placeholder="&#xf194;"></span>
+			<span asp-validation-for="CustomerAddress" class="text-danger"></span>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Enter username">
+			<input asp-for="CustomerUsername" id="username" class="input100" type="text"  placeholder="Tên tài khoản">
+			<span class="focus-input100" data-placeholder="&#xf207"></span>
+			<span asp-validation-for="CustomerUsername" class="text-danger"></span>
+		</div>
+		<div class="wrap-input100 validate-input" data-validate="Enter password">
+			<input asp-for="CustomerPassword" id="password" class="input100" type="password" placeholder="Mật khẩu" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải chứ ít nhất một số,một chữ hoa và một chữ thường , và ít nhất 8 ký tự" required>
+			<span class="focus-input100" data-placeholder="&#xf191;"></span>
+			<span asp-validation-for="CustomerPassword" class="text-danger"></span>
+		</div>
+		<div class="wrap-input100 validate-input" data-validate="Enter RePassword">
+			<input asp-for="CustomerRePassword" id="rePassword" class="input100" type="password" placeholder="Nhập lại mật khẩu">
+			<span class="focus-input100" data-placeholder="&#xf191;"></span>
+			<span asp-validation-for="CustomerRePassword" class="text-danger"></span>
+		</div>
+
+		<div class="container-login100-form-btn">
+			<button class="login100-form-btn" style="background: linear-gradient(to bottom, #0ba360 0%, #3cba92 100%);">
+				Đăng ký
+			</button>
+		</div>
+
+		<div class="text-center p-t-90">
+			<a class="txt1" asp-action="login" asp-controller="login">
+				Đã có tài khoản?
+			</a>
+		</div>
+	</form>
+</div>

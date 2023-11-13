@@ -106,8 +106,8 @@ public partial class NaturalShopContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.Function).WithMany(p => p.Customers)
-                .HasForeignKey(d => d.FunctionId)
+            entity.HasOne(d => d.AccountType).WithMany(p => p.Customers)
+                .HasForeignKey(d => d.AccountTypeId)
                 .HasConstraintName("FK_Customers_Functions");
         });
 
@@ -130,8 +130,8 @@ public partial class NaturalShopContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.Function).WithMany(p => p.Employees)
-                .HasForeignKey(d => d.FunctionId)
+            entity.HasOne(d => d.AccountType).WithMany(p => p.Employees)
+                .HasForeignKey(d => d.AccountTypeId)
                 .HasConstraintName("FK_employees_Functions");
         });
 

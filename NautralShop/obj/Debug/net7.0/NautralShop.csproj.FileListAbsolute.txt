@@ -261,3 +261,4 @@ D:\Du_an_Website\DotNet\NaturalShop\NautralShop\NautralShop\bin\Debug\net7.0\run
 D:\Du_an_Website\DotNet\NaturalShop\NautralShop\NautralShop\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Du_an_Website\DotNet\NaturalShop\NautralShop\NautralShop\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\Du_an_Website\DotNet\NaturalShop\NautralShop\NautralShop\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\Du_an_Website\DotNet\NaturalShop\NautralShop\NautralShop\bin\Debug\net7.0\BCrypt.Net-Core.dll

@@ -21,7 +21,5 @@ public partial class Function
 
     public virtual AccountType? AccountType { get; set; }
 
-    public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
-
-    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+   
 }

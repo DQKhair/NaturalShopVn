@@ -23,9 +23,9 @@ public partial class Customer
 
     public bool CustomerStatus { get; set; }
 
-    public int? FunctionId { get; set; }
+    public int? AccountTypeId { get; set; }
 
-    public virtual Function? Function { get; set; }
+    public virtual AccountType? AccountType { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 

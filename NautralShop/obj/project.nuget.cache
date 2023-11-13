@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Cdg1nO1d1jW3PlLJp15JsVV8I6Fqw5810LTN7BelqoIJIdk7BLy/mSki7bgnxmjKsgAInPbmYTD9WU0Rvf2Hjg==",
+  "dgSpecHash": "k1GFu38kbuF/K1/wU5Xh21g3Rj0hI5mB9FrEGY13/E5A0wy/IEilKWJj4BgphJi82baT+I6gm+l0jA02/LduDQ==",
   "success": true,
   "projectFilePath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\NautralShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jondd\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jondd\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\jondd\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\jondd\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\jondd\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\jondd\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

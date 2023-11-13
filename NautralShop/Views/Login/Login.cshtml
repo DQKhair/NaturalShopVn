@@ -1,0 +1,45 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Đăng nhập";
+	Layout = "~/views/Shared/_LayoutLogin.cshtml";
+}
+<div class="wrap-login100" style="background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);">
+	<form asp-action="Login" asp-controller="Login" class="login100-form validate-form">
+		<span class="login100-form-logo">
+			<img class="w-100" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FlogoNaturalShop.png?alt=media&token=04c3a5b4-6740-4191-8408-fd6172665132" />
+		</span>
+
+		<span class="login100-form-title p-b-34 p-t-27">
+			Đăng nhập
+		</span>
+
+		<div class="wrap-input100 validate-input" data-validate="Enter username">
+			<input class="input100" type="text" name="username" placeholder="Tài khoản">
+			<span class="focus-input100" data-placeholder="&#xf207;"></span>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Enter password">
+			<input class="input100" type="password" name="password" placeholder="Mật khẩu">
+			<span class="focus-input100" data-placeholder="&#xf191;"></span>
+		</div>
+
+		<div class="contact100-form-checkbox">
+			<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+			<label class="label-checkbox100" for="ckb1">
+				Lưu đăng nhập
+			</label>
+		</div>
+
+		<div class="container-login100-form-btn">
+			<button class="login100-form-btn" style="background: linear-gradient(to bottom, #0ba360 0%, #3cba92 100%);">
+				Đăng nhập
+			</button>
+		</div>
+
+		<div class="text-center p-t-90">
+			<a class="txt1" asp-action="signup" asp-controller="login">
+				Chưa có tài khoản?
+			</a>
+		</div>
+	</form>
+</div>

@@ -52,6 +52,7 @@ namespace NautralShop.Areas.Admin.Controllers
             _product.ProductUseful = productsVM.ProductUseful;
             _product.ProductUserManual = productsVM.ProductUserManual;
             _product.ProductDescription = productsVM.ProductDescription;
+            _product.ProductStatus = true;
             _product.ProductDetailDescription = productsVM.ProductDetailDescription;
             if(productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0)
             {
