@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NNUuD1rmxZVvCD1oTfCyKTlBcTCcteN330gNthWqshQ=",
+  "Hash": "Y3q1ODc2WW1mWdSWrqkFeoMOhK2bC3jjpxPGG1doy6M=",
   "Source": "NautralShop",
   "BasePath": "_content/NautralShop",
   "Mode": "Default",
@@ -2259,6 +2259,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
+    },
+    {
+      "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
+      "SourceId": "NautralShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\",
+      "BasePath": "_content/NautralShop",
+      "RelativePath": "images/60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
     },
     {
       "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg",

@@ -87,16 +87,17 @@
                             <p>@Html.DisplayFor(modelItem => item.VoucherName) </p>
                         </td>
                         <td>
-                            <p>@Html.DisplayFor(model => item.VoucherValue)</p>
+                            <p>@Html.DisplayFor(model => item.VoucherValue) VNĐ</p>
                         </td>
                         <td>
-                            <p> @Html.DisplayFor(modelItem => item.VoucherQuantity) VNĐ</p>
+                            <p> @Html.DisplayFor(modelItem => item.VoucherQuantity) </p>
                         </td>
                         
                         <td>
                             <div class="fs-5 action">
-                                <a asp-action="EditProduct" asp-route-id="@item.VoucherId" class="btnEditVoucher"><i class="fa-regular fa-pen-to-square me-3"></i></a>
-                                <a asp-action="DeleteProduct" asp-route-id="@item.VoucherId" class="DeleteVoucher"><i class="fa-solid fa-trash"></i></a>
+                                <a asp-action="DetailVoucher" asp-controller="vouchers" asp-area="admin" asp-route-id="@item.VoucherId" class="btnInfVoucher"><i class="fa-solid fa-circle-info"></i></a>
+                                <a asp-action="EditVoucher" asp-controller="vouchers" asp-area="admin" asp-route-id="@item.VoucherId" class="btnEditVoucher"><i class="fa-regular fa-pen-to-square mx-2"></i></a>
+                                <a asp-action="DeleteVoucher" asp-controller="vouchers" asp-area="admin" asp-route-id="@item.VoucherId" class="DeleteVoucher"><i class="fa-solid fa-trash"></i></a>
                             </div>
                         </td>
                     </tr>

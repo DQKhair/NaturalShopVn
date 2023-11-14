@@ -47,7 +47,13 @@ public partial class NaturalShopContext : DbContext
     {
         return await Categories.FromSqlRaw("EXEC GetListCaterories").ToListAsync();
     }
-    public async Task AddCategory(string categoryName)
+    public async Task<Category> GetCategoryById(int? categoryId)
+    {
+        var result = await Categories.FromSqlRaw("EXEC GetCategoryById @categoryId", new SqlParameter("categoryId", categoryId)).ToListAsync();
+        return result.SingleOrDefault()!;
+
+	}
+	public async Task AddCategory(string categoryName)
     {
         await Database.ExecuteSqlRawAsync("EXEC AddCategory @categoryName", new SqlParameter("@categoryName", categoryName));
     }
@@ -63,6 +69,115 @@ public partial class NaturalShopContext : DbContext
     }
     //Categories
 
+    //Product
+    public async Task<IList<Product>> GetListProducts()
+    {
+        return await Products.FromSqlRaw("EXEC GetListProducts").ToListAsync();
+    }
+    public async Task<Product> GetProductById(string productId)
+    {
+        var result = await Products.FromSqlRaw("EXEC GetProductById @productId", new SqlParameter("productId", productId)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task AddProduct(string productId, string productName, double productPrice,string productImage, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC AddProduct @productId,@productName,@productPrice,@productImage,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
+            new SqlParameter("@productId", productId),
+            new SqlParameter("@productName", productName),
+            new SqlParameter("@productPrice", productPrice),
+            new SqlParameter("@productImage", productImage),
+            new SqlParameter("@productStatus", productStatus),
+            new SqlParameter("@productValuePromotion", productValuePromotion),
+            new SqlParameter("@productIngredient", productIngredient),
+            new SqlParameter("@productUseful", productUseful),
+            new SqlParameter("@productUserManual", productUserManual),
+            new SqlParameter("@productDescription", productDescription),
+            new SqlParameter("@productDetailDescription", productDetailDescription),
+            new SqlParameter("@categoryId", categoryId));
+    }
+    public async Task EditProduct(string productId, string productName, double productPrice, string productImage, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC EditProduct @productId,@productName,@productPrice,@productImage,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
+           new SqlParameter("@productId", productId),
+           new SqlParameter("@productName", productName),
+           new SqlParameter("@productPrice", productPrice),
+           new SqlParameter("@productImage", productImage),
+           new SqlParameter("@productStatus", productStatus),
+           new SqlParameter("@productValuePromotion", productValuePromotion),
+           new SqlParameter("@productIngredient", productIngredient),
+           new SqlParameter("@productUseful", productUseful),
+           new SqlParameter("@productUserManual", productUserManual),
+           new SqlParameter("@productDescription", productDescription),
+           new SqlParameter("@productDetailDescription", productDetailDescription),
+           new SqlParameter("@categoryId", categoryId));
+    }
+    public async Task DeleteProduct(string productId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC DeleteProduct @productId", new SqlParameter("@productId", productId));
+    }
+    //Product
+
+    //Promotion
+    public async Task<IList<Product>> GetListPromotions()
+    {
+        return await Products.FromSqlRaw("EXEC GetListPromotions").ToListAsync();
+    }
+    public async Task<IList<Product>> GetPromotionNotValue()
+    {
+        return await Products.FromSqlRaw("EXEC GetPromotionNotValue").ToListAsync();
+    }
+    public async Task AddAndEditPromotion(string productId, double productValuePromotion)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC AddAndEditPromotion @productId,@productValuePromotion",
+            new SqlParameter("@productId", productId),
+            new SqlParameter("@productValuePromotion", productValuePromotion));
+    }
+    public async Task DeletePromotion(string productId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC DeletePromotion @productId", new SqlParameter("@productId", productId));
+    }
+    //Promotion
+    
+    //Vouchers
+    public async Task<IList<Voucher>> GetListVouchers()
+    {
+        return await Vouchers.FromSqlRaw("EXEC GetListVouchers").ToListAsync();
+    }
+    public async Task<Voucher> GetVoucherById(string voucherId)
+    {
+        var result = await Vouchers.FromSqlRaw("EXEC GetVoucherById @voucherId", new SqlParameter("@voucherId", voucherId)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task AddVoucher(string voucherId,string voucherName, double voucherValue, int voucherPoint,int voucherQuantity,DateTime dateExpire,string employeeId)
+    {
+        await Database.ExecuteSqlRawAsync(
+         "EXEC AddVoucher @voucherId, @voucherName, @voucherValue, @voucherPoint, @voucherQuantity, @dateExpire ,@employeeId",
+         new SqlParameter("@voucherId", voucherId),
+         new SqlParameter("@voucherName", voucherName),
+         new SqlParameter("@voucherValue", voucherValue),
+         new SqlParameter("@voucherPoint", voucherPoint),
+         new SqlParameter("@voucherQuantity", voucherQuantity),
+         new SqlParameter("@dateExpire", dateExpire),
+         new SqlParameter("@employeeId", employeeId)
+     );
+    }
+    public async Task EditVoucher(string voucherId, string voucherName, double voucherValue, int voucherPoint, int voucherQuantity, DateTime dateExpire)
+    {
+        await Database.ExecuteSqlRawAsync(
+         "EXEC EditVoucher @voucherId, @voucherName, @voucherValue, @voucherPoint, @voucherQuantity, @dateExpire",
+         new SqlParameter("@voucherId", voucherId),
+         new SqlParameter("@voucherName", voucherName),
+         new SqlParameter("@voucherValue", voucherValue),
+         new SqlParameter("@voucherPoint", voucherPoint),
+         new SqlParameter("@voucherQuantity", voucherQuantity),
+         new SqlParameter("@dateExpire", dateExpire)
+         );
+    }
+    public async Task DeleteVoucher(string voucherId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC DeleteVoucher @voucherId", new SqlParameter("@voucherId", voucherId));
+    }
+    //Voucher
     //End Add Proc
 
 

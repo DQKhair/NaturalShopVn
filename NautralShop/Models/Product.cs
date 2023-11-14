@@ -27,6 +27,7 @@ public partial class Product
 
     public bool ProductStatus { get; set; }
     public int? CategoryId { get; set; }
+    public string? CategoryName { get; set; } = string.Empty!;
 
     public virtual Category? Category { get; set; }
 

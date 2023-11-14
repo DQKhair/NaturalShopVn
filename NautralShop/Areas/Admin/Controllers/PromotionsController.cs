@@ -16,13 +16,13 @@ namespace NautralShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var _product = await _context.Products.Where(p => p.ProductValuePromotion > 0).ToListAsync();
+            var _product = await _context.GetListPromotions();
             return View(_product);
         }
 
-        public  IActionResult CreatePromotion()
+        public async Task<IActionResult> CreatePromotion()
         {
-            ViewData["ProductId"] = new SelectList(_context.Products.Where(p => p.ProductValuePromotion == 0), "ProductId", "ProductName");
+            ViewData["ProductId"] = new SelectList( await _context.GetPromotionNotValue(), "ProductId", "ProductName");
             return View();
         }
 
@@ -30,29 +30,34 @@ namespace NautralShop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreatePromotion(Product product)
         {
-            var id = product.ProductId;
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            string id = product.ProductId;
+            var _product = await _context.GetProductById(id);
                 
-            if (_product == null)
+            if (_product == null || product.ProductValuePromotion == null)
             {
                 return NotFound();
             }
             else
             {
-                _product.ProductValuePromotion = product.ProductValuePromotion;
-                await _context.SaveChangesAsync();
+                await _context.AddAndEditPromotion(id,Convert.ToDouble(product.ProductValuePromotion)!);
                 return RedirectToAction(nameof(Index));
             }    
         }
 
         public async Task<IActionResult> EditPromotion(string? id)
         {
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
-            if(_product == null)
+            if(id == null)
             {
-                return NotFound();
+                return BadRequest();
+            }else
+            {
+                var _product = await _context.GetProductById(id);
+                if(_product == null)
+                {
+                    return NotFound();
+                }
+                return View(_product);
             }
-            return View(_product);
         }
 
         [HttpPost]
@@ -60,15 +65,16 @@ namespace NautralShop.Areas.Admin.Controllers
         [ActionName("EditPromotion")]
         public async Task<IActionResult> Edit(string id, Product product)
         {
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id);
             try
             {
-                if(_product == null)
+                if(_product == null || product.ProductValuePromotion == null)
                 {
                     return NotFound();
+                }else
+                {
+                    await _context.AddAndEditPromotion(id,Convert.ToDouble(product.ProductValuePromotion)!);
                 }    
-                _product.ProductValuePromotion = product.ProductValuePromotion;
-                await _context.SaveChangesAsync();
             }catch
             {
                 return BadRequest();
@@ -78,7 +84,7 @@ namespace NautralShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> DeletePromotion(string? id)
         {
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id!);
             if (_product == null)
             {
                 return NotFound();
@@ -90,15 +96,14 @@ namespace NautralShop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeletePromotion(string id, Product product)
         {
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id);
             try
             {
                 if (_product == null)
                 {
                     return NotFound();
                 }
-                _product.ProductValuePromotion = 0;
-                await _context.SaveChangesAsync();
+                await _context.DeletePromotion(id);
             }
             catch
             {

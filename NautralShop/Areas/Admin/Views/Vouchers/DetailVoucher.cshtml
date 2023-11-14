@@ -1,11 +1,9 @@
 ﻿@model NautralShop.Models.Voucher
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Thêm mới";
+    ViewData["Title"] = "Chi tiết voucher";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-
 <style>
     * {
         padding: 0;
@@ -16,43 +14,52 @@
 
     .container_content {
         background-color: #fff;
+        width: 100%;
         margin: auto;
         padding: 20px;
         border-radius: 5px;
     }
 
     .container_form {
+        width: 80%;
         margin: auto;
         display: flex;
         justify-content: center;
     }
 
-    .header_categoryFormr p {
+    .header_EditCate p {
         color: #b66dff;
+    }
+
+    .container_bodyEdit {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-group .form-control[readonly]{
+        background-color:#fff
     }
 </style>
 <div class="container_content">
-    <div class="header_categoryFormr">
-        <div class="text-center"><p class="fs-4 fw-bold">Thêm mới voucher</p></div>
-    </div>
+    <div class="text-center header_EditCate"><p class="fw-bold fs-4">Chi tiết voucher</p></div>
     <hr />
-    <div class="container_form">
-        <div>
-            <form asp-action="CreateVoucher" asp-controller="Vouchers" asp-area="admin">
+    <div class="container_bodyEdit">
+        <div class="col-md-4">
+            <form asp-action="EditVoucher" asp-area="admin" asp-controller="vouchers">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="VoucherId" />
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
                             <label class="control-label">Tên voucher</label>
-                            <input asp-for="VoucherName" class="form-control" required />
+                            <input asp-for="VoucherName" class="form-control" readonly />
                             <span asp-validation-for="VoucherName" class="text-danger"></span>
                         </div>
-
                     </div>
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
-                            <label class="control-label">Giá trị giảm giá</label>
-                            <input asp-for="VoucherValue" class="form-control w-100" required />
+                            <label class="control-label">Giá trị khuyến mãi</label>
+                            <input asp-for="VoucherValue" class="form-control" readonly />
                             <span asp-validation-for="VoucherValue" class="text-danger"></span>
                         </div>
                     </div>
@@ -60,15 +67,15 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="form-group">
-                            <label class="control-label">Số lượng </label>
-                            <input asp-for="VoucherQuantity" class="form-control" required />
+                            <label class="control-label">Số lượng voucher</label>
+                            <input asp-for="VoucherQuantity" class="form-control" readonly />
                             <span asp-validation-for="VoucherQuantity" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="form-group">
-                            <label class="control-label">Điểm cần đổi</label>
-                            <input asp-for="VoucherPoint" class="form-control" required />
+                            <label class="control-label">Điểm để đổi</label>
+                            <input asp-for="VoucherPoint" class="form-control" readonly />
                             <span asp-validation-for="VoucherPoint" class="text-danger"></span>
                         </div>
                     </div>
@@ -76,23 +83,30 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="form-group">
-                            <label class="control-label">Ngày hết hạn </label>
-                            <input asp-for="DateExpire" type="date" class="form-control" required />
+                            <label class="control-label">Ngày hết hạn</label>
+                            <input asp-for="DateExpire" type="date" class="form-control" readonly />
                             <span asp-validation-for="DateExpire" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
-
-                <div class="form-group d-flex justify-content-center">
-                    <input type="submit" value="Thêm mới" class="btn btn-gradient-primary" />
+                <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Mã Voucher</label>
+                        <input asp-for="VoucherId" type="text" class="form-control text-center" readonly />
+                        <span asp-validation-for="VoucherId" class="text-danger"></span>
+                    </div>
+                </div>
                 </div>
             </form>
         </div>
     </div>
+
     <div>
-        <a asp-action="Index" asp-area="admin" asp-controller="vouchers">Trở lại</a>
+        <a asp-action="Index" asp-controller="vouchers" asp-area="admin">Trở lại</a>
     </div>
 </div>
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

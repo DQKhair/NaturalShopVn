@@ -74,7 +74,7 @@
         </thead>
         <tbody>
             @{var count = 0;}
-            @foreach (var item in Model)
+                @foreach (var item in ViewData["ProductList"] as IEnumerable<NautralShop.Models.Product>)
             {
                     <tr>
                     
@@ -99,7 +99,7 @@
                         <p> @Html.DisplayFor(modelItem => item.ProductPrice) VNĐ</p>
                     </td>
                     <td>
-                        <p> @Html.DisplayFor(modelItem => item.Category!.CategoryName)</p>
+                        <p> @Html.DisplayFor(modelItem => item.CategoryName)</p>
                     </td>
                     <td>
                         <div class="fs-5 action">

@@ -84,6 +84,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcQ3JlYXRlVm91Y2hlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Du_an_Website/DotNet/NaturalShop/NautralShop/NautralShop/Areas/Admin/Views/Vouchers/DeleteVoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcRGVsZXRlVm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NautralShop/NautralShop/Areas/Admin/Views/Vouchers/DetailVoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcRGV0YWlsVm91Y2hlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NautralShop/NautralShop/Areas/Admin/Views/Vouchers/EditVoucher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcRWRpdFZvdWNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Du_an_Website/DotNet/NaturalShop/NautralShop/NautralShop/Areas/Admin/Views/Vouchers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

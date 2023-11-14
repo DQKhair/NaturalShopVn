@@ -1,0 +1,45 @@
+﻿@model NautralShop.Models.Voucher
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Xóa voucher";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+</style>
+<div class="container_content">
+    <div class="text-center">
+        <p class="text-danger fw-bold fs-4">Bạn chắc chắn xóa chứ ?</p>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-center">
+        <form asp-action="DeleteVoucher" asp-controller="vouchers" asp-area="admin">
+            <div class="d-flex flex-column">
+                <div class="my-3">
+                    <input type="hidden" asp-for="VoucherId" />
+                    <span class="form-label">@Html.DisplayName("Tên voucher")</span>
+                    <input type="text" class="form-control my-3 text-center bg-white" value="@Html.DisplayFor(m => m.VoucherName)" readonly />
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" value="Xóa" class="btn btn-gradient-primary w-25" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <a asp-action="Index" asp-controller="vouchers" asp-area="admin">Trở lại</a>
+</div>
+

@@ -2080,6 +2080,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>NautralShop</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/NautralShop</BasePath>
+      <RelativePath>images/60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>NautralShop</SourceId>

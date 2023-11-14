@@ -21,8 +21,8 @@ namespace NautralShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var _products = await _context.Products.Include(c=>c.Category).Where(p => p.ProductStatus == true).ToListAsync();
-            return View(_products);
+			ViewData["ProductList"] = await _context.GetListProducts();
+			return View();
         }
 
         public IActionResult Create()
@@ -42,18 +42,6 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return BadRequest();
             }    
-            var _product = new Product();
-            _product.ProductId = Guid.NewGuid().ToString();
-            _product.ProductName = productsVM.ProductName;
-            _product.ProductPrice = productsVM.ProductPrice;
-            _product.ProductValuePromotion = productsVM.ProductValuePromotion;
-            _product.CategoryId = productsVM.CategoryId;
-            _product.ProductIngredient = productsVM.ProductIngredient;
-            _product.ProductUseful = productsVM.ProductUseful;
-            _product.ProductUserManual = productsVM.ProductUserManual;
-            _product.ProductDescription = productsVM.ProductDescription;
-            _product.ProductStatus = true;
-            _product.ProductDetailDescription = productsVM.ProductDetailDescription;
             if(productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0)
             {
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
@@ -65,7 +53,8 @@ namespace NautralShop.Areas.Admin.Controllers
                     {
                         await productsVM.IFormFileImage.CopyToAsync(stream);
                     }
-                    _product.ProductImage = "/images/" + uniqueFileName;
+                    string ProductImage = "/images/" + uniqueFileName;
+                     await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!, ProductImage,true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0),productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
 
                 }catch
                 {
@@ -73,11 +62,9 @@ namespace NautralShop.Areas.Admin.Controllers
                 }
             }else
             {
-                _product.ProductImage = "";
+                string emtyProductImage = "";
+                await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!, emtyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
             }
-            _context.Add(_product);
-            await _context.SaveChangesAsync();
-
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", productsVM.CategoryId);
             return RedirectToAction(nameof(Index));
         }
@@ -88,7 +75,7 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id);
             if (_product == null)
             {
                 return NotFound();
@@ -110,21 +97,12 @@ namespace NautralShop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditProduct(string id, [FromForm]ProductsVM productsVM)
         {
-            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id);
             if( _product == null) { return NotFound(); }
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _product.ProductName = productsVM.ProductName;
-                    _product.ProductPrice = productsVM.ProductPrice;
-                    _product.ProductValuePromotion= productsVM.ProductValuePromotion;
-                    _product.ProductIngredient= productsVM.ProductIngredient;
-                    _product.ProductUseful = productsVM.ProductUseful;
-                    _product.ProductUserManual = productsVM.ProductUserManual;
-                    _product.ProductDescription = productsVM.ProductDescription;
-                    _product.ProductDetailDescription= productsVM.ProductDetailDescription;
-
                     if (productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0)
                     {
                         if (!string.IsNullOrEmpty(_product.ProductImage))
@@ -145,8 +123,9 @@ namespace NautralShop.Areas.Admin.Controllers
                             {
                                 await productsVM.IFormFileImage.CopyToAsync(stream);
                             }
-                            _product.ProductImage = "/images/" + uniqueFileName;
-
+                                string ProductImage = "/images/" + uniqueFileName;
+                                await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!, ProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                                return RedirectToAction(nameof(Index));
                         }
                         catch
                         {
@@ -155,11 +134,9 @@ namespace NautralShop.Areas.Admin.Controllers
                     }
                     else
                     {
-                        _product.ProductImage = "";
+                            string EmptyProductImage = "";
+                            await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!, EmptyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
                     }
-
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -167,13 +144,13 @@ namespace NautralShop.Areas.Admin.Controllers
                 }
             }
 
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", productsVM.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CatgoryName", productsVM.CategoryId);
             return View();
         }
 
         public async Task<IActionResult> DeleteProduct(string? id)
         {
-            var _product = await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id!);
             if (_product == null)
             {
                 return NotFound();
@@ -186,14 +163,15 @@ namespace NautralShop.Areas.Admin.Controllers
         [ActionName("DeleteProduct")]
         public async Task<IActionResult> Delete(string id)
         {
-            var _product = await _context.Products.FirstOrDefaultAsync(p => p.ProductId == id);
+            var _product = await _context.GetProductById(id);
             if (_product == null)
             {
                 return NotFound();
+            }else
+            {
+               await _context.DeleteProduct(id);
+                return RedirectToAction(nameof(Index));
             }
-            _product.ProductStatus = false;
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
     }

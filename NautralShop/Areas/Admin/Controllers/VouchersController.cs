@@ -16,7 +16,21 @@ namespace NautralShop.Areas.Admin.Controllers
 
         public async Task <IActionResult> Index()
         {
-            var _voucher = await _context.Vouchers.ToListAsync(); 
+            var _voucher = await _context.GetListVouchers(); 
+            return View(_voucher);
+        }
+
+        public async Task<IActionResult> DetailVoucher(string? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var _voucher = await _context.GetVoucherById(id);
+            if(_voucher == null)
+            {
+                return NotFound();
+            }
             return View(_voucher);
         }
 
@@ -26,24 +40,100 @@ namespace NautralShop.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ActionName("CreateVoucher")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateVoucher(Voucher voucher)
+        public async Task<IActionResult> CreateVoucher([Bind("VoucherName,VoucherValue,VoucherQuantity,VoucherPoint,DateExpire")]Voucher voucher)
         {
-            if(ModelState.IsValid)
+            string EmployeeId = "e754ef0f-5e73-4cc1-b87a-a352bea111c8";
+            if (voucher != null)
             {
-                var _voucher = new Voucher();
-                _voucher.VoucherId = Guid.NewGuid().ToString();
-                _voucher.VoucherName = voucher.VoucherName;
-                _voucher.VoucherValue = voucher.VoucherValue;
-                _voucher.VoucherPoint = voucher.VoucherPoint;
-                _voucher.VoucherQuantity = voucher.VoucherQuantity;
-                _voucher.DateExpire = DateTime.Now;
-                _voucher.EmployeeId = null;
-                _context.Vouchers.Add(_voucher);
-                await _context.SaveChangesAsync();
+
+                //var _voucher = new Voucher();
+                //_voucher.VoucherId = Guid.NewGuid().ToString();
+                //_voucher.VoucherName = voucher.VoucherName;
+                //_voucher.VoucherValue = voucher.VoucherValue;
+                //_voucher.VoucherPoint = voucher.VoucherPoint;
+                //_voucher.VoucherQuantity = voucher.VoucherQuantity;
+                //_voucher.DateExpire = voucher.DateExpire;
+                //_voucher.EmployeeId = EmployeeId;
+
+                await _context.AddVoucher(Guid.NewGuid().ToString(), voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity, Convert.ToDateTime(voucher.DateExpire), EmployeeId);
+				//_context.Vouchers.Add(_voucher);
+    //            await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                ModelState.AddModelError("Error", "Lỗi thêm voucher");
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> EditVoucher(string? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }    
+            var _voucher = await _context.GetVoucherById(id);
+            if(_voucher == null)
+            {
+                return NotFound();
+            }    
+            return View(_voucher);
+        }
+
+        [HttpPost]
+        [ActionName("EditVoucher")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditVoucher(string id, Voucher voucher)
+        {
+            if(id == null)
+            {
+                return BadRequest();
+            }
+            var _voucher = await _context.GetVoucherById(id);
+            if(_voucher == null)
+            {
+                return NotFound();
+            }else
+            {
+                await _context.EditVoucher(id, voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity,Convert.ToDateTime(voucher.DateExpire));
                 return RedirectToAction(nameof(Index));
             }    
-            return View();
+        }
+
+        public async Task<IActionResult> DeleteVoucher(string? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+;            }
+            var _voucher = await _context.GetVoucherById(id);
+            if( _voucher == null)
+            {
+                return NotFound();
+            }
+            return View(_voucher);
+        }
+
+        [HttpPost]
+        [ActionName("DeleteVoucher")]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            if(id == null)
+            {
+                return BadRequest();
+            }
+            var _voucher = await _context.GetVoucherById(id);
+            if( _voucher == null)
+            {
+                return BadRequest();
+            }else
+            {
+               await _context.DeleteVoucher(id);
+                return RedirectToAction(nameof(Index));
+            }    
         }
     }
 }

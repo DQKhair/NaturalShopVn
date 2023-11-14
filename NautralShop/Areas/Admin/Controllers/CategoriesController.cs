@@ -46,12 +46,12 @@ namespace NautralShop.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Categories == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
+			var category = await _context.GetCategoryById(id);
             if (category == null)
             {
                 return NotFound();
@@ -97,8 +97,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category = await _context.GetCategoryById(id);
             if (category == null)
             {
                 return NotFound();
