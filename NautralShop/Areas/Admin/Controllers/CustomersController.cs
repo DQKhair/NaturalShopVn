@@ -3,6 +3,7 @@ using NautralShop.Models;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
+	[Area("admin")]
 	public class CustomersController : Controller
 	{
 		private readonly NaturalShopContext _context;
@@ -12,10 +13,23 @@ namespace NautralShop.Areas.Admin.Controllers
 			this._context = context;
 		}
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
-
-			return View();
+			var _customers = await _context.GetListCustomers();
+			return View(_customers);
+		}
+		public async Task<IActionResult> DetailCustomer(string? id)
+		{
+			if(id == null)
+			{
+				return NotFound();
+			}
+			var _customer = await _context.GetCustomerById(id);
+			if( _customer == null )
+			{
+				return NotFound();
+			}
+			return View(_customer);
 		}
 	}
 }

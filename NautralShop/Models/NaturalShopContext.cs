@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
@@ -178,6 +179,18 @@ public partial class NaturalShopContext : DbContext
         await Database.ExecuteSqlRawAsync("EXEC DeleteVoucher @voucherId", new SqlParameter("@voucherId", voucherId));
     }
     //Voucher
+
+    //Customer
+    public async Task<IList<Customer>> GetListCustomers()
+    {
+        return await Customers.FromSqlRaw("EXEC GetListCustomers").ToListAsync();
+    }
+    public async Task<Customer> GetCustomerById(string customerId)
+    {
+        var result = await Customers.FromSqlRaw("EXEC GetCustomerById @customerId",new SqlParameter("@customerId",customerId)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    //Customer
     //End Add Proc
 
 
