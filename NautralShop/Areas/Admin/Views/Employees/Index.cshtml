@@ -1,0 +1,115 @@
+﻿@model IEnumerable<NautralShop.Models.Employee>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Quản lý nhân viên";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+        .container_content div p {
+            color: #b66dff
+        }
+
+    .action i {
+        color: #b66dff;
+    }
+
+        .action i:hover {
+            color: #6921b1;
+        }
+
+    .action .fa-trash {
+        color: #6921b1;
+    }
+
+        .action .fa-trash:hover {
+            color: #cc0000;
+        }
+
+</style>
+<div class="container_content">
+    <div class="text-center"><p class="fs-4 fw-bold">Quản lý nhân viên</p></div>
+
+    <p>
+        <a href="@Url.Action("CreateEmployee","Employees",new {area = "admin"})" class="btn btn-gradient-primary mt-4">Thêm mới</a>
+    </p>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-borderless text-center">
+            <thead>
+                <tr>
+                    <th>
+                        <p class="fs-5">#</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Tên Nhân viên")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Địa chỉ")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Số điện thoại")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Trạng thái")</p>
+                    </th>
+                    <th> <p class="fs-5">Thao tác</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var count = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @{
+                                ++count;
+                                var getStatus = (item.EmployeeStatus)?"Đang hoạt động":"Không hoạt động";
+                                var statusEmployee = getStatus;
+                            }
+                            <p>@Convert.ToInt32(count) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.EmployeeName)</p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(model => item.EmployeeAddress)</p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.EmployeePhone)</p>
+                        </td>
+                        <td>
+                            <p>@statusEmployee</p>
+                        </td>
+                        <td>
+                            <div class="fs-5 action">
+                                <a asp-action="DetailEmployee" asp-controller="Employees" asp-area="admin" asp-route-id="@item.EmployeeId" class="btnInfEmployee"><i class="fa-solid fa-circle-info"></i></a>
+                                <a asp-action="EditEmployee" asp-controller="Employees" asp-area="admin" asp-route-id="@item.EmployeeId" class="btnEditEmployeey"><i class="fa-regular fa-pen-to-square mx-3"></i></a>
+                                @* <a asp-action="DeleteEmployee" asp-controller="Employees" asp-area="admin" asp-route-id="@item.EmployeeId" class="DeleteEmployee"><i class="fa-solid fa-trash"></i></a> *@
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

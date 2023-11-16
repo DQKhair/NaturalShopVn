@@ -47,19 +47,7 @@ namespace NautralShop.Areas.Admin.Controllers
             string EmployeeId = "e754ef0f-5e73-4cc1-b87a-a352bea111c8";
             if (voucher != null)
             {
-
-                //var _voucher = new Voucher();
-                //_voucher.VoucherId = Guid.NewGuid().ToString();
-                //_voucher.VoucherName = voucher.VoucherName;
-                //_voucher.VoucherValue = voucher.VoucherValue;
-                //_voucher.VoucherPoint = voucher.VoucherPoint;
-                //_voucher.VoucherQuantity = voucher.VoucherQuantity;
-                //_voucher.DateExpire = voucher.DateExpire;
-                //_voucher.EmployeeId = EmployeeId;
-
                 await _context.AddVoucher(Guid.NewGuid().ToString(), voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity, Convert.ToDateTime(voucher.DateExpire), EmployeeId);
-				//_context.Vouchers.Add(_voucher);
-    //            await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             else

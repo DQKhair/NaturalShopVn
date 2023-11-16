@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using NautralShop.Areas.Admin.Models;
 
 namespace NautralShop.Models;
 
@@ -191,6 +192,43 @@ public partial class NaturalShopContext : DbContext
         return result.SingleOrDefault()!;
     }
     //Customer
+
+    //Employee
+    public async Task<IList<Employee>> GetlistEmployees()
+    {
+        return await Employees.FromSqlRaw("EXEC GetlistEmployees").ToListAsync();
+    }
+    public async Task <Employee> GetEmployeesById(string employeeId)
+    {
+        var result = await Employees.FromSqlRaw("EXEC GetEmployeesById @employeeId", new SqlParameter("@employeeId", employeeId)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task<Employee> GetEmployeeByUserName(string employeeUserName)
+    {
+        var result = await Employees.FromSqlRaw("EXEC GetEmployeeByUserName @employeeUsername", new SqlParameter("@employeeUsername", employeeUserName)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task<Employee> GetEmployeeByEmail(string employeeEmail)
+    {
+        var result = await Employees.FromSqlRaw("EXEC GetEmployeeByEmail @employeeEmail", new SqlParameter("@employeeEmail", employeeEmail)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task AddEmployee(string employeeId,string employeeName, string employeeAddress,string employeeEmail,string employeePhone,string employeeUsername, string employeePassword)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC AddEmployee @employeeId,@employeeName, @employeeAddress,@employeeEmail,@employeePhone,@employeeUsername,@employeePassword",
+            new SqlParameter("@employeeId", employeeId),
+            new SqlParameter("@employeeName", employeeName),
+            new SqlParameter("@employeeAddress", employeeAddress),
+            new SqlParameter("@employeeEmail", employeeEmail),
+            new SqlParameter("@employeePhone", employeePhone),
+            new SqlParameter("@employeeUsername", employeeUsername),
+            new SqlParameter("@employeePassword", employeePassword));
+    }
+    public async Task ResetPassword(string employeeId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC ResetPassword @employeeId", new SqlParameter("@employeeId", employeeId));
+    }
+    //End Employee
     //End Add Proc
 
 

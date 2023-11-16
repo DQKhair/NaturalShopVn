@@ -1,0 +1,122 @@
+﻿@model NautralShop.Models.Employee
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Chi tiết thông tin";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_EditCate p {
+        color: #b66dff;
+    }
+
+    .container_bodyEdit {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-group .form-control[readonly] {
+        background-color: #fff
+    }
+</style>
+<div class="container_content">
+    <div class="text-center header_EditCate"><p class="fw-bold fs-4">Chi tiết thông tin nhân viên</p></div>
+    <hr />
+    <div class="container_bodyEdit">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Tên nhân viên</label>
+                        <input asp-for="EmployeeUsername" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeUsername" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Trạng thái</label>
+                        @{
+                            var status = Model.EmployeeStatus;
+                            var statusCus = (status) ? "Đang hoạt động" : "ngừng hoạt động";
+                        }
+                        <input value="@statusCus" type="text" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeStatus" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Địa chỉ</label>
+                        <input asp-for="EmployeeAddress" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input asp-for="EmployeeEmail" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeEmail" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Số điện thoại</label>
+                        <input asp-for="EmployeePhone" type="tel" class="form-control" readonly />
+                        <span asp-validation-for="EmployeePhone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Tên tài khoản</label>
+                        <input asp-for="EmployeeUsername" type="text" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeUsername" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label class="control-label">Mã nhân viên</label>
+                        <input asp-for="EmployeeId" class="form-control" readonly />
+                        <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" asp-controller="employees" asp-area="admin">Trở lại</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

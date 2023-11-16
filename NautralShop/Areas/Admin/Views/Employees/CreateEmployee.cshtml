@@ -1,0 +1,127 @@
+﻿@model NautralShop.Areas.Admin.Models.EmployeeVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Thêm mới";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_form {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_categoryFormr p {
+        color: #b66dff;
+    }
+</style>
+<div class="container_content">
+    <div class="header_categoryFormr">
+        <div class="text-center"><p class="fs-4 fw-bold">Thêm mới nhân viên</p></div>
+    </div>
+    <hr />
+    <div class="container_form">
+        <div>
+            <form asp-action="CreateEmployee" asp-controller="employees" asp-area="admin">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Họ</label>
+                            <input asp-for="EmployeeLName" class="form-control" placeholder="Họ" required />
+                            <span asp-validation-for="EmployeeLName" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Tên</label>
+                            <input asp-for="EmployeeFName" class="form-control w-100" placeholder="Tên" required />
+                            <span asp-validation-for="EmployeeFName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Địa chỉ</label>
+                            <input asp-for="EmployeeAddress" class="form-control" placeholder="Địa chỉ" required />
+                            <span asp-validation-for="EmployeeAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input asp-for="EmployeeEmail" class="form-control" type="email" placeholder="Email" required />
+                            <span asp-validation-for="EmployeeEmail" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Số điện thoại</label>
+                            <input asp-for="EmployeePhone" type="tel" class="form-control" placeholder="Số điện thoại" pattern="((\+84)|(0))(\d{9,10})" title="Số điện thoại không hợp lệ" required />
+                            <span asp-validation-for="EmployeePhone" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Tên tài khoản</label>
+                            <input asp-for="EmployeeUsername" type="text" class="form-control" placeholder="Tên tài khoản" required />
+                            <span asp-validation-for="EmployeeUsername" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Mật khẩu</label>
+                            <input asp-for="EmployeePassword" type="text" class="form-control" type="password" placeholder="Mật khẩu" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Phải chứ ít nhất một số,một chữ hoa và một chữ thường , và ít nhất 8 ký tự" required />
+                            <span asp-validation-for="EmployeePassword" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label class="control-label">Nhập lại mật khẩu</label>
+                            <input asp-for="EmployeeRePassword" type="password" class="form-control" placeholder="Nhập lại mật khẩu" required />
+                            <span asp-validation-for="EmployeeRePassword" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    <input type="submit" value="Thêm mới" class="btn btn-gradient-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index" asp-area="admin" asp-controller="employees">Trở lại</a>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
