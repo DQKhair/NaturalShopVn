@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Areas.Admin.Models;
@@ -8,6 +9,7 @@ using System.Net.WebSockets;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly NaturalShopContext _context;

@@ -191,6 +191,28 @@ public partial class NaturalShopContext : DbContext
         var result = await Customers.FromSqlRaw("EXEC GetCustomerById @customerId",new SqlParameter("@customerId",customerId)).ToListAsync();
         return result.SingleOrDefault()!;
     }
+    public async Task<Customer> GetCustomerByUsername(string customerUsername)
+    {
+        var result = await Customers.FromSqlRaw("EXEC GetCustomerByUsername @customerUsername",new SqlParameter("@customerUsername",customerUsername)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task<Customer> GetCustomerByEmail(string customerEmail)
+    {
+        var result = await Customers.FromSqlRaw("EXEC GetCustomerByEmail @customerEmail", new SqlParameter("@customerEmail", customerEmail)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task SignupCustomer(string customerId,string customerName,string customerAddress, string customerEmail, string customerPhone, string customerUsername,string customerPassword)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC SignupCustomer @customerId ,@customerName ,@customerAddress ,@customerEmail ,@customerPhone ,@customerUsername ,@customerPassword",
+            new SqlParameter("@customerId",customerId),
+            new SqlParameter("@customerName", customerName),
+            new SqlParameter("@customerAddress", customerAddress),
+            new SqlParameter("@customerEmail", customerEmail),
+            new SqlParameter("@customerPhone", customerPhone),
+            new SqlParameter("@customerUsername", customerUsername),
+            new SqlParameter("@customerPassword", customerPassword)
+            );
+    }
     //Customer
 
     //Employee

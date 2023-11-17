@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Models;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly NaturalShopContext _context;

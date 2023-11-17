@@ -2,6 +2,9 @@
 using NautralShop.Models;
 using BCrypt.Net;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace NautralShop.Controllers
 {
@@ -16,6 +19,11 @@ namespace NautralShop.Controllers
 
         public IActionResult Login()
         {
+            ClaimsPrincipal claimsUser = HttpContext.User;
+            if(claimsUser.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }    
             return View();
         }
 
@@ -26,29 +34,56 @@ namespace NautralShop.Controllers
             if (ModelState.IsValid)
             {
                 //handle login
-                var _customer = await _context.Customers.SingleOrDefaultAsync(c => c.CustomerUsername == username);
+                var _customer = await _context.GetCustomerByUsername(username);
                 if (_customer != null && BCrypt.Net.BCrypt.Verify(password, _customer!.CustomerPassword))
                 {
+                    List<Claim> claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Role,"Customer"),
+                        new Claim(ClaimTypes.Name,_customer.CustomerName),
+                        new Claim("CustomerId",_customer.CustomerId)
+                    };
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+                    AuthenticationProperties properties = new AuthenticationProperties()
+                    {
+                        AllowRefresh = true,
+                        IsPersistent = false,
+                    };
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
                     return RedirectToAction("Index", "Home");
                 }
-                var _employee = await _context.Employees.SingleOrDefaultAsync(e => e.EmployeeUsername == username);
+                var _employee = await _context.GetEmployeeByUserName(username);
                 if (_employee != null && BCrypt.Net.BCrypt.Verify(password, _employee!.EmployeePassword))
                 {
+                    List<Claim> claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Role,"Employee"),
+                        new Claim(ClaimTypes.Name,_employee.EmployeeName),
+                        new Claim("employeeId",_employee.EmployeeId)
+                    };
+                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    AuthenticationProperties properties = new AuthenticationProperties()
+                    {
+                        AllowRefresh = true,
+                        IsPersistent = false,
+                    };
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
                     return RedirectToAction("Index", "PageAdmin",new {area = "admin"});
                 }
             }
             return View();
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
             //handle logout
-			return RedirectToAction("Login", "Login");
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction(nameof(Login));
 		}
 
         public IActionResult SignUp()
         {
-
+           
             return View();
         }
 
@@ -56,6 +91,10 @@ namespace NautralShop.Controllers
         [ValidateAntiForgeryToken]
 		public async Task<IActionResult> SignUp(CustomerVM customerVM)
 		{
+            if(customerVM == null)
+            {
+                return BadRequest();
+            }
             if (ModelState.IsValid)
             {
                 string lname = customerVM.CustomerLastName;
@@ -74,24 +113,11 @@ namespace NautralShop.Controllers
                 }
                 else
                 {
-                    var _customerCheck = await _context.Customers.SingleOrDefaultAsync(c => c.CustomerUsername == username);
-					var _customerCheckEmail = await _context.Customers.SingleOrDefaultAsync(c => c.CustomerEmail == email);
+                    var _customerCheck = await _context.GetCustomerByUsername(username);
+					var _customerCheckEmail = await _context.GetEmployeeByEmail(email);
 					if (_customerCheck == null && _customerCheckEmail == null)
                     {
-                        var _customer = new Customer();
-                        _customer.CustomerId = Guid.NewGuid().ToString();
-                        _customer.CustomerName = lname + fname;
-                        _customer.CustomerPhone = customerVM.CustomerPhone;
-                        _customer.CustomerAddress = customerVM.CustomerAddress;
-                        _customer.CustomerEmail = customerVM.CustomerEmail;
-                        _customer.CustomerUsername = customerVM.CustomerUsername;
-                        _customer.CustomerPassword = BCrypt.Net.BCrypt.HashPassword(pass, salt);
-                        _customer.CustomerPoint = 0;
-                        _customer.CustomerStatus = true;
-                        _customer.AccountTypeId = 3;
-
-                        _context.Customers.Add(_customer);
-                        await _context.SaveChangesAsync();
+                        await _context.SignupCustomer(Guid.NewGuid().ToString(), lname +" "+ fname, customerVM.CustomerAddress??"", customerVM.CustomerEmail??"", customerVM.CustomerPhone??"", customerVM.CustomerUsername!, BCrypt.Net.BCrypt.HashPassword(pass, salt));
                         return RedirectToAction(nameof(Login));
                     }else
                     {

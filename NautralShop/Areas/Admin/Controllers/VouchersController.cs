@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Models;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class VouchersController : Controller
     {
         private readonly NaturalShopContext _context;

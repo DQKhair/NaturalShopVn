@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Areas.Admin.Models;
 using NautralShop.Models;
@@ -7,6 +8,7 @@ using NuGet.Protocol.Plugins;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class EmployeesController : Controller
     {
         private readonly NaturalShopContext _context;
@@ -74,7 +76,7 @@ namespace NautralShop.Areas.Admin.Controllers
                     var _employeeCheckEmail = await _context.GetEmployeeByEmail(email);
                     if (_employeeCheck == null && _employeeCheckEmail == null)
                     {
-                        await _context.AddEmployee(Guid.NewGuid().ToString(), lname + fname, employeeVM.EmployeeAddress??"", employeeVM.EmployeeEmail?? "", employeeVM.EmployeePhone ?? "", employeeVM.EmployeeUsername!, BCrypt.Net.BCrypt.HashPassword(pass, salt));
+                        await _context.AddEmployee(Guid.NewGuid().ToString(), lname +" "+ fname, employeeVM.EmployeeAddress??"", employeeVM.EmployeeEmail?? "", employeeVM.EmployeePhone ?? "", employeeVM.EmployeeUsername!, BCrypt.Net.BCrypt.HashPassword(pass, salt));
                         return RedirectToAction(nameof(Index));
                     }
                     else

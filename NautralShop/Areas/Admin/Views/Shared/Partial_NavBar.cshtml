@@ -1,5 +1,22 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@using System.Security.Claims;
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+
+    // Lấy thông tin xác thực từ HttpContext
+    var claimsIdentity = User.Identity as ClaimsIdentity;
+
+    // Kiểm tra xem có thông tin xác thực không
+    if (claimsIdentity != null)
+    {
+        // Lấy các claim từ Identity
+        var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+        var role = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
+        ViewBag.Name = userName;
+        // Sử dụng thông tin claim theo nhu cầu của bạn
+    }
+    var name = ViewBag.Name;
+}
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo" href="@Url.Action("index","PageAdmin",new {area = "Admin"})"><img src="~/adminAssets/assets/images/logo.svg" alt="logo" /></a>
@@ -27,7 +44,7 @@
                         <span class="availability-status online"></span>
                     </div>
                     <div class="nav-profile-text">
-                        <p class="mb-1 text-black">David Greymaax</p>
+                        <p class="mb-1 text-black">@name</p>
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -35,7 +52,7 @@
                         <i class="mdi mdi-cached me-2 text-success"></i> Thông tin cá nhân
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" asp-action="Logout" asp-controller="Login" asp-area="">
                         <i class="mdi mdi-logout me-2 text-primary"></i> Đăng xuất
                     </a>
                 </div>

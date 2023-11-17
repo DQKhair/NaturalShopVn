@@ -1,10 +1,11 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using NautralShop.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc();
 builder.Services.AddMvcCore();
@@ -12,6 +13,21 @@ builder.Services.AddDbContext<NaturalShopContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("NaturalShop"));
 });
+
+//add sesstion and cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+    {
+        option.LoginPath = "/Login/login";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+    });
+
+builder.Services.AddSession(option =>
+{
+    option.IdleTimeout = TimeSpan.FromMinutes(30);
+});
+
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -29,6 +45,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

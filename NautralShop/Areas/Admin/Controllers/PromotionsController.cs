@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Models;
@@ -6,6 +7,7 @@ using NautralShop.Models;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class PromotionsController : Controller
     {
         private readonly NaturalShopContext _context;

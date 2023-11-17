@@ -1,5 +1,25 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Security.Claims;
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+
+    // Lấy thông tin xác thực từ HttpContext
+    var claimsIdentity = User.Identity as ClaimsIdentity;
+
+    // Kiểm tra xem có thông tin xác thực không
+    if (claimsIdentity != null)
+    {
+        // Lấy các claim từ Identity
+        var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
+        var roles = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
+        ViewBag.Name = userName;
+        ViewBag.Role = roles;
+        // Sử dụng thông tin claim theo nhu cầu của bạn
+    }
+    var name = ViewBag.Name;
+    var role = ViewBag.Role;
+}
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile">
@@ -10,8 +30,8 @@
                     <!--change to offline or busy as needed-->
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                    <span class="font-weight-bold mb-2">David Grey. H</span>
-                    <span class="text-secondary text-small">Quản trị viên</span>
+                    <span class="font-weight-bold mb-2">@name</span>
+                    <span class="text-secondary text-small">@role</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
