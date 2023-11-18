@@ -110,7 +110,40 @@ namespace NautralShop.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
-        
-        
+
+        [HttpPut]
+        public async Task<IActionResult> OffAccountEmployee(string id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var _employee = await _context.GetEmployeesById(id);
+            if(_employee == null)
+            {
+                return BadRequest();
+            }
+            _employee.EmployeeStatus = false;
+            await _context.SaveChangesAsync();
+            return Json(_employee);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> OnAccountEmployee(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var _employee = await _context.GetEmployeesById(id);
+            if (_employee == null)
+            {
+                return BadRequest();
+            }
+            _employee.EmployeeStatus = true;
+            await _context.SaveChangesAsync();
+            return Json(_employee);
+        }
+
     }
 }

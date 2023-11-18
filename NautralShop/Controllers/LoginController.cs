@@ -20,57 +20,85 @@ namespace NautralShop.Controllers
         public IActionResult Login()
         {
             ClaimsPrincipal claimsUser = HttpContext.User;
-            if(claimsUser.Identity.IsAuthenticated)
+			if (claimsUser != null && claimsUser.Identity != null && claimsUser.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Home");
+			    var claimsIdentity = User.Identity as ClaimsIdentity;
+			    var role = claimsIdentity!.FindFirst(ClaimTypes.Role)?.Value;
+                if (role == "Employee")
+                {
+                    return RedirectToAction("index", "pageadmin",new {area = "admin"});
+                }else if(role == "Customer"){
+                    return RedirectToAction("Index", "Home");
+                }else
+                {
+                    return View();
+                }    
             }    
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(string username, string password)
+        public async Task<IActionResult> Login(UserLogin userLogin)
         {
             if (ModelState.IsValid)
             {
-                //handle login
-                var _customer = await _context.GetCustomerByUsername(username);
-                if (_customer != null && BCrypt.Net.BCrypt.Verify(password, _customer!.CustomerPassword))
+                if(userLogin == null || userLogin.Password == null || userLogin.Username == null)
                 {
-                    List<Claim> claims = new List<Claim>()
+                    return BadRequest();
+                }    
+                //handle login
+                var _customer = await _context.GetCustomerByUsername(userLogin.Username);
+                if (_customer != null && BCrypt.Net.BCrypt.Verify(userLogin.Password, _customer!.CustomerPassword))
+                {
+                    if (_customer.CustomerStatus == true)
                     {
+                        List<Claim> claims = new List<Claim>()
+                        {
                         new Claim(ClaimTypes.Role,"Customer"),
                         new Claim(ClaimTypes.Name,_customer.CustomerName),
                         new Claim("CustomerId",_customer.CustomerId)
-                    };
-                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-                    AuthenticationProperties properties = new AuthenticationProperties()
+                        };
+                        ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        AuthenticationProperties properties = new AuthenticationProperties()
+                        {
+                            AllowRefresh = true,
+                            IsPersistent = userLogin.RememberMe,
+                        };
+                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+                        return RedirectToAction("Index", "Home");
+                    }else
                     {
-                        AllowRefresh = true,
-                        IsPersistent = false,
-                    };
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
-                    return RedirectToAction("Index", "Home");
+                        ModelState.AddModelError("", "Tài khoản đã bị khóa !");
+                    }    
+                    
                 }
-                var _employee = await _context.GetEmployeeByUserName(username);
-                if (_employee != null && BCrypt.Net.BCrypt.Verify(password, _employee!.EmployeePassword))
+                var _employee = await _context.GetEmployeeByUserName(userLogin.Username);
+                if (_employee != null && BCrypt.Net.BCrypt.Verify(userLogin.Password, _employee!.EmployeePassword))
                 {
-                    List<Claim> claims = new List<Claim>()
+                    if (_employee.EmployeeStatus == true)
                     {
-                        new Claim(ClaimTypes.Role,"Employee"),
-                        new Claim(ClaimTypes.Name,_employee.EmployeeName),
-                        new Claim("employeeId",_employee.EmployeeId)
-                    };
-                    ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    AuthenticationProperties properties = new AuthenticationProperties()
+                        List<Claim> claims = new List<Claim>()
+                        {
+                            new Claim(ClaimTypes.Role,"Employee"),
+                            new Claim(ClaimTypes.Name,_employee.EmployeeName),
+                            new Claim("employeeId",_employee.EmployeeId)
+                        };
+                        ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        AuthenticationProperties properties = new AuthenticationProperties()
+                        {
+                            AllowRefresh = true,
+                            IsPersistent = userLogin.RememberMe,
+                        };
+                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+                        return RedirectToAction("Index", "PageAdmin",new {area = "admin"});
+                    }else
                     {
-                        AllowRefresh = true,
-                        IsPersistent = false,
-                    };
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
-                    return RedirectToAction("Index", "PageAdmin",new {area = "admin"});
+                        ModelState.AddModelError("", "Tài khoản đã bị khóa !");
+                    }    
                 }
-            }
+				ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không đúng !");
+			}
             return View();
         }
 
@@ -108,7 +136,7 @@ namespace NautralShop.Controllers
 
                 if (pass != repass)
                 {
-                    ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không đúng !");
+                    ModelState.AddModelError("", "Mật khẩu không trùng khớp !");
                     return View("SignUp");
                 }
                 else

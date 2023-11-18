@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NautralShop.Models;
+using System.Security.Claims;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
@@ -46,7 +47,8 @@ namespace NautralShop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateVoucher([Bind("VoucherName,VoucherValue,VoucherQuantity,VoucherPoint,DateExpire")]Voucher voucher)
         {
-            string EmployeeId = "e754ef0f-5e73-4cc1-b87a-a352bea111c8";
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+            var EmployeeId = claimsIdentity!.FindFirst("employeeId")!.Value;
             if (voucher != null)
             {
                 await _context.AddVoucher(Guid.NewGuid().ToString(), voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity, Convert.ToDateTime(voucher.DateExpire), EmployeeId);
