@@ -33,5 +33,41 @@ namespace NautralShop.Areas.Admin.Controllers
 			}
 			return View(_customer);
 		}
-	}
+
+        [HttpPut]
+        public async Task<IActionResult> OffAccountCustomer(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var _customer = await _context.GetCustomerById(id);
+            if (_customer == null)
+            {
+                return BadRequest();
+            }
+            await _context.OffAccountCustomer(id);
+            //_customer.CustomerStatus = false;
+            //await _context.SaveChangesAsync();
+            return Json(_customer);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> OnAccountCustomer(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var _customer = await _context.GetCustomerById(id);
+            if (_customer == null)
+            {
+                return BadRequest();
+            }
+            await _context.OnAccountCustomer(id);
+            //_customer.CustomerStatus = true;
+            //await _context.SaveChangesAsync();
+            return Json(_customer);
+        }
+    }
 }

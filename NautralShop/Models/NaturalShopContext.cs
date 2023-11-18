@@ -213,6 +213,14 @@ public partial class NaturalShopContext : DbContext
             new SqlParameter("@customerPassword", customerPassword)
             );
     }
+    public async Task OffAccountCustomer(string customerId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC OffAccountCustomer @customerId", new SqlParameter("@customerId", customerId));
+    }
+    public async Task OnAccountCustomer(string customerId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC OnAccountCustomer @customerId", new SqlParameter("@customerId", customerId));
+    }
     //Customer
 
     //Employee
@@ -249,6 +257,14 @@ public partial class NaturalShopContext : DbContext
     public async Task ResetPassword(string employeeId)
     {
         await Database.ExecuteSqlRawAsync("EXEC ResetPassword @employeeId", new SqlParameter("@employeeId", employeeId));
+    }
+    public async Task OffAccountEmployee(string employeeId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC OffAccountEmployee @employeeId", new SqlParameter("@employeeId", employeeId));
+    }
+    public async Task OnAccountEmployee(string employeeId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC OnAccountEmployee @employeeId", new SqlParameter("@employeeId", employeeId));
     }
     //End Employee
     //End Add Proc

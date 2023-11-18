@@ -123,8 +123,7 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return BadRequest();
             }
-            _employee.EmployeeStatus = false;
-            await _context.SaveChangesAsync();
+            await _context.OffAccountEmployee(id);
             return Json(_employee);
         }
 
@@ -140,8 +139,7 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return BadRequest();
             }
-            _employee.EmployeeStatus = true;
-            await _context.SaveChangesAsync();
+            await _context.OnAccountEmployee(id);
             return Json(_employee);
         }
 

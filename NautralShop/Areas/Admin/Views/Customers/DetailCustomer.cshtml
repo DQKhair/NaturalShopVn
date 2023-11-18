@@ -106,7 +106,7 @@
                             <label class="control-label">Trạng thái</label>
                         @{
                             var status = Model.CustomerStatus;
-                            var statusCus = (status) ? "Đang hoạt động" : "ngừng hoạt động";
+                            var statusCus = (status) ? "Đang hoạt động" : "Ngừng hoạt động";
                         }
                             <input value="@statusCus" type="text" class="form-control" readonly />
                             <span asp-validation-for="CustomerStatus" class="text-danger"></span>

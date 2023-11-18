@@ -1,0 +1,109 @@
+﻿@model IEnumerable<NautralShop.Models.Order>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Quản lý đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+        .container_content div p {
+            color: #b66dff
+        }
+
+    .action i {
+        color: #b66dff;
+    }
+
+        .action i:hover {
+            color: #6921b1;
+        }
+
+    .action .fa-trash {
+        color: #6921b1;
+    }
+
+        .action .fa-trash:hover {
+            color: #cc0000;
+        }
+
+</style>
+<div class="container_content">
+    <div class="text-center"><p class="fs-4 fw-bold">Quản lý đơn hàng</p></div>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-borderless text-center">
+            <thead>
+                <tr>
+                    <th>
+                        <p class="fs-5">#</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Tên khách hàng")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Số lượng")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Tổng tiền")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Ngày")</p>
+                    </th>
+                    <th> <p class="fs-5">Thao tác</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var count = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @{
+                                ++count;
+                            }
+                            <p>@Convert.ToInt32(count) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.OrderCustomerName) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.OrderTotalQuantity) </p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(model => item.OrderTotalPrice) VNĐ</p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.OrderDate) </p>
+                        </td>
+
+                        <td>
+                            <div class="fs-5 action">
+                                <a asp-action="DetailOrder" asp-controller="Orders" asp-area="admin" asp-route-id="@item.OrderId" class="btnInfOrder"><i class="fa-solid fa-circle-info"></i></a>
+                                <a asp-action="EditOrder" asp-controller="Orders" asp-area="admin" asp-route-id="@item.OrderId" class="btnEditOrder"><i class="fa-regular fa-pen-to-square mx-2"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

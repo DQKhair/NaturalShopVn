@@ -66,6 +66,12 @@
                     <th>
                         <p class="fs-5">@Html.DisplayName("Số điện thoại")</p>
                     </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("trạng thái")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("trạng thái")</p>
+                    </th>
                     <th> <p class="fs-5">Thao tác</p></th>
                 </tr>
             </thead>
@@ -80,6 +86,9 @@
                         <td>
                             @{
                                 ++count;
+                                var getStatus = (item.CustomerStatus) ? "Đang hoạt động" : "Không hoạt động";
+                                var customerStatus = getStatus;
+                                var isActiveStatus = (item.CustomerStatus) ? "checked" : "";
                             }
                             <p>@Convert.ToInt32(count) </p>
                         </td>
@@ -92,7 +101,21 @@
                         <td>
                             <p> @Html.DisplayFor(modelItem => item.CustomerPhone) </p>
                         </td>
-
+                        <td>
+                            @if (item.CustomerStatus == true)
+                            {
+                                <p class="statusEmployee ">@customerStatus</p>
+                            }
+                            else
+                            {
+                                <p class="statusEmployee text-danger">@customerStatus</p>
+                            }
+                        </td>
+                        <td>
+                            <div class="form-check form-switch d-flex justify-content-center mt-0">
+                                <input class="form-check-input" type="checkbox" id="isActiveStatus-@item.CustomerId" data-customer-id="@item.CustomerId" @(isActiveStatus) onchange="HandlechangeSwitch(this)">
+                            </div>
+                        </td>
                         <td>
                             <div class="fs-5 action">
                                 <a asp-action="DetailCustomer" asp-controller="Customers" asp-area="admin" asp-route-id="@item.CustomerId" class="btnInfCustomer"><i class="fa-solid fa-circle-info"></i></a>
@@ -104,3 +127,42 @@
         </table>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function HandlechangeSwitch(checkbox) {
+        const customerId = checkbox.getAttribute("data-customer-id");
+        const isChecked = checkbox.checked;
+
+        if (isChecked) {
+            $.ajax({
+                url: "/admin/customers/OnAccountCustomer/" + customerId,
+                type: "PUT",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify({}),
+                success: (res) => {
+                    console.log(res);
+                    location.reload();
+                },
+                error: (error) => {
+                    console.error("Error update status customer", error);
+                }
+            });
+        } else {
+            $.ajax({
+                url: "/admin/customers/OffAccountCustomer/" + customerId,
+                type: "PUT",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify({}),
+                success: (res) => {
+                    console.log(res);
+                    location.reload();
+                },
+                error: (error) => {
+                    console.error("Error update status customer", error);
+                }
+            });
+        }
+    }
+</script>
