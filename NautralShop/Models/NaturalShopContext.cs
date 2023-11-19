@@ -290,6 +290,12 @@ public partial class NaturalShopContext : DbContext
     }
     //Order
     //End Order
+    //statistic
+    public async Task<IList<Order>> GetValueStatisticYear(int yearValue)
+    {
+        return await Orders.FromSqlRaw("EXEC GetValueStatisticYear @yearValue", new SqlParameter("@yearValue", yearValue)).ToListAsync();
+    }
+    //end statictis
     //End Add Proc
 
 

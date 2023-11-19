@@ -1,0 +1,153 @@
+﻿@model IEnumerable<NautralShop.Models.Category>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Quản lý danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .container_content div p {
+        color: #b66dff
+    }
+}
+</style>
+<div class="container_content">
+    <div class="text-center"><p class="fs-4 fw-bold">Thống kê</p></div>
+    <hr />
+    <div class="w-50 my-3">
+        <select id="yearSelect" class="form-select">
+         <option value="">Chọn năm</option>
+         </select>
+    </div>
+    <div class="row">
+        <div class="col-sm" id="chartNew">
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="col-sm">
+            <canvas id="myisChart" style="width: 300px;max-width: 300px;display: block;height: 300px; margin:auto"></canvas>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+
+        //call func
+        SetSelectList();
+        DisplayChartBar();
+        DisplayChartPie()
+        HandleChangeSelect();
+
+        //end call func
+
+        function SetSelectList() {
+            //select
+            const select = $("#yearSelect");
+            const currentYear = new Date().getFullYear();
+            for (let year = currentYear; year >= 2010; year--) {
+                const option = $("<option></option>");
+                option.attr("value", year).text(year)
+                select.append(option);
+            }
+            //end select
+        }
+
+        function DisplayChartBar(yValuesBar, xValuesBar) {
+            var xValues = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+            var yValues = [55, 49, 44, 24, 33, 55, 49, 44, 24, 38, 55, 49];
+            var barColors = ["#a35dff", "#fea196", "#4dcbeb", "#a35dff", "#fea196", "#4dcbeb", "#a35dff", "#fea196", "#4dcbeb", "#a35dff", "#fea196", "#4dcbeb"];
+           
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: xValuesBar,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValuesBar
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: "Thống kê số lượng đơn hàng theo tháng"
+                    }
+                }
+            });
+
+           
+        }
+
+        function DisplayChartPie(yValuesPie) {
+            var xValues = ["Giao hàng thành công", "Giao hàng thất bại"];
+            var yValues = [95, 5];
+            var barColors = [
+                "#96cd86",
+                "#fc3d3d"
+            ];
+
+            new Chart("myisChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValuesPie
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Tỉ lệ giao hàng thành công"
+                    }
+                }
+            });
+        }
+
+        function HandleChangeSelect() {
+            $("#yearSelect").on("change", function()  {
+                $("#chartNew").empty();
+                $("#chartNew").append(`<canvas id="myChart" style="width: 100%; max-width: 600px; display: block;" width="460" height="230" class="chartjs-render-monitor"></canvas>`);
+                const selectedYear = $(this).val();
+                //handle get
+                $.get(`/admin/statistic/GetOrdersByMonth?year=${selectedYear}`, function (res) {
+                    console.log("data " + res);
+                    var yValuesBar = [];
+                    var xValuesBar = [];
+                    $.each(res, function (index, data) {
+                        yValuesBar.push(data.numberOfOrders)
+                        xValuesBar.push("Tháng "+data.month)
+                    })
+                    DisplayChartBar(yValuesBar, xValuesBar)
+                })
+
+                $.get(`/admin/statistic/GetOrdersByPercent?year=${selectedYear}`, function (res) {
+                    console.log("data " + res);
+                    var yValuesPie = [];
+                    $.each(res, function (index, data) {
+                        console.log("data " + data);
+                        yValuesPie.push(data);
+                    })
+                    console.log("arr" + yValuesPie)
+                    DisplayChartPie(yValuesPie)
+                })
+            });
+        }
+    });
+</script>
