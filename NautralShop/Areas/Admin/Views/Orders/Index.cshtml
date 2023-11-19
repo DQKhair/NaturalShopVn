@@ -65,6 +65,12 @@
                     <th>
                         <p class="fs-5">@Html.DisplayName("Ngày")</p>
                     </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Phương thức thanh toán")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Trạng thái")</p>
+                    </th>
                     <th> <p class="fs-5">Thao tác</p></th>
                 </tr>
             </thead>
@@ -89,16 +95,23 @@
                             <p>@Html.DisplayFor(modelItem => item.OrderTotalQuantity) </p>
                         </td>
                         <td>
-                            <p>@Html.DisplayFor(model => item.OrderTotalPrice) VNĐ</p>
+                            @{
+                                var price = item.OrderTotalPrice;
+                            }
+                            <p>@price.ToString("n0") VNĐ</p>
                         </td>
                         <td>
                             <p> @Html.DisplayFor(modelItem => item.OrderDate) </p>
                         </td>
-
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.PaymentMethodName) </p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.StatusOrderName) </p>
+                        </td>
                         <td>
                             <div class="fs-5 action">
-                                <a asp-action="DetailOrder" asp-controller="Orders" asp-area="admin" asp-route-id="@item.OrderId" class="btnInfOrder"><i class="fa-solid fa-circle-info"></i></a>
-                                <a asp-action="EditOrder" asp-controller="Orders" asp-area="admin" asp-route-id="@item.OrderId" class="btnEditOrder"><i class="fa-regular fa-pen-to-square mx-2"></i></a>
+                                <a asp-action="OrderDetail" asp-controller="Orders" asp-area="admin" asp-route-id="@item.OrderId" class="btnDetailOrder"> <i class="fa-regular fa-pen-to-square mx-2"></i></a>
                             </div>
                         </td>
                     </tr>

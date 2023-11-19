@@ -25,7 +25,11 @@ public partial class Order
 
     public int? PaymentMethodId { get; set; }
 
+    public string PaymentMethodName { get; set; } = string.Empty;
+
     public int? StatusOrderId { get; set; }
+
+    public string StatusOrderName { get; set; } = string.Empty;
 
     public virtual Customer? Customer { get; set; }
 

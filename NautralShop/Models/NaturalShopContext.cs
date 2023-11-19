@@ -267,6 +267,29 @@ public partial class NaturalShopContext : DbContext
         await Database.ExecuteSqlRawAsync("EXEC OnAccountEmployee @employeeId", new SqlParameter("@employeeId", employeeId));
     }
     //End Employee
+    public async Task<IList<Order>> GetListOrders()
+    {
+        return await Orders.FromSqlRaw("EXEC GetListOrders").ToListAsync();
+    }
+    public async Task<IList<OrderDetail>> GetDetailOrder(string orderId)
+    {
+        return await OrderDetails.FromSqlRaw("EXEC GetDetailOrder @orderId", new SqlParameter("@orderId", orderId)).ToListAsync();
+    }
+    public async Task<Order> GetOrdersById(string orderId )
+    {
+        var result = await Orders.FromSqlRaw("EXEC GetOrdersById @orderId", new SqlParameter("@orderId", orderId)).ToListAsync();
+        return result.SingleOrDefault()!;
+    }
+    public async Task ConfirmOrder(string orderId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC ConfirmOrder @orderId", new SqlParameter("@orderId",orderId));
+    }
+    public async Task CancelOrder(string orderId)
+    {
+        await Database.ExecuteSqlRawAsync("EXEC CancelOrder @orderId", new SqlParameter("@orderId", orderId));
+    }
+    //Order
+    //End Order
     //End Add Proc
 
 

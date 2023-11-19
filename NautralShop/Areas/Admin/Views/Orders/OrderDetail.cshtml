@@ -1,0 +1,181 @@
+﻿@model IEnumerable<NautralShop.Models.OrderDetail>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var statusOrderId = Convert.ToInt32(ViewBag.statusOrderId);
+}
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .container_content {
+        background-color: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+        .container_content div p {
+            color: #b66dff
+        }
+
+    .action i {
+        color: #b66dff;
+    }
+
+        .action i:hover {
+            color: #6921b1;
+        }
+
+    .action .fa-trash {
+        color: #6921b1;
+    }
+
+        .action .fa-trash:hover {
+            color: #cc0000;
+        }
+
+</style>
+<div class="container_content">
+    <div class="text-center"><p class="fs-4 fw-bold">Quản lý đơn hàng</p></div>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-borderless text-center">
+            <thead>
+                <tr>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Mã đơn")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Sản phẩm")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Số lượng")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Thành tiền")</p>
+                    </th>
+                     <th>
+                        <p class="fs-5">@Html.DisplayName("Tên khách hàng")</p>
+                    </th>
+                     <th>
+                        <p class="fs-5">@Html.DisplayName("Địa chỉ")</p>
+                    </th>
+                     <th>
+                        <p class="fs-5">@Html.DisplayName("Số điện thoại")</p>
+                    </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Trạng thái đơn")</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                   
+                    <tr>
+                        <td>
+                            <p id="idOrder">@Html.DisplayFor(modelItem => item.OrderId)</p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.ProductName)</p>
+                        </td>
+                        <td>
+                            <p>@Html.DisplayFor(modelItem => item.OrderDetailQuantity) </p>
+                        </td>
+                        <td>
+                            @{
+                                var price = item.OrderDetailPrice;
+                            }
+                            <p>@price.ToString("n0") VNĐ</p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerName) </p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerAddress) </p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerPhone) </p>
+                        </td>
+                        <td>
+                            <p> @Html.DisplayFor(modelItem => item.StatusOrderName) </p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <hr />
+    <div class="d-flex justify-content-center">
+        @if (statusOrderId != 1)
+        {
+            <button id="cancelOrder" class="btn btn-outline-secondary me-3" disabled>Hủy đơn</button>
+        }else
+        {
+            <button id="cancelOrder" class="btn btn-outline-secondary me-3">Hủy đơn</button>
+        }
+        @if (statusOrderId == 1)
+        {
+            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đơn</button>
+        }
+        else if (statusOrderId == 2)
+        {
+            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đang giao</button>
+        }
+        else if (statusOrderId == 3)
+        {
+            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đã giao</button>
+        }
+    </div>
+    <div>
+        <a asp-action="Index" asp-controller="orders" asp-area="admin">Trở lại</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#confirmOrder").click( () => {
+            var orderId = $("#idOrder").text();
+            $.ajax({
+                url: '/Admin/Orders/ConfirmOrderById/' + orderId,
+                type: 'PUT',
+                contentType: 'application/json',
+                dataType:"json",
+                success:  (result) => {
+                    console.log(result);
+                    window.location.href="/admin/orders/index";
+                },
+                error: (error) => {
+                    console.error("Lỗi xác nhận đơn hàng", error);
+                }
+            });
+        });
+
+        $("#cancelOrder").click(() => {
+            var orderId = $("#idOrder").text();
+            $.ajax({
+                url: '/Admin/Orders/CancelOrder/' + orderId,
+                type: 'PUT',
+                contentType: 'application/json',
+                dataType: "json",
+                success: (result) => {
+                    console.log(result);
+                    window.location.href = "/admin/orders/index";
+                },
+                error: (error) => {
+                    console.error("Lỗi xác nhận đơn hàng", error);
+                }
+            });
+        });
+    });
+</script>

@@ -96,10 +96,10 @@
                             </div>
                     </td>
                     <td>
-                        <p> @Html.DisplayFor(modelItem => item.ProductPrice) VNĐ</p>
+                        <p>@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
                     </td>
                     <td>
-                        <p> @Html.DisplayFor(modelItem => item.CategoryName)</p>
+                        <p>@Html.DisplayFor(modelItem => item.CategoryName)</p>
                     </td>
                     <td>
                         <div class="fs-5 action">
