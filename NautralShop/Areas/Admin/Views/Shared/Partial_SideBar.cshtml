@@ -1,96 +1,80 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using System.Security.Claims;
-
+@using NautralShop.Models;
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
 
-    // Lấy thông tin xác thực từ HttpContext
     var claimsIdentity = User.Identity as ClaimsIdentity;
 
-    // Kiểm tra xem có thông tin xác thực không
     if (claimsIdentity != null)
     {
-        // Lấy các claim từ Identity
         var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
         var roles = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
+        var employeeIds = claimsIdentity.FindFirst("EmployeeId")?.Value;
+        var accountTypeIds = claimsIdentity.FindFirst("AccountTypeId")?.Value;
         ViewBag.Name = userName;
         ViewBag.Role = roles;
-        // Sử dụng thông tin claim theo nhu cầu của bạn
-    }
-    var name = ViewBag.Name;
-    var role = ViewBag.Role;
-}
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <ul class="nav">
-        <li class="nav-item nav-profile">
-            <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                    <img src="~/adminAssets/assets/images/faces/face1.jpg" alt="profile">
-                    <span class="login-status online"></span>
-                    <!--change to offline or busy as needed-->
-                </div>
-                <div class="nav-profile-text d-flex flex-column">
-                    <span class="font-weight-bold mb-2">@name</span>
-                    <span class="text-secondary text-small">@role</span>
-                </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("index","PageAdmin",new {area = "Admin"})">
-                <span class="menu-title">Dashboard</span>
-                <i class="fa-solid fa-house menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Quản lý người dùng</span>
-                <i class="menu-arrow"></i>
-                <i class="fa-solid fa-user-gear menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="Customers" asp-area="admin">Quản lý khách hàng</a></li>
-                    <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="Employees" asp-area="admin">Quản lý nhân viên</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="@Url.Action("index","categories", new{area = "Admin"})">
-                <span class="menu-title">Quản lý danh mục</span>
-                <i class="fa-solid fa-bars menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="products" asp-area="admin">
-                <span class="menu-title">Quản lý sản phẩm</span>
+        ViewBag.EmployeeId = employeeIds;
+        ViewBag.AccountTypeId = accountTypeIds;
 
-                <i class="fa-solid fa-store menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="Promotions" asp-area="admin">
-                <span class="menu-title">Quản lý khuyến mãi</span>
-                <i class="fa-solid fa-percent menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="vouchers" asp-area="admin">
-                <span class="menu-title">Quản lý voucher</span>
-                <i class="fa-solid fa-ticket menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="Orders" asp-area="admin">
-                <span class="menu-title">Quản lý đơn hàng</span>
-                <i class="fa-brands fa-shopify menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="Statistic" asp-area="admin" >
-                <span class="menu-title">Báo cáo thống kê</span>
-                <i class="fa-solid fa-chart-column menu-icon"></i>
-            </a>
-        </li>
-    </ul>
-</nav>
+        var name = ViewBag.Name;
+        var role = ViewBag.Role;
+        string employeeId = ViewBag.EmployeeId;
+        int accountTypeId = Convert.ToInt32(ViewBag.AccountTypeId);
+
+        NaturalShopContext _context = new NaturalShopContext();
+        var listFunc = _context.Functions.Where(f => f.AccountTypeId == accountTypeId).ToList();
+        @if (accountTypeId == 1 || accountTypeId == 2)
+        {
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile">
+                        <a href="#" class="nav-link">
+                            <div class="nav-profile-image">
+                                <img src="~/adminAssets/assets/images/faces/face1.jpg" alt="profile">
+                                <span class="login-status online"></span>
+                                <!--change to offline or busy as needed-->
+                            </div>
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">@name</span>
+                                <span class="text-secondary text-small">@role</span>
+                            </div>
+                            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("index","PageAdmin",new {area = "Admin"})">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="fa-solid fa-house menu-icon"></i>
+                        </a>
+                    </li>
+                    @if (accountTypeId == 1)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <span class="menu-title">Quản lý người dùng</span>
+                                <i class="menu-arrow"></i>
+                                <i class="fa-solid fa-user-gear menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="Customers" asp-area="admin">Quản lý khách hàng</a></li>
+                                    <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="Employees" asp-area="admin">Quản lý nhân viên</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                    @foreach (var item in listFunc)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="@item.RouteAction" asp-controller="@item.RouteController" asp-area="@item.RouteArea">
+                                <span class="menu-title">@item.FunctionName</span>
+                                <i class="@item.FunctionIcon"></i>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+    }
+}

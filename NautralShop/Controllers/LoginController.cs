@@ -82,7 +82,8 @@ namespace NautralShop.Controllers
                         {
                             new Claim(ClaimTypes.Role,"Employee"),
                             new Claim(ClaimTypes.Name,_employee.EmployeeName),
-                            new Claim("employeeId",_employee.EmployeeId)
+                            new Claim("EmployeeId",_employee.EmployeeId),
+                            new Claim("AccountTypeId",_employee.AccountTypeId.ToString()!)
                         };
                         ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                         AuthenticationProperties properties = new AuthenticationProperties()
