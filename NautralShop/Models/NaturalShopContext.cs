@@ -298,9 +298,9 @@ public partial class NaturalShopContext : DbContext
     //end statictis
 
     //Home index
-    public async Task<IList<Product>> GetListProductWithCateId(int categoryId)
+    public async Task<IList<Product>> GetListProductWithCateIdHome(int categoryId)
     {
-        return await Products.FromSqlRaw("EXEC GetListProductWithCateId @categoryId", new SqlParameter("@categoryId", categoryId)).ToListAsync();
+        return await Products.FromSqlRaw("EXEC GetListProductWithCateIdHome @categoryId", new SqlParameter("@categoryId", categoryId)).ToListAsync();
     }
     //End Home index
     //Promotion home
@@ -309,6 +309,12 @@ public partial class NaturalShopContext : DbContext
         return await Products.FromSqlRaw("EXEC GetListProductWithPromotion").ToListAsync();
     }
     //en promotion home
+    //CategoriesHome
+    public async Task<IList<Product>> GetListProductWithCateId(int categoryId)
+    {
+        return await Products.FromSqlRaw("EXEC GetListProductWithCateId @categoryId", new SqlParameter("@categoryId", categoryId)).ToListAsync();
+    }
+    //End categoriesHome
     //End Add Proc
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,36 +1,43 @@
-﻿@model IEnumerable<NautralShop.Models.Category>
+﻿@model IEnumerable<NautralShop.Models.Product>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Cửa hàng";
+    var category = ViewData["CateById"] as Category;
 }
 
-<h1>Danh mục sản phẩm</h1>
+<div class="container my-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+            <li class="breadcrumb-item " aria-current="page">Cửa hàng</li>
+            <li class="breadcrumb-item active" aria-current="page">@category?.CategoryName</li>
+        </ol>
+    </nav>
+</div>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">Thêm danh mục</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container mt-3">
+    <h2 class="text-uppercase" style="text-align: center;">@category?.CategoryName</h2>
+    <div class="progress mx-auto" style="height: 2px;width: 30%;">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- groupcard -->
+    <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <a class="text-decoration-none" href="@Url.Action("DetailProduct", "Home",new { id = @item.ProductId })">
+                    <div class="card h-100">
+                        <img src="@Html.DisplayFor(m=>item.ProductImage)" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">@Html.DisplayFor(m => item.ProductName)</h5>
+
+                            <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 pb-3"> @Html.ActionLink("Mua sản phẩm", "DetailProduct", "Home", new { id = @item.ProductId }, new { @class = "btn btn-green mt-2" })</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+</div>

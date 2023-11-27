@@ -30,13 +30,13 @@ namespace NautralShop.Controllers
                 ViewBag.UserName = userName;
                 ViewBag.Role = role;
             }
-            var _productCate1 = await _context.GetListProductWithCateId(1);
+            var _productCate1 = await _context.GetListProductWithCateIdHome(1);
             ViewData["productCate1"] = _productCate1;
-            var _productCate2 = await _context.GetListProductWithCateId(2);
+            var _productCate2 = await _context.GetListProductWithCateIdHome(2);
             ViewData["productCate2"] = _productCate2;
-            var _productCate3 = await _context.GetListProductWithCateId(3);
+            var _productCate3 = await _context.GetListProductWithCateIdHome(3);
             ViewData["productCate3"] = _productCate3;
-            var _productCate4 = await _context.GetListProductWithCateId(4);
+            var _productCate4 = await _context.GetListProductWithCateIdHome(4);
             ViewData["productCate4"] = _productCate4;
             return View();
         }
