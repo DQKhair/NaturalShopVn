@@ -1,0 +1,42 @@
+﻿@using NautralShop.Models;
+@{
+
+    NaturalShopContext _context = new NaturalShopContext();
+    var _categories = await _context.GetListCategories();
+    ViewData["listCate"] = _categories;
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+    <div class="container ">
+        <a class="navbar-brand text-uppercase" asp-action="index" asp-controller="Home">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cửa hàng
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @foreach (var item in ViewData["listCate"] as List<Category> ?? new List<Category>())
+                        {
+                             <li><a class="dropdown-item" asp-action="index" asp-controller="categories" asp-route-id=@item.CategoryId>@item.CategoryName</a></li>
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-action="AboutUs" asp-controller="Home">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-action="index" asp-controller="promotions">Khuyến mãi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-action="index" asp-controller="News">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" asp-action="Contact" asp-controller="Home">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

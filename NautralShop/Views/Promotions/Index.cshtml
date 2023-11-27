@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["title"] = "Khuyến mãi";
+}
+@model IEnumerable<NautralShop.Models.Product>
+
+<div class="container my-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+            <li class="breadcrumb-item " aria-current="page">Khuyến mãi</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://naturalshop-3979.web.app/content/img/Summer%20Sale%20Banner.jpg" class="d-block w-100" alt="banner promotion">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-uppercase my-2" style="text-align: center;">Sản phẩm khuyến mãi</h2>
+    <div class="progress mx-auto" style="height: 2px;width: 30%;">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- groupcard -->
+    <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <a class="text-decoration-none" href="@Url.Action("index", "DetailProduct",new { id = @item.ProductId })">
+                    <div class="card">
+                        <span style="right: -13%;top: 2%;" class="text-light position-absolute translate-middle p-2 bg-danger border border-light rounded-circle">
+                            Sale
+                        </span>
+                        <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">@item.ProductName</h5>
+                            <p class="card-text text-secondary text-decoration-line-through">Giá góc @Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                            <p class="card-text text-danger ">Chỉ còn @Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0") VNĐ</p>
+                            @Html.ActionLink("Mua sản phẩm", "index", "DetailProduct", new { id = @item.ProductId }, new { @class = "btn btn-green mt-2 my-2" })
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

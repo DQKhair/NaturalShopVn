@@ -1,1216 +1,1216 @@
 {
   "Files": [
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\NautralShop.bundle.scp.css",
-      "PackagePath": "staticwebassets\\NautralShop.bundle.scp.css"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\NaturalShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\NaturalShop.bundle.scp.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\css\\main.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\css\\main.css",
       "PackagePath": "staticwebassets\\LoginAssets\\css\\main.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\css\\util.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\css\\util.css",
       "PackagePath": "staticwebassets\\LoginAssets\\css\\util.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\HELP-US-OUT.txt"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\css\\font-awesome.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\animated.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\animated.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\animated.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\bordered-pulled.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\core.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\core.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\core.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\fixed-width.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\font-awesome.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\icons.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\icons.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\icons.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\larger.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\larger.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\larger.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\list.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\list.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\list.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\mixins.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\mixins.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\path.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\path.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\path.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\rotated-flipped.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\screen-reader.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\stacked.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\stacked.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\variables.less",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\variables.less",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\less\\variables.less"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_animated.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_bordered-pulled.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_core.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_fixed-width.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_icons.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_larger.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_list.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_mixins.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_path.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_rotated-flipped.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_screen-reader.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_stacked.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\_variables.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\font-awesome-4.7.0\\scss\\font-awesome.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.css",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\css\\material-design-iconic-font.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.svg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\iconic\\fonts\\Material-Design-Iconic-Font.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Black.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Black.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Black.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BlackItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BlackItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-BlackItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Bold.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Bold.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Bold.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BoldItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-BoldItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-BoldItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBold.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraBoldItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLight.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ExtraLightItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Italic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Italic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Italic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Light.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Light.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Light.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-LightItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-LightItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-LightItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Medium.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Medium.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Medium.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-MediumItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-MediumItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-MediumItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Regular.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Regular.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Regular.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBold.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBold.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-SemiBold.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-SemiBoldItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Thin.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-Thin.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-Thin.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ThinItalic.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\fonts\\poppins\\Poppins-ThinItalic.ttf",
       "PackagePath": "staticwebassets\\LoginAssets\\fonts\\poppins\\Poppins-ThinItalic.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\images\\icons\\favicon.ico",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\images\\icons\\favicon.ico",
       "PackagePath": "staticwebassets\\LoginAssets\\images\\icons\\favicon.ico"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\js\\main.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\js\\main.js",
       "PackagePath": "staticwebassets\\LoginAssets\\js\\main.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animate\\animate.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animate\\animate.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animate\\animate.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\css\\animsition.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\css\\animsition.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\css\\animsition.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\js\\animsition.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\animsition\\js\\animsition.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\animsition\\js\\animsition.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\popper.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\popper.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\tooltip.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\bootstrap\\js\\tooltip.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\bootstrap\\js\\tooltip.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\countdowntime\\countdowntime.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\countdowntime\\countdowntime.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\countdowntime\\countdowntime.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\css-hamburgers\\hamburgers.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\daterangepicker.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\moment.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\daterangepicker\\moment.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\daterangepicker\\moment.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\jquery\\jquery-3.2.1.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\jquery\\jquery-3.2.1.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\jquery\\jquery-3.2.1.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\perfect-scrollbar\\perfect-scrollbar.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.css",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\LoginAssets\\vendor\\select2\\select2.min.js",
       "PackagePath": "staticwebassets\\LoginAssets\\vendor\\select2\\select2.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\css\\style.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\css\\style.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\css\\style.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\css\\style.css.map",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\css\\style.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.eot",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.ttf",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff2",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Bold.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.eot",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.ttf",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff2",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Light.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.eot",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.ttf",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff2",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Medium.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.eot",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.ttf",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\fonts\\Ubuntu\\Ubuntu-Regular.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\circle.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\circle.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\circle.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\circle.svg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\circle.svg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\circle.svg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_1.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_1.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\img_1.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_2.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_2.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\img_2.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_3.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_3.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\img_3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_4.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\dashboard\\img_4.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\dashboard\\img_4.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-1.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-1.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces-clipart\\pic-1.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-2.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-2.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces-clipart\\pic-2.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-3.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-3.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces-clipart\\pic-3.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-4.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces-clipart\\pic-4.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces-clipart\\pic-4.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face1.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face1.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face1.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face10.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face10.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face10.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face11.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face11.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face11.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face12.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face12.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face12.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face13.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face13.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face13.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face14.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face14.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face14.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face15.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face15.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face15.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face16.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face16.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face16.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face17.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face17.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face17.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face18.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face18.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face18.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face19.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face19.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face19.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face2.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face2.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face2.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face20.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face20.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face20.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face21.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face21.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face21.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face22.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face22.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face22.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face23.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face23.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face23.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face24.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face24.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face24.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face25.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face25.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face25.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face26.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face26.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face26.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face27.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face27.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face27.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face3.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face3.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face4.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face4.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face4.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face5.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face5.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face5.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face6.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face6.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face6.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face7.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face7.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face7.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face8.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face8.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face8.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face9.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\faces\\face9.jpg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\faces\\face9.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\favicon.ico",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\favicon.ico"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\favicon.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\favicon.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\favicon.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\logo-mini.svg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\logo-mini.svg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\logo-mini.svg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\logo.svg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\logo.svg",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\logo.svg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\blue.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\blue.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\blue.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\dark.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\dark.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\dark.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\flag.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\flag.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\flag.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\green.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\green.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\green.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\jsgrid-icons.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\jsgrid-icons.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\jsgrid-icons.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\red.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\red.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\red.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\yellow.png",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\images\\sprites\\yellow.png",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\images\\sprites\\yellow.png"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\chart.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\chart.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\chart.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\dashboard.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\dashboard.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\dashboard.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\file-upload.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\file-upload.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\file-upload.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\hoverable-collapse.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\hoverable-collapse.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\hoverable-collapse.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\jquery.cookie.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\jquery.cookie.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\jquery.cookie.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\misc.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\misc.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\misc.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\off-canvas.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\off-canvas.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\off-canvas.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\todo.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\todo.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\todo.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\todolist.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\js\\todolist.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\js\\todolist.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_dashboard.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_dashboard.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_dashboard.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_demo.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_demo.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_demo.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_fonts.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_fonts.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_fonts.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_footer.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_footer.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_footer.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_functions.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_functions.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_functions.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_layouts.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_layouts.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_layouts.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_misc.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_misc.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_misc.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_navbar.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_navbar.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_navbar.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_reset.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_reset.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_reset.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_sidebar.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_sidebar.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_sidebar.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_typography.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_typography.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_typography.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_utilities.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_utilities.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_utilities.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_variables.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_variables.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_vertical-wrapper.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_vertical-wrapper.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_vertical-wrapper.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_widget-grid.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\_widget-grid.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\_widget-grid.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_badges.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_badges.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_badges.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_bootstrap-progress.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_bootstrap-progress.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_bootstrap-progress.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_breadcrumbs.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_breadcrumbs.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_breadcrumbs.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_buttons.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_buttons.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_buttons.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_cards.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_cards.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_cards.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_checkbox-radio.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_checkbox-radio.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_checkbox-radio.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_dropdown.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_dropdown.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_dropdown.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_forms.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_forms.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_forms.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_icons.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_icons.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_icons.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_lists.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_lists.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_lists.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_preview.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_preview.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_preview.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_tables.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_tables.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_tables.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_todo-list.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\components\\_todo-list.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\components\\_todo-list.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\landing-screens\\_auth.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\landing-screens\\_auth.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\landing-screens\\_auth.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_animation.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_animation.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_animation.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_background.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_background.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_background.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_badges.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_badges.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_badges.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_blockqoute.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_blockqoute.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_blockqoute.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_breadcrumbs.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_breadcrumbs.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_breadcrumbs.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_buttons.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_cards.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_cards.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_cards.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_misc.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_misc.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_misc.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_pagination.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_popovers.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_popovers.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_popovers.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_text.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_text.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_text.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_tooltips.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\mixins\\_tooltips.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\mixins\\_tooltips.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\style.scss",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\scss\\style.scss",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\scss\\style.scss"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\chart.js\\Chart.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\chart.js\\Chart.min.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\chart.js\\Chart.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\css\\vendor.bundle.base.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\css\\vendor.bundle.base.css",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\css\\vendor.bundle.base.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\js\\vendor.bundle.base.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\js\\vendor.bundle.base.js",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\js\\vendor.bundle.base.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\css\\site.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\favicon.ico",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
       "PackagePath": "staticwebassets\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
       "PackagePath": "staticwebassets\\images\\60c2f524-b3fd-4fba-9049-f9017c640684_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg",
       "PackagePath": "staticwebassets\\images\\b2028732-a36e-456f-88ee-7379ad19b58f_quantum_beauty_world_matnanguloveworldhoahong.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\bg-01.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\bg-01.jpg",
       "PackagePath": "staticwebassets\\images\\bg-01.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\images\\cb46c835-07c8-44e6-9536-2b699b499e4b_quantum_beauty_world_suaruamatloveworldnhau.jpg",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\cb46c835-07c8-44e6-9536-2b699b499e4b_quantum_beauty_world_suaruamatloveworldnhau.jpg",
       "PackagePath": "staticwebassets\\images\\cb46c835-07c8-44e6-9536-2b699b499e4b_quantum_beauty_world_suaruamatloveworldnhau.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\js\\site.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NautralShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.NaturalShop.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.NautralShop.props",
-      "PackagePath": "build\\NautralShop.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.NaturalShop.props",
+      "PackagePath": "build\\NaturalShop.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.NautralShop.props",
-      "PackagePath": "buildMultiTargeting\\NautralShop.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.NaturalShop.props",
+      "PackagePath": "buildMultiTargeting\\NaturalShop.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.NautralShop.props",
-      "PackagePath": "buildTransitive\\NautralShop.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.NaturalShop.props",
+      "PackagePath": "buildTransitive\\NaturalShop.props"
     }
   ],
   "ElementsToRemove": []

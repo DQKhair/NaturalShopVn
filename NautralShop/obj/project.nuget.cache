@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k1GFu38kbuF/K1/wU5Xh21g3Rj0hI5mB9FrEGY13/E5A0wy/IEilKWJj4BgphJi82baT+I6gm+l0jA02/LduDQ==",
+  "dgSpecHash": "jQgylZ6N8B+PCfno6GvX2WRg6FP9XsKVtQFi18CQLTz4/jGVhlNWSar7KR9/31WoOctz8CLsXz+PycpkdSraeA==",
   "success": true,
-  "projectFilePath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\NautralShop.csproj",
+  "projectFilePath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\NaturalShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jondd\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jondd\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

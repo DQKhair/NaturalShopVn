@@ -1,7 +1,12 @@
+:root {
+    --colorPage: #93c355;
+    --colorWhite: #fff;
+    --colorFont: #7d7d7d;
+    --colorHoverPage: #578e35;
+}
 html {
   font-size: 14px;
 }
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -11,12 +16,38 @@ html {
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
-
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
 html {
   position: relative;
   min-height: 100%;
 }
+img {
+    width:100%;
+}
+.btn-green {
+    color: var(--colorWhite);
+    background-color:var(--colorPage);
+}
+.btn-green:hover {
+    color: var(--colorWhite);
+    background-color: var(--colorHoverPage);
+}
 
-body {
-  margin-bottom: 60px;
+.top_header{
+    background-color: var(--colorPage);
+    color: var(--colorWhite);
+    width:100%;
+}
+.top_header p{
+    font-size:1rem;
+    text-transform:uppercase;
+}
+.login_header div a{
+    text-decoration:none;
+    color:var(--colorFont);
+    padding:10px;
 }

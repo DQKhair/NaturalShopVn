@@ -1,9 +1,115 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    var username = ViewBag.UserName;
+    ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">@username</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<partial name="_PartialSlider.cshtml" />
+
+<partial name="_PartialAboutMe" />
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <!-- QUANTUM BEAUTY WORLD -->
+        <div class="container mt-3">
+            <h2 class="text-uppercase" style="text-align: center;">QUANTUM BEAUTY WORLD</h2>
+            <div class="progress mx-auto" style="height: 2px;width: 30%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- groupcard -->
+            <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+                @foreach (var item in ViewData["productCate1"] as List<Product>?? new List<Product>())
+                {
+                    <div class="col">
+                        <a class="text-decoration-none" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId>
+                            <div class="card h-100">
+                                <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">@item.ProductName</h5>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id =@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- QUANTUM DAILY WORLD -->
+        <div class="container mt-5">
+            <h2 class="text-uppercase" style="text-align: center;">QUANTUM BEAUTY WORLD</h2>
+            <div class="progress mx-auto" style="height: 2px;width: 30%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- groupcard -->
+            <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+
+                @foreach (var item in ViewData["productCate2"] as List<Product> ?? new List<Product>())
+                {
+                    <div class="col">
+                        <a class="text-decoration-none" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId>
+                            <div class="card h-100">
+                                <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">@item.ProductName</h5>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- QUANTUM HEALTHY WORLD -->
+        <div class="container mt-5">
+            <h2 class="text-uppercase" style="text-align: center;">QUANTUM healthy WORLD</h2>
+            <div class="progress mx-auto" style="height: 2px;width: 30%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- groupcard -->
+            <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+                @foreach (var item in ViewData["productCate3"] as List<Product> ?? new List<Product>())
+                {
+                    <div class="col">
+                        <a class="text-decoration-none" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId>
+                            <div class="card h-100">
+                                <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">@item.ProductName</h5>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- TIÊU DÙNG XANH AORI -->
+        <div class="container mt-5">
+            <h2 class="text-uppercase" style="text-align: center;">tiêu dùng xanh aori</h2>
+            <div class="progress mx-auto" style="height: 2px;width: 30%;">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- groupcard -->
+            <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+                @foreach (var item in ViewData["productCate4"] as List<Product> ?? new List<Product>())
+                {
+                    <div class="col">
+                        <a class="text-decoration-none" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId>
+                            <div class="card h-100">
+                                <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">@item.ProductName</h5>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                </div>
+                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </main>
+    <partial name="_PartialCusSayAboutMe" />
 </div>

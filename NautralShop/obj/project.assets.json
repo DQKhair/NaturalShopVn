@@ -12899,11 +12899,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\NautralShop.csproj",
-      "projectName": "NautralShop",
-      "projectPath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\NautralShop.csproj",
+      "projectUniqueName": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\NaturalShop.csproj",
+      "projectName": "NaturalShop",
+      "projectPath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\NaturalShop.csproj",
       "packagesPath": "C:\\Users\\jondd\\.nuget\\packages\\",
-      "outputPath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NautralShop\\NautralShop\\obj\\",
+      "outputPath": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jondd\\AppData\\Roaming\\NuGet\\NuGet.Config",

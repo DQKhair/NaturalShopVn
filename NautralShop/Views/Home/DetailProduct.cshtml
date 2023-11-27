@@ -1,0 +1,21 @@
+﻿@model NautralShop.Models.Product
+@{
+    ViewData["title"] = "Chi tiết sản phẩm";
+    var categoryId = Convert.ToString(Model.CategoryId);
+}
+
+<div class="container">
+
+    <div class="container my-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+                <li class="breadcrumb-item " aria-current="page">Danh mục sản phẩm</li>
+                <li class="breadcrumb-item " aria-current="page"><a asp-action="index" asp-controller="Categories" asp-route-id=@categoryId>@Html.DisplayFor(model => model.CategoryName)</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@Html.DisplayFor(model => model.ProductName)</li>
+            </ol>
+        </nav>
+    </div>
+
+
+</div>

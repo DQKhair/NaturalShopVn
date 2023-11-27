@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["title"] = "Tin tức";
+}
+
+<div class="container my-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tin tức</li>
+        </ol>
+    </nav>
+</div>
+<div class="container">
+        <h2 class="text-uppercase fs-4 text-center" style="border-bottom:1px solid #93c355;padding-bottom:10px">Tin tức</h2>
+            <div class="row my-5">
+            <div class="col-md-3"> <img style="width: 15rem;" class="shadow-sm border border-3" src="https://naturalshop-3979.web.app/content/img/news1.jpg" alt="news1"></div>
+                <div class="col-md-9">
+                    <p><b>Tinh dầu bưởi đa-zi-năng thế nào ?</b></p>
+                    <p>Nếu là người quan tâm đến sức khỏe và làm đẹp, hẳn bạn đã biết đến những lợi ích tuyệt vời của tinh dầu bưởi. Bạn thường biết đến tác dụng đuổi muỗi, khử mùi hay làm mượt tóc của tinh dầu bưởi nhưng thực chất tinh dầu thiên nhiên này còn hữu ích hơn […]</p>
+                <a asp-action="detailNews" asp-controller="News" asp-route-id="1" class="btn btn-green">Xem thêm</a>
+                </div>
+            </div>
+            <div class="row my-5">
+            <div class="col-md-3"> <img style="width: 15rem;" class="shadow-sm border border-3" src="https://naturalshop-3979.web.app/content/img/news1.jpg" alt="news1"></div>
+                <div class="col-md-9">
+                    <p><b>5 công dụng bất ngờ của tinh dầu hoa oải hương</b></p>
+                    <p>Tinh dầu hoa Lavender được đánh giá là loại tinh dầu có hoạt tính cao, đem đến nhiều giá trị cho sức khỏe và làn da người sử dụng. Hương thơm thư thái, dễ chịu của tinh dầu Lavender nguyên chất sẽ tác động đến tuyến hạch nhân sâu trong não bộ của bạn và […]</p>
+                <a asp-action="detailNews" asp-controller="News" asp-route-id="2" class="btn btn-green">Xem thêm</a>
+                </div>
+            </div>
+            <div class="row my-5">
+            <div class="col-md-3"> <img style="width: 15rem;" class="shadow-sm border border-3" src="https://naturalshop-3979.web.app/content/img/news2.jpg" alt="news2"></div>
+                <div class="col-md-9">
+                    <p><b>Lý do bạn nên sử dụng thành phần trà xanh chăm sóc sức khoẻ gia đình</b></p>
+                    <p>Không chỉ được biết đến như là một loại nước uống thông thường, trà xanh còn được chứng minh là thần dược trong việc chăm sóc sức khỏe và sắc đẹp. Trà xanh từ lâu đã được xem như một loại thảo dược hỗ trợ điều trị chứng đau đầu, trầm cảm và giúp ngăn ngừa […]</p>
+                <a asp-action="detailNews" asp-controller="News" asp-route-id="3" class="btn btn-green">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+        <!-- EndBody -->
+</div>

@@ -296,8 +296,20 @@ public partial class NaturalShopContext : DbContext
         return await Orders.FromSqlRaw("EXEC GetValueStatisticYear @yearValue", new SqlParameter("@yearValue", yearValue)).ToListAsync();
     }
     //end statictis
-    //End Add Proc
 
+    //Home index
+    public async Task<IList<Product>> GetListProductWithCateId(int categoryId)
+    {
+        return await Products.FromSqlRaw("EXEC GetListProductWithCateId @categoryId", new SqlParameter("@categoryId", categoryId)).ToListAsync();
+    }
+    //End Home index
+    //Promotion home
+    public async Task<IList<Product>> GetListProductWithPromotion()
+    {
+        return await Products.FromSqlRaw("EXEC GetListProductWithPromotion").ToListAsync();
+    }
+    //en promotion home
+    //End Add Proc
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Server=K02\\MSSQLSERVER1;Database=NaturalShop;Trusted_Connection=True;Integrated Security=True;TrustServerCertificate=True;");
