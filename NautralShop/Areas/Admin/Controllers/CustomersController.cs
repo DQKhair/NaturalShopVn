@@ -5,7 +5,7 @@ using NautralShop.Models;
 namespace NautralShop.Areas.Admin.Controllers
 {
 	[Area("admin")]
-	[Authorize]
+	[Authorize(Policy = "AdminAndEmployee")]
 	public class CustomersController : Controller
 	{
 		private readonly NaturalShopContext _context;

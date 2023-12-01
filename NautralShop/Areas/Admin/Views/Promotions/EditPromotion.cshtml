@@ -41,18 +41,18 @@
     <div class="text-center header_EditCate"><p class="fw-bold fs-4">Sửa khuyến mãi</p></div>
     <hr />
     <div class="container_bodyEdit">
-        <div class="col-md-4">
+        <div class="col-md-8">
             <form asp-action="EditPromotion">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
                             <label class="control-label">Tên sản phẩm</label>
                             <input asp-for="ProductName" class="form-control bg-white" readonly />
                             <span asp-validation-for="ProductName" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
                             <label class="control-label">Giá trị khuyến mãi</label>
                             <input asp-for="ProductValuePromotion" class="form-control" required />

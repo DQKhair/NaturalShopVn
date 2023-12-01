@@ -44,7 +44,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label class="control-label">Tên sản phẩm</label>
-                            <input asp-for="ProductName" class="form-control" required />
+                            <input asp-for="ProductName" class="form-control" required placeholder="Nhập tên sản phẩm" />
                             <span asp-validation-for="ProductName" class="text-danger"></span>
                         </div>
                        
@@ -52,14 +52,14 @@
                     <div class="col">
                         <div class="form-group">
                             <label class="control-label">Giá sản phẩm</label>
-                            <input asp-for="ProductPrice" class="form-control w-100" required />
+                            <input asp-for="ProductPrice" class="form-control w-100" placeholder="Nhập giá sản phẩm" required />
                             <span asp-validation-for="ProductPrice" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label class="control-label">Giá trị khuyến mãi</label>
-                            <input asp-for="ProductValuePromotion" class="form-control" required />
+                            <input asp-for="ProductValuePromotion" class="form-control" placeholder="Nhập số tiền khuyến mãi" required />
                             <span asp-validation-for="ProductValuePromotion" class="text-danger"></span>
                         </div>
                     </div>
@@ -74,10 +74,33 @@
                     </div>
                     <div class="col">
                     <div class="form-group">
-                        <label class="control-label">Loại sản phẩm</label>
-                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        <label class="control-label">Hình ảnh 2</label>
+                            <input asp-for="IFormFileImage2" type="file" class="form-control" required />
+                            <span asp-validation-for="IFormFileImage2" class="text-danger"></span>
                     </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-group">
+                        <label class="control-label">Hình ảnh 3</label>
+                            <input asp-for="IFormFileImage3" type="file" class="form-control" required />
+                            <span asp-validation-for="IFormFileImage3" class="text-danger"></span>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Số lượng</label>
+                            <input asp-for="ProductQuantity" type="number" class="form-control" maxlength="3" placeholder="Nhập số lượng sản phẩm" required />
+                            <span asp-validation-for="ProductQuantity" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label class="control-label">Loại sản phẩm</label>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
 
@@ -85,27 +108,27 @@
                     <div class="col">
                         <div class="form-group">
                             <label class="control-label">Thành phần</label>
-                            <textarea asp-for="ProductIngredient" class="form-control"  ></textarea>
+                            <textarea asp-for="ProductIngredient" class="form-control" placeholder="Nhập mô tả thành phần"  ></textarea>
                             <span asp-validation-for="ProductIngredient" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Công dụng</label>
-                            <textarea asp-for="ProductUseful" class="form-control" ></textarea>
+                            <textarea asp-for="ProductUseful" class="form-control" placeholder="Nhập mô tả công dụng" ></textarea>
                             <span asp-validation-for="ProductUseful" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Cách dùng</label>
-                            <textarea asp-for="ProductUserManual" class="form-control" ></textarea>
+                            <textarea asp-for="ProductUserManual" class="form-control" placeholder="Nhập mô tả cách dùng"></textarea>
                             <span asp-validation-for="ProductUserManual" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Mô tả sản phẩm</label>
-                            <textarea asp-for="ProductDescription" class="form-control" ></textarea>
+                            <textarea asp-for="ProductDescription" class="form-control" placeholder="Nhập mô tả sản phẩm" ></textarea>
                             <span asp-validation-for="ProductDescription" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Mô tả chi tiết</label>
-                            <textarea asp-for="ProductDetailDescription" class="form-control" ></textarea>
+                            <textarea asp-for="ProductDetailDescription" class="form-control" placeholder="Nhập mô tả chi tiết" ></textarea>
                             <span asp-validation-for="ProductDetailDescription" class="text-danger"></span>
                         </div>
                     </div>

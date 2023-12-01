@@ -9,8 +9,8 @@ using System.Net.WebSockets;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
-    public class ProductsController : Controller
+	[Authorize(Policy = "AdminAndEmployee")]
+	public class ProductsController : Controller
     {
         private readonly NaturalShopContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -44,19 +44,33 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return BadRequest();
             }    
-            if(productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0)
+            if(productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0 && productsVM.IFormFileImage2 != null && productsVM.IFormFileImage2.Length > 0 && productsVM.IFormFileImage3 != null && productsVM.IFormFileImage3.Length > 0)
             {
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
                 var uniqueFileName = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage.FileName;
+                var uniqueFileName2 = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage2.FileName;
+                var uniqueFileName3 = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage3.FileName;
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                var filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
+                var filePath3 = Path.Combine(uploadsFolder, uniqueFileName3);
                 try
                 {
                     using( var stream = new FileStream(filePath,FileMode.Create))
                     {
                         await productsVM.IFormFileImage.CopyToAsync(stream);
                     }
+                    using (var stream = new FileStream(filePath2, FileMode.Create))
+                    {
+                        await productsVM.IFormFileImage2.CopyToAsync(stream);
+                    }
+                    using (var stream = new FileStream(filePath3, FileMode.Create))
+                    {
+                        await productsVM.IFormFileImage3.CopyToAsync(stream);
+                    }
                     string ProductImage = "/images/" + uniqueFileName;
-                     await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!, ProductImage,true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0),productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                    string ProductImage2 = "/images/" + uniqueFileName2;
+                    string ProductImage3 = "/images/" + uniqueFileName3;
+                    await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!,productsVM.ProductQuantity, ProductImage, ProductImage2, ProductImage3, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0),productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
 
                 }catch
                 {
@@ -65,7 +79,7 @@ namespace NautralShop.Areas.Admin.Controllers
             }else
             {
                 string emtyProductImage = "";
-                await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!, emtyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!,productsVM.ProductQuantity, emtyProductImage, emtyProductImage, emtyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", productsVM.CategoryId);
             return RedirectToAction(nameof(Index));
@@ -85,6 +99,7 @@ namespace NautralShop.Areas.Admin.Controllers
             ProductsVM productsVM = new ProductsVM();
             productsVM.ProductName = _product.ProductName;
             productsVM.ProductPrice = _product.ProductPrice;
+            productsVM.ProductQuantity = _product.ProductQuantity;
             productsVM.ProductValuePromotion = _product.ProductValuePromotion;
             productsVM.ProductUseful = _product.ProductUseful;
             productsVM.ProductUserManual = _product.ProductUserManual;
@@ -105,29 +120,50 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 try
                 {
-                    if (productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0)
+                    if (productsVM.IFormFileImage != null && productsVM.IFormFileImage.Length > 0 && productsVM.IFormFileImage2 != null && productsVM.IFormFileImage2.Length > 0 && productsVM.IFormFileImage3 != null && productsVM.IFormFileImage3.Length > 0)
                     {
-                        if (!string.IsNullOrEmpty(_product.ProductImage))
+                        if (!string.IsNullOrEmpty(_product.ProductImage) && !string.IsNullOrEmpty(_product.ProductImage2) && !string.IsNullOrEmpty(_product.ProductImage3))
                         {
                             var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", Path.GetFileName(_product.ProductImage));
-                            if (System.IO.File.Exists(oldImagePath))
+                            var oldImagePath2 = Path.Combine(_webHostEnvironment.WebRootPath, "images", Path.GetFileName(_product.ProductImage2));
+                            var oldImagePath3 = Path.Combine(_webHostEnvironment.WebRootPath, "images", Path.GetFileName(_product.ProductImage3));
+                            if (System.IO.File.Exists(oldImagePath) && System.IO.File.Exists(oldImagePath2) && System.IO.File.Exists(oldImagePath3))
                             {
                                 System.IO.File.Delete(oldImagePath);
+                                System.IO.File.Delete(oldImagePath2);
+                                System.IO.File.Delete(oldImagePath3);
                             }
                         }
 
                         var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
                         var uniqueFileName = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage.FileName;
+                        var uniqueFileName2 = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage2.FileName;
+                        var uniqueFileName3 = Guid.NewGuid().ToString() + "_" + productsVM.IFormFileImage3.FileName;
+
                         var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                        var filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
+                        var filePath3 = Path.Combine(uploadsFolder, uniqueFileName3);
                         try
                         {
                             using (var stream = new FileStream(filePath, FileMode.Create))
                             {
                                 await productsVM.IFormFileImage.CopyToAsync(stream);
                             }
-                                string ProductImage = "/images/" + uniqueFileName;
-                                await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!, ProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
-                                return RedirectToAction(nameof(Index));
+                            using (var stream = new FileStream(filePath2, FileMode.Create))
+                            {
+                                await productsVM.IFormFileImage2.CopyToAsync(stream);
+                            }
+                            using (var stream = new FileStream(filePath3, FileMode.Create))
+                            {
+                                await productsVM.IFormFileImage3.CopyToAsync(stream);
+                            }
+
+                            string ProductImage = "/images/" + uniqueFileName;
+                            string ProductImage2 = "/images/" + uniqueFileName2;
+                            string ProductImage3 = "/images/" + uniqueFileName3;
+
+                            await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!,productsVM.ProductQuantity, ProductImage, ProductImage2, ProductImage3, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                            return RedirectToAction(nameof(Index));
                         }
                         catch
                         {
@@ -137,7 +173,7 @@ namespace NautralShop.Areas.Admin.Controllers
                     else
                     {
                             string EmptyProductImage = "";
-                            await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!, EmptyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                            await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!, productsVM.ProductQuantity, EmptyProductImage, EmptyProductImage, EmptyProductImage, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
                     }
                 }
                 catch (DbUpdateConcurrencyException)

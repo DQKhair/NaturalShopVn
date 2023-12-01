@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Policy = "AdminAndEmployee")]
     public class CategoriesController : Controller
     {
         private readonly NaturalShopContext _context;

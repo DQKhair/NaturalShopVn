@@ -7,8 +7,9 @@ using static NuGet.Packaging.PackagingConstants;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Authorize]
+	[Authorize(Policy = "AdminAndEmployee")]
     [Area("admin")]
-    public class Statistic : Controller
+	public class Statistic : Controller
     {
         private readonly NaturalShopContext _context;
 

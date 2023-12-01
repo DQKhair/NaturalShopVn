@@ -7,8 +7,8 @@ using System.Security.Claims;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize]
-    public class VouchersController : Controller
+	[Authorize(Policy = "AdminAndEmployee")]
+	public class VouchersController : Controller
     {
         private readonly NaturalShopContext _context;
 

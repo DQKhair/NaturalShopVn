@@ -7,8 +7,8 @@ using NautralShop.Models;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
-    public class PromotionsController : Controller
+	[Authorize(Policy = "AdminAndEmployee")]
+	public class PromotionsController : Controller
     {
         private readonly NaturalShopContext _context;
 

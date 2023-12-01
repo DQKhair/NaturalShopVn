@@ -81,13 +81,16 @@ public partial class NaturalShopContext : DbContext
         var result = await Products.FromSqlRaw("EXEC GetProductById @productId", new SqlParameter("productId", productId)).ToListAsync();
         return result.SingleOrDefault()!;
     }
-    public async Task AddProduct(string productId, string productName, double productPrice,string productImage, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
+    public async Task AddProduct(string productId, string productName, double productPrice,int productQuantity,string productImage, string productImage2, string productImage3, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
     {
-        await Database.ExecuteSqlRawAsync("EXEC AddProduct @productId,@productName,@productPrice,@productImage,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
+        await Database.ExecuteSqlRawAsync("EXEC AddProduct @productId,@productName,@productPrice,@productQuantity,@productImage,@productImage2,@productImage3,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
             new SqlParameter("@productId", productId),
             new SqlParameter("@productName", productName),
             new SqlParameter("@productPrice", productPrice),
+            new SqlParameter("@productQuantity", productQuantity),
             new SqlParameter("@productImage", productImage),
+            new SqlParameter("@productImage2", productImage2),
+            new SqlParameter("@productImage3", productImage3),
             new SqlParameter("@productStatus", productStatus),
             new SqlParameter("@productValuePromotion", productValuePromotion),
             new SqlParameter("@productIngredient", productIngredient),
@@ -97,13 +100,16 @@ public partial class NaturalShopContext : DbContext
             new SqlParameter("@productDetailDescription", productDetailDescription),
             new SqlParameter("@categoryId", categoryId));
     }
-    public async Task EditProduct(string productId, string productName, double productPrice, string productImage, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
+    public async Task EditProduct(string productId, string productName, double productPrice,int productQuantity, string productImage, string productImage2, string productImage3, bool productStatus, double productValuePromotion, string productIngredient, string productUseful, string productUserManual, string productDescription, string productDetailDescription, int categoryId)
     {
-        await Database.ExecuteSqlRawAsync("EXEC EditProduct @productId,@productName,@productPrice,@productImage,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
+        await Database.ExecuteSqlRawAsync("EXEC EditProduct @productId,@productName,@productPrice,@productQuantity,@productImage,@productImage2,@productImage3,@productStatus,@productValuePromotion,@productIngredient,@productUseful,@productUserManual,@productDescription,@productDetailDescription,@categoryId",
            new SqlParameter("@productId", productId),
            new SqlParameter("@productName", productName),
            new SqlParameter("@productPrice", productPrice),
+           new SqlParameter("@productQuantity", productQuantity),
            new SqlParameter("@productImage", productImage),
+           new SqlParameter("@productImage2", productImage2),
+           new SqlParameter("@productImage3", productImage3),
            new SqlParameter("@productStatus", productStatus),
            new SqlParameter("@productValuePromotion", productValuePromotion),
            new SqlParameter("@productIngredient", productIngredient),

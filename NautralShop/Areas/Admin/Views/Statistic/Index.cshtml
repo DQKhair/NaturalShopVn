@@ -38,7 +38,7 @@
         <div class="col-sm" id="chartNew">
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
-        <div class="col-sm">
+        <div class="col-sm" id="chartPieNew">
             <canvas id="myisChart" style="width: 300px;max-width: 300px;display: block;height: 300px; margin:auto"></canvas>
         </div>
     </div>
@@ -114,7 +114,7 @@
                 options: {
                     title: {
                         display: true,
-                        text: "Tỉ lệ giao hàng thành công"
+                        text: "Tỉ lệ giao hàng thành công trong năm"
                     }
                 }
             });
@@ -124,6 +124,8 @@
             $("#yearSelect").on("change", function()  {
                 $("#chartNew").empty();
                 $("#chartNew").append(`<canvas id="myChart" style="width: 100%; max-width: 600px; display: block;" width="460" height="230" class="chartjs-render-monitor"></canvas>`);
+                $("#chartPieNew").empty();
+                $("#chartPieNew").append(`<canvas id="myisChart" style="width: 300px;max-width: 300px;display: block;height: 300px; margin:auto"></canvas>`);
                 const selectedYear = $(this).val();
                 //handle get
                 $.get(`/admin/statistic/GetOrdersByMonth?year=${selectedYear}`, function (res) {

@@ -41,7 +41,7 @@
             <form asp-action="CreatePromotion" asp-controller="Promotions" asp-area="admin">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
                             <label class="control-label">Sản phẩm</label>
                             <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
@@ -49,7 +49,7 @@
                         </div>
 
                     </div>
-                    <div class="col">
+                    <div class="col-sm">
                         <div class="form-group">
                             <label class="control-label">Giá trị khuyến mãi</label>
                             <input asp-for="ProductValuePromotion" class="form-control" required />

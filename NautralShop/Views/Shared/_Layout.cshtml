@@ -14,11 +14,8 @@
         var claimsIdentity = User.Identity as ClaimsIdentity;
         if (claimsIdentity != null)
         {
-            // Lấy các claim từ Identity
             var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
             var role = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
-
-            // Sử dụng thông tin claim theo nhu cầu của bạn
             ViewBag.UserName = userName;
             ViewBag.Role = role;
         }
@@ -120,6 +117,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://kit.fontawesome.com/fbda8849fb.js"
             crossorigin="anonymous"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

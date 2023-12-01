@@ -20,7 +20,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         option.LoginPath = "/Login/login";
         option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        option.AccessDeniedPath = "/Home/Error404";
     });
+builder.Services.AddAuthorization(option =>
+{
+    option.AddPolicy("AdminAndEmployee", policy =>
+        policy.RequireRole("Employee"));
+});
 
 builder.Services.AddSession(option =>
 {

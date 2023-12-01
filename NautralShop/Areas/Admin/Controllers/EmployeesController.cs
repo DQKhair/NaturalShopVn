@@ -8,8 +8,8 @@ using NuGet.Protocol.Plugins;
 namespace NautralShop.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize]
-    public class EmployeesController : Controller
+	[Authorize(Policy = "AdminAndEmployee")]
+	public class EmployeesController : Controller
     {
         private readonly NaturalShopContext _context;
 

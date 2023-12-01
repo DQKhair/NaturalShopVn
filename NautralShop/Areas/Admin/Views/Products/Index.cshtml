@@ -23,7 +23,7 @@
     }
 
         .container_content div p {
-            color: #b66dff
+            color: #b66dff;
         }
 
     .action i {
@@ -63,6 +63,9 @@
                 <th>
                     <p class="fs-5">@Html.DisplayName("Hình ảnh")</p>
                 </th>
+                    <th>
+                        <p class="fs-5">@Html.DisplayName("Số lượng còn")</p>
+                    </th>
                 <th>
                     <p class="fs-5">@Html.DisplayName("Giá sản phẩm")</p>
                 </th>
@@ -74,7 +77,7 @@
         </thead>
         <tbody>
             @{var count = 0;}
-                @foreach (var item in ViewData["ProductList"] as IEnumerable<NautralShop.Models.Product>)
+                @foreach (var item in ViewData["ProductList"] as IEnumerable<NautralShop.Models.Product>?? new List<NautralShop.Models.Product>())
             {
                     <tr>
                     
@@ -94,6 +97,9 @@
                             <div class="imgProduct w-25 mx-auto">
                                 <img src="@pathImg@Html.DisplayFor(modelItem => item.ProductImage)" alt="Hình sản phẩm" class="w-100 rounded h-100" />
                             </div>
+                    </td>
+                    <td>
+                        <p>@Html.DisplayFor(modelItem => item.ProductQuantity)</p>
                     </td>
                     <td>
                         <p>@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>

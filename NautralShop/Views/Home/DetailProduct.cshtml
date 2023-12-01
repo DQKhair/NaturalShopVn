@@ -1,21 +1,163 @@
 ﻿@model NautralShop.Models.Product
 @{
     ViewData["title"] = "Chi tiết sản phẩm";
-    var categoryId = Convert.ToString(Model.CategoryId);
 }
 
-<div class="container">
-
-    <div class="container my-3">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
-                <li class="breadcrumb-item " aria-current="page">Cửa hàng</li>
-                <li class="breadcrumb-item " aria-current="page"><a asp-action="index" asp-controller="Categories" asp-route-id=@categoryId>@Html.DisplayFor(model => model.CategoryName)</a></li>
-                <li class="breadcrumb-item active" aria-current="page">@Html.DisplayFor(model => model.ProductName)</li>
-            </ol>
-        </nav>
-    </div>
-
-
+<div class="container my-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="Home"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+            <li class="breadcrumb-item " aria-current="page">Cửa hàng</li>
+            <li class="breadcrumb-item " aria-current="page"><a asp-action="index" asp-controller="Categories" asp-route-id=@Model.CategoryId>@Html.DisplayFor(model => model.CategoryName)</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Html.DisplayFor(model => model.ProductName)</li>
+        </ol>
+    </nav>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 my-3">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="@Html.DisplayFor(model => model.ProductImage)" class="d-block w-100" alt="ảnh sản phẩm">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="@Html.DisplayFor(model => model.ProductImage2)" class="d-block w-100" alt="ảnh sản phẩm">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-8 my-3">
+            <h3>@Html.DisplayFor(model => model.ProductName)</h3>
+            <h4 class="text-danger">@Convert.ToInt32(Model.ProductPrice).ToString("n0") VNĐ</h4>
+            @{
+                if (!String.IsNullOrEmpty(Model.ProductUseful) && !String.IsNullOrEmpty(Model.ProductUserManual) && String.IsNullOrEmpty(Model.ProductIngredient))
+                {
+                                        <h5>Công dụng</h5>
+                                        <p>&#9752;@Model.ProductUseful</p>
+                                        <br />
+                                        <h5>Hướng dẫn sử dụng :</h5>
+                                        <p>&#10146;@Model.ProductUserManual</p>
+                }
+                else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUserManual) && String.IsNullOrEmpty(Model.ProductUseful))
+                {
+                                        <h5>Thành Phần</h5>
+                                        <p>&#9752;@Model.ProductIngredient</p>
+                                        <br />
+                                        <h5>Hướng dẫn sử dụng :</h5>
+                                        <p>&#10146;@Model.ProductUserManual</p>
+                }
+                else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUseful) && String.IsNullOrEmpty(Model.ProductUserManual))
+                {
+                                        <h5>Thành Phần</h5>
+                                        <p>&#9752;@Model.ProductIngredient</p>
+                                        <br />
+                                        <h5>Công dụng</h5>
+                                        <p>&#9752;@Model.ProductUseful</p>
+                }
+                else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUseful) && !String.IsNullOrEmpty(Model.ProductUserManual))
+                {
+                                        <h5>Thành Phần</h5>
+                                        <p>&#9752;@Model.ProductIngredient</p>
+                                        <br />
+                                        <h5>Công dụng</h5>
+                                        <p>&#9752;@Model.ProductUseful</p>
+                                        <br />
+                                        <h5>Hướng dẫn sử dụng :</h5>
+                                        <p>&#10146;@Model.ProductUserManual</p>
+                }
+                //tinh dau
+                if (Html.DisplayFor(model => model.ProductName).ToString() == "DẦU TI&#202;U")
+                {
+                                        <h5>Lưu ý:</h5>
+                                        <p>Không được uống</p>
+                                        <p>Tránh tiếp xúc với mắt , vết thương hở</p>
+                }
+            }
+            <hr>
+            <h5 class="text-danger">Số lượng</h5>
+            <div class="d-flex">
+                <button id="minusQuantity" class="border border-1 px-2 down_qty" style="cursor: pointer;">-</button>
+                <input style="height:25px;width:15%" class="text-center mx-2 form-control" id="inputQuantity" type="number" value="1" min="1" max="999" step="1" maxlength="3" />
+                <button id="plusQuantity" class="border border-1 px-2 up_qty" style="cursor: pointer;">+</button>
+            </div>
+            <div class="my-3">
+                <a class="btn btn-green" href="#">Mua sản phẩm</a>
+                <a class="btn btn-danger" href="@Url.Action("AddToCart", "Cart", new { Id = Model.ProductId })">Thêm vào giỏ</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        @{
+            if (Html.DisplayFor(model => model.CategoryId).ToString() != "4")
+            {
+                                    <h3>Mô tả</h3>
+                                    <hr>
+                                    <p>@Model.ProductDescription</p>
+                                    <img class="my-3" style="width: 100%;" src="@Html.DisplayFor(model => model.ProductImage3)" alt="anh san pham">
+                if (String.IsNullOrEmpty(Html.DisplayFor(model => model.ProductDetailDescription).ToString()))
+                {
+                                        <div></div>
+                }
+                else
+                {
+                                        <h5 class="text-uppercase fw-bold">Thông tin sản phẩm</h5>
+                                        <p>@Model.ProductDetailDescription</p>
+                }
+                if (Html.DisplayFor(model => model.ProductName).ToString() == "Coffee")
+                {
+                                        <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
+                                        <ul>
+                                            <li>- Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</li>
+                                        </ul>
+                }
+                else
+                {
+                                        <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
+                                        <ul>
+                                            <li>- Nắp kín, để ở nơi khô ráo thoáng mát.</li>
+                                            <li>- Để xa tầm với của trẻ em. Nếu sản phẩm rơi vào mắt hãy rửa sạch bằng nước.</li>
+                                        </ul>
+                }
+                                    <p>Xuất xứ: Việt Nam</p>
+                                    <p>HSD: 3 năm kể từ ngày sản xuất</p>
+                                    <p>NSX: Xem trên bao bì</p>
+                                    <h5 class="text-uppercase fw-bold">Thông tin thương hiệu</h5>
+                                    <p>Sau rất nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe và làm đẹp của đội ngũ sáng lập, Love World bắt đầu với ước mơ mang những sản phẩm thiên nhiên chất lượng cao đến với mọi người dân trên toàn thế giới. </p>
+                                    <p>Ứng dụng Cơ lượng tử đột phá cùng nguồn nguyên liệu 100% từ thiên nhiên, các sản phẩm Chăm sóc sức khoẻ & Làm đẹp của thương hiệu Love World Việt Nam NÓI KHÔNG với hoá chất độc hại mà đảm bảo an toàn với sức khỏe người tiêu dùng và thân thiện môi trường.</p>
+                                    <img style="width: 100%;" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FGiayCongNhan.jpg?alt=media&token=b2ea44dc-b2e2-4319-add0-2cf38fd08c9d" alt="giaycongnhan">
+            }
+        }
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(()=> {
+        const minusQuantity = $("#minusQuantity");
+        const plusQuantity = $("#plusQuantity");
+        const inputQuantity = $("#inputQuantity");
+        var count = $("#inputQuantity").val();
+
+        minusQuantity.click( ()=> {
+            if (parseInt(count) > 1)
+                inputQuantity.val(parseInt(--count))
+        })
+        plusQuantity.click( ()=> {
+            if (parseInt(count) < 999)
+                inputQuantity.val(parseInt(++count))
+        })
+    })
+</script>

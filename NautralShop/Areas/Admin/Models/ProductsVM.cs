@@ -1,4 +1,5 @@
 ﻿using NautralShop.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace NautralShop.Areas.Admin.Models
 {
@@ -25,6 +26,12 @@ namespace NautralShop.Areas.Admin.Models
         public bool ProductStatus { get; set; }
 
         public int? CategoryId { get; set; }
+
+        public int ProductQuantity { get; set; } = 0;
+
+        public IFormFile? IFormFileImage2 { get; set; }
+
+        public IFormFile? IFormFileImage3 { get; set; }
 
 
     }
