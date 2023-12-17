@@ -67,6 +67,16 @@ namespace NautralShop.Controllers
             return View();
         }
 
+        public async Task<IActionResult> FindProduct(string? search)
+        {
+            var product = await _context.Products.Where(p => p.ProductName.Contains(search??"")).ToListAsync();
+            if(product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

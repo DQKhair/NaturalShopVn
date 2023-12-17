@@ -1,0 +1,37 @@
+﻿:root {
+    --colorPage: #93c355;
+    --colorWhite: #fff;
+    --colorFont: #7d7d7d;
+    --colorHoverPage: #578e35;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.sidebar .nav .nav-item.active > .nav-link .menu-title {
+    color: var(--colorPage);
+    font-family: "ubuntu-medium", sans-serif;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link.active {
+    color: var(--colorPage);
+    background: transparent;
+}
+
+.sidebar .nav .nav-item.active > .nav-link i {
+    color: #93c355;
+}
+
+.btn-green {
+    color: var(--colorWhite);
+    background-color: var(--colorPage);
+}
+
+    .btn-green:hover {
+        color: var(--colorWhite);
+        background-color: var(--colorHoverPage);
+    }

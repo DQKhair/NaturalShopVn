@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<NautralShop.Models.OrderDetail>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@using NautralShop.Models;
 @{
     ViewData["Title"] = "Chi tiết đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
     var statusOrderId = Convert.ToInt32(ViewBag.statusOrderId);
+    var orderDetailInfomation = ViewBag.OrderDetailInfomation as OrderDetail;
+    int countIndex = 0;
 }
 
 <style>
@@ -24,19 +26,19 @@
     }
 
         .container_content div p {
-            color: #b66dff
+            color: #000;
         }
 
     .action i {
-        color: #b66dff;
+        color: var(--colorPage);
     }
 
         .action i:hover {
-            color: #6921b1;
+            color: var(--colorHoverPage);
         }
 
     .action .fa-trash {
-        color: #6921b1;
+        color: var(--colorPage);
     }
 
         .action .fa-trash:hover {
@@ -47,12 +49,19 @@
 <div class="container_content">
     <div class="text-center"><p class="fs-4 fw-bold">Quản lý đơn hàng</p></div>
     <hr />
+    <div class="infomationOrder">
+        <p class="fw-bold">Tên khách hàng: <span class="fw-normal">@orderDetailInfomation?.Order?.OrderCustomerName</span></p>
+        <p class="fw-bold">Số điện thoại: <span class="fw-normal">@orderDetailInfomation?.Order?.OrderCustomerPhone</span></p>
+        <p class="fw-bold">Địa chỉ: <span class="fw-normal">@orderDetailInfomation?.Order?.OrderCustomerAddress</span></p>
+        <p class="fw-bold">Trạng thái đơn: <span class="fw-normal">@orderDetailInfomation?.Order?.StatusOrder?.StatusOrderName</span></p>
+        <p class="fw-bold">Mã đơn: <span class="fw-normal" id="idOrder">@orderDetailInfomation?.OrderId</span></p>
+    </div>
     <div class="table-responsive">
         <table class="table table-borderless text-center">
             <thead>
                 <tr>
                     <th>
-                        <p class="fs-5">@Html.DisplayName("Mã đơn")</p>
+                        <p class="fs-5">#</p>
                     </th>
                     <th>
                         <p class="fs-5">@Html.DisplayName("Sản phẩm")</p>
@@ -63,18 +72,7 @@
                     <th>
                         <p class="fs-5">@Html.DisplayName("Thành tiền")</p>
                     </th>
-                     <th>
-                        <p class="fs-5">@Html.DisplayName("Tên khách hàng")</p>
-                    </th>
-                     <th>
-                        <p class="fs-5">@Html.DisplayName("Địa chỉ")</p>
-                    </th>
-                     <th>
-                        <p class="fs-5">@Html.DisplayName("Số điện thoại")</p>
-                    </th>
-                    <th>
-                        <p class="fs-5">@Html.DisplayName("Trạng thái đơn")</p>
-                    </th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -83,10 +81,10 @@
                    
                     <tr>
                         <td>
-                            <p id="idOrder">@Html.DisplayFor(modelItem => item.OrderId)</p>
+                            <p>@(++countIndex)</p>
                         </td>
                         <td>
-                            <p>@Html.DisplayFor(modelItem => item.ProductName)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Product!.ProductName)</p>
                         </td>
                         <td>
                             <p>@Html.DisplayFor(modelItem => item.OrderDetailQuantity) </p>
@@ -96,18 +94,6 @@
                                 var price = item.OrderDetailPrice;
                             }
                             <p>@price.ToString("n0") VNĐ</p>
-                        </td>
-                        <td>
-                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerName) </p>
-                        </td>
-                        <td>
-                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerAddress) </p>
-                        </td>
-                        <td>
-                            <p> @Html.DisplayFor(modelItem => item.OrderCustomerPhone) </p>
-                        </td>
-                        <td>
-                            <p> @Html.DisplayFor(modelItem => item.StatusOrderName) </p>
                         </td>
                     </tr>
                 }
@@ -125,15 +111,15 @@
         }
         @if (statusOrderId == 1)
         {
-            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đơn</button>
+            <button id="confirmOrder" class="btn btn-green">Xác nhận đơn</button>
         }
         else if (statusOrderId == 2)
         {
-            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đang giao</button>
+            <button id="confirmOrder" class="btn btn-green">Xác nhận đang giao</button>
         }
         else if (statusOrderId == 3)
         {
-            <button id="confirmOrder" class="btn btn-gradient-primary">Xác nhận đã giao</button>
+            <button id="confirmOrder" class="btn btn-green">Xác nhận đã giao</button>
         }
     </div>
     <div>
@@ -147,12 +133,13 @@
         $("#confirmOrder").click( () => {
             var orderId = $("#idOrder").text();
             $.ajax({
-                url: '/Admin/Orders/ConfirmOrderById/' + orderId,
+                url: `/Admin/Orders/ConfirmOrderById/orderId=${orderId}`,
                 type: 'PUT',
                 contentType: 'application/json',
                 dataType:"json",
                 success:  (result) => {
                     console.log(result);
+                    alert("Đơn hàng đã được cập nhật")
                     window.location.href="/admin/orders/index";
                 },
                 error: (error) => {
@@ -164,12 +151,13 @@
         $("#cancelOrder").click(() => {
             var orderId = $("#idOrder").text();
             $.ajax({
-                url: '/Admin/Orders/CancelOrder/' + orderId,
+                url: `/Admin/Orders/CancelOrder/orderId=${orderId}`,
                 type: 'PUT',
                 contentType: 'application/json',
                 dataType: "json",
                 success: (result) => {
                     console.log(result);
+                    alert("Hủy đơn thành công")
                     window.location.href = "/admin/orders/index";
                 },
                 error: (error) => {

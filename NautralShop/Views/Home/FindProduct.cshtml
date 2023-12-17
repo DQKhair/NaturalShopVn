@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NautralShop.Models.Product>
+@{
+    ViewData["Title"] = "Kết quả tìm kiếm";
+}
+<div class="container my-3 shadow p-3 mb-5 rounded">
+    <h3 class="my-3 text-center">Kết quả tìm kiếm</h3>
+    <div class="row row-cols-2 row-cols-md-4 g-4 my-3 text-center">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <a class="text-decoration-none" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId>
+                <div class="card h-100">
+                    <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">@item.ProductName</h5>
+                        <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                </div>
+            </a>
+        </div>
+    }
+    </div>
+</div>

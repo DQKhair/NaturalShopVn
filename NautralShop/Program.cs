@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using NaturalShop.Models;
 using NautralShop.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(option =>
     {
         option.LoginPath = "/Login/login";
-        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        option.ExpireTimeSpan = TimeSpan.FromHours(1);
         option.AccessDeniedPath = "/Home/Error404";
     });
 builder.Services.AddAuthorization(option =>
@@ -30,8 +31,10 @@ builder.Services.AddAuthorization(option =>
 
 builder.Services.AddSession(option =>
 {
-    option.IdleTimeout = TimeSpan.FromMinutes(30);
-});
+    option.IdleTimeout = TimeSpan.FromDays(1);
+}); 
+
+
 
 builder.Services.AddHttpContextAccessor();
 
@@ -48,6 +51,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseSession();
 
 app.UseRouting();
 

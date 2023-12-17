@@ -1,0 +1,137 @@
+﻿@model NautralShop.Models.Customer
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+}
+
+<style>
+    .form-control:focus {
+        box-shadow: none;
+        border-color: var(--colorPage)
+    }
+
+
+    .back:hover {
+        color: var(--colorPage);
+        cursor: pointer
+    }
+
+    .labels {
+        font-size: 11px
+    }
+
+    .add-experience:hover {
+        background: var(--colorPage);
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px var(--colorPage)
+    }
+
+</style>
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row formInfo">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style="width:50%" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">@Html.DisplayFor(e => e.CustomerUsername)</span><span class="text-black-50">@Html.DisplayFor(e => e.CustomerEmail)</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <form asp-action="ChangeInfomationCustomer" asp-controller="infomations">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Thông tin cá nhân</h4>
+                    </div>
+                    <div class="row mt-3">
+                        <input type="text" asp-for="CustomerId" class="form-control" placeholder="Tên" hidden>
+                        <div class="col-md-12"><label class="labels">Tên</label><input asp-for="CustomerName" type="text" class="form-control" placeholder="Tên" required></div>
+                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Số điện thoại</label><input asp-for="CustomerPhone" type="tel" class="form-control" type="tel" placeholder="Số điện thoại" pattern="((\+84)|(0))(\d{9,10})" title="Số điện thoại không hợp lệ" required></div>
+                        <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                        <div class="col-md-12"><label class="labels">Địa chỉ</label><input asp-for="CustomerAddress" type="text" class="form-control" placeholder="Địa chỉ" required></div>
+                        <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+                        <div class="col-md-12"><label class="labels">Email</label><input asp-for="CustomerEmail" type="email" class="form-control" placeholder="Email" required></div>
+                        <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                        <div class="col-md-12"><label class="labels">Tên tài khoản</label><input asp-for="CustomerUsername" type="text" class="form-control bg-white" placeholder="Tên tài khoản" readonly></div>
+                        <span asp-validation-for="CustomerUsername" class="text-danger"></span>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-green" type="submit">Lưu</button></div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 pt-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Khác</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Thông tin thêm</span></div><br>
+                <div class="col-md-12"><label class="labels">Loại tài khoản</label><input type="text" class="form-control bg-white" placeholder="loại tài khoản" value="@Html.DisplayFor(e => e.AccountType!.AccountTypeName)" readonly></div> <br>
+                <div class="col-md-12"><label class="labels">Mã khách hàng</label><input type="text" class="form-control bg-white" placeholder="mã nhân viên" value="@Html.DisplayFor(e => e.CustomerId)" readonly></div>
+            </div>
+            <div class="p-3">
+                <div class="ms-2"><a class="text-primary text-decoration-underline" data-bs-toggle="modal" data-bs-target="#ChangePassword">Đổi mật khẩu</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* model *@
+<!-- Modal -->
+<div id="containerChangePassword">
+    <div class="modal fade" id="ChangePassword" tabindex="-1" aria-labelledby="ChangePasswordModel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form enctype="application/json">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Đổi mật khẩu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" asp-for="CustomerId" id="employeeId" class="form-control" placeholder="Tên" hidden>
+                        <div class="col-md-12"><label class="labels">Mật khẩu cũ</label><input id="oldPassword" type="password" class="form-control" required></div>
+                        <div class="col-md-12"><label class="labels">Mật khẩu mới</label><input id="newPassword" type="password" class="form-control" required></div>
+                        <div class="col-md-12"><label class="labels">Nhập lại mật khẩu</label><input id="rePassword" type="password" class="form-control" required></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                        <button type="submit" id="submitChangePassword" class="btn btn-green">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $("#submitChangePassword").closest('form').submit((e) => {
+            e.preventDefault();
+            const customerId = $("#employeeId").val();
+            const oldPass = $("#oldPassword").val();
+            const newPass = $("#newPassword").val();
+            const rePass = $("#rePassword").val();
+            if (newPass == rePass) {
+                $.ajax({
+                    url: `infomations/ChangePassword/customerId=${customerId}&&oldPass=${oldPass}&&newPass=${newPass}`,
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify({}),
+                    success: (res) => {
+                        console.log(res);
+                        alert("Đổi mật khẩu thành công");
+                        $("#containerChangePassword").hide();
+                        $(".modal-backdrop").hide();
+                        $("body").removeClass("modal-open").removeAttr("style");
+                    },
+                    error: (err) => {
+                        alert(err.responseText)
+                        console.error("Lỗi đổi mật khẩu", err);
+                    }
+
+                })
+
+            } else {
+                alert("Mật khẩu không trùng khớp")
+            }
+        })
+    })
+</script>

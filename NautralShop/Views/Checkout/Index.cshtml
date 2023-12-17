@@ -1,0 +1,67 @@
+﻿@using NautralShop.Models;
+@{
+    ViewData["Title"] = "Thanh toán";
+    var customer = ViewBag.Customer as Customer;
+
+    string fullName = customer?.CustomerName??"";
+
+    int spaceIndex = fullName.IndexOf(' '); // Tìm vị trí của dấu cách đầu tiên
+
+    string firstName = "";
+    string lastName = "";
+    if (spaceIndex >= 0)
+    {
+        lastName = fullName.Substring(0, spaceIndex); // Cắt từ đầu đến vị trí dấu cách
+        firstName = fullName.Substring(spaceIndex + 1); // Cắt từ vị trí dấu cách đến hết chuỗi
+    }
+    string customerPhone = customer?.CustomerPhone ?? "";
+
+}
+    
+<div class="container border border-1 p-5 mx-auto my-3">
+    <div class="text-center mb-5">
+        <h3>
+            Thông tin khách hàng
+        </h3>
+    </div>
+    <form asp-action="CheckoutInFCus" asp-controller="Checkout" class="row g-3">
+        <div class="col-md-6">
+            <label for="lNameCustomer" class="form-label">Họ</label>
+            <input type="text" class="form-control" name="lNameCustomer" id="lNameCustomer" value="@lastName" maxlength="50" required placeholder="Nguyễn văn">
+        </div>
+        <div class="col-md-6">
+            <label for="fNameCustomer" class="form-label">Tên</label>
+            <input type="text" class="form-control" name="fNameCustomer" id="fNameCustomer" value="@firstName" maxlength="50" required placeholder="An">
+        </div>
+        <div class="col-md-6">
+            <label for="phoneCustomer" class="form-label">Số điện thoại</label>
+            <input class="form-control" name="phoneCustomer" id="phoneCustomer" type="tel" value="@customerPhone" placeholder="Số điện thoại" pattern="((\+84)|(0))(\d{9,10})" title="Số điện thoại không hợp lệ" required>
+        </div>
+        <div class="col-6">
+            <label for="inputAddressStreet" class="form-label">Địa chỉ</label>
+            <input type="text" class="form-control" name="inputAddressStreet" id="inputAddressStreet" required placeholder="123 str">
+        </div>
+        <div class="col-6">
+            <label for="inputAddressWard" class="form-label">Phường/Xã</label>
+            <input type="text" class="form-control" name="inputAddressWard" id="inputAddressWard" required placeholder="Phường 1">
+        </div>
+        <div class="col-md-6">
+            <label for="inputAddressDistrict" class="form-label">Quận/Huyện</label>    
+            <input type="text" class="form-control" name="inputAddressDistrict" id="inputAddressDistrict" required placeholder="Quận 1">
+        </div>
+         <div class="col-md-12">
+            <label for="inputAddressCity" class="form-label">Thành Phố/Tỉnh</label>    
+            <input type="text" class="form-control" name="inputAddressCity" id="inputAddressCity" required placeholder="Quận 1">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPayMethod" class="form-label">Phương thức thanh toán</label>
+            <select id="inputPayMethod" name="inputPayMethod" class="form-select">
+                <option value="1" selected>Thanh toán khi nhận hàng</option>
+                <option value="2">Thanh toán online</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-green">Thanh toán</button>
+        </div>
+    </form>
+</div>

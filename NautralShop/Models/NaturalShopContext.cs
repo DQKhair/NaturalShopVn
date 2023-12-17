@@ -126,9 +126,9 @@ public partial class NaturalShopContext : DbContext
     //Product
 
     //Promotion
-    public async Task<IList<Product>> GetListPromotions()
+    public async Task<IList<Product>> GetListPromotions(string search)
     {
-        return await Products.FromSqlRaw("EXEC GetListPromotions").ToListAsync();
+        return await Products.FromSqlRaw("EXEC GetListPromotions @search",new SqlParameter("@search",search)).ToListAsync();
     }
     public async Task<IList<Product>> GetPromotionNotValue()
     {
@@ -147,9 +147,10 @@ public partial class NaturalShopContext : DbContext
     //Promotion
     
     //Vouchers
-    public async Task<IList<Voucher>> GetListVouchers()
+    public async Task<IList<Voucher>> GetListVouchers(string search)
     {
-        return await Vouchers.FromSqlRaw("EXEC GetListVouchers").ToListAsync();
+        var result = await Vouchers.FromSqlRaw("EXEC GetListVouchers @search", new SqlParameter("@search", search)).ToListAsync();
+        return result;
     }
     public async Task<Voucher> GetVoucherById(string voucherId)
     {
@@ -273,6 +274,7 @@ public partial class NaturalShopContext : DbContext
         await Database.ExecuteSqlRawAsync("EXEC OnAccountEmployee @employeeId", new SqlParameter("@employeeId", employeeId));
     }
     //End Employee
+    //Order
     public async Task<IList<Order>> GetListOrders()
     {
         return await Orders.FromSqlRaw("EXEC GetListOrders").ToListAsync();
@@ -286,15 +288,19 @@ public partial class NaturalShopContext : DbContext
         var result = await Orders.FromSqlRaw("EXEC GetOrdersById @orderId", new SqlParameter("@orderId", orderId)).ToListAsync();
         return result.SingleOrDefault()!;
     }
-    public async Task ConfirmOrder(string orderId)
+    public async Task ConfirmOrder(string orderId, string employeeId)
     {
-        await Database.ExecuteSqlRawAsync("EXEC ConfirmOrder @orderId", new SqlParameter("@orderId",orderId));
+        await Database.ExecuteSqlRawAsync("EXEC ConfirmOrder @orderId, @employeeId",new SqlParameter("@orderId",orderId),
+            new SqlParameter("@employeeId",employeeId)
+            );
     }
-    public async Task CancelOrder(string orderId)
+    public async Task CancelOrder(string orderId, string employeeId)
     {
-        await Database.ExecuteSqlRawAsync("EXEC CancelOrder @orderId", new SqlParameter("@orderId", orderId));
+        await Database.ExecuteSqlRawAsync("EXEC CancelOrder @orderId, @employeeId", new SqlParameter("@orderId", orderId),
+            new SqlParameter("@employeeId", employeeId)
+            );
     }
-    //Order
+
     //End Order
     //statistic
     public async Task<IList<Order>> GetValueStatisticYear(int yearValue)

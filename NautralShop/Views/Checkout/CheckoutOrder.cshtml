@@ -1,0 +1,189 @@
+﻿@using NaturalShop.Models;
+@{
+    ViewData["Title"] = "Xác nhận thanh toán";
+    var datainf = ViewData["infs"] as InfomationCustomerCheckout?? new InfomationCustomerCheckout();
+    var dataCart = ViewData["carts"] as List<Cart>?? new List<Cart>();
+    var namecus ="";
+    var address = "";
+    var payMethod = "";
+    var coutCart = 0;
+    double totalMoneyProduct = 0;
+
+
+    if(datainf != null && dataCart != null)
+    {
+        namecus = datainf.LName + " " + datainf.FName;
+        address = $"{datainf.AddressStreet}, {datainf.AddressWard}, {datainf.AddressDistrict}, {datainf.AddressCity}";
+        payMethod = (datainf.PaymentMethod == 1) ? "Thanh toán khi nhận hàng" : "Thanh toán online";
+
+        foreach (var item in dataCart)
+        {
+            coutCart += item.Quantity;
+            totalMoneyProduct += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice));
+        }
+    }
+    double totalMoneyOrder = totalMoneyProduct + 32000;
+}
+<style>
+    .footerCheckout {
+        background-color: #fff;
+        padding: 20px 20px;
+    }
+
+    .footerCheckout .header_FooterCheckout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+     .footerCheckout .header_FooterCheckout p:first-child {
+          font-size: 1.2rem;
+          font-weight: bold;
+     }
+
+    .footerCheckout .body_FooterCheckout {
+         display: flex;
+         justify-content: end;
+         margin: 10px 20px;
+    }
+
+    .container__content_body_FooterCheckout {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .container__content_body_FooterCheckout #totalMoneyPayCheckout {
+            color: red;
+    }
+
+    .footerCheckout .footer_FooterCheckout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer_FooterCheckout .BtnSubmitCheckout {
+        width: 30%;
+    }
+
+    .footer_FooterCheckout .NoticeCheckout{
+        width: 30%;
+    }
+    .footer_FooterCheckout #SubmitOrder {
+        width: 100%;
+        padding: 10px;
+        background-color: #ff1342;
+        border: 1px solid #ff1342;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .footer_FooterCheckout #SubmitOrder:hover {
+        color: #fff;
+        background-color: #b81031;
+        border: 1px solid #b81031;
+    }
+
+    .container__content_body_FooterCheckout .transporter_FooterCheckout {
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .container__content_body_FooterCheckout .transporter_FooterCheckout p {
+        font-size: small;
+        padding-bottom: 10px;
+    }
+</style>
+<div class="container">
+    <form asp-action="CheckoutOrder" asp-controller="checkout" method="post">
+    <div class="header_Address my-3">
+        <h5>Thông tin đơn hàng</h5>
+        <div class="d-flex">
+            <p class="fw-lighter"><span class="fw-normal">Khách hàng: </span>@namecus</p>
+            <p class="mx-5 fw-lighter"><span class="fw-normal">Địa chỉ: </span>@address</p>
+            <a asp-action="index" asp-controller="checkout" >Thay đổi</a>
+        </div>
+    </div>
+    <div class="body_carts table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Số tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewData["carts"] as List<Cart> ?? new List<Cart>())
+                {
+                    <tr>
+                        @{
+                            string productId = item.Product!.ProductId;
+                            int price = Convert.ToInt32(item.Product!.ProductPrice);
+                            int quantity = Convert.ToInt32(item.Quantity);
+                            double totalMoney = price * quantity;
+                        }
+                        <td> <p>@item.Product!.ProductName</p></td>
+                        <td><p>@price.ToString("n0")<span class="text-decoration-underline">đ</span></p></td>
+                        <td>
+                            <div class="d-inline-block">
+                                <input id="inputQuantity" class="form-control text-center bg-white w-50" type="text" value="@item.Quantity" maxlength="2" min="1" readonly />
+                            </div>
+                        </td>
+                        <td><p class="text-danger">@totalMoney.ToString("n0")<span class="text-decoration-underline">đ</span></p></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="footer_checkOrder">
+        <div class="footerCheckout">
+            <div class="header_FooterCheckout">
+                <p>Phương thức thanh toán</p>
+                <p id="methodPay">@payMethod</p>
+            </div>
+
+
+            <div class="body_FooterCheckout">
+                <div class="container__content_body_FooterCheckout">
+                    <div class="transporter_FooterCheckout">
+                        <span>Đơn vị vận chuyển: </span>
+                        <span>Nhanh</span>
+                        <p>Nhận hàng từ 3-5 ngày</p>
+                    </div>
+                    <div class="TotalMoney_FooterCheckout">
+                        <span>Tổng tiền hàng: </span>
+                        <span id="totalMoneyCheckout">@totalMoneyProduct.ToString("n0")<span class="text-decoration-underline">đ</span></span>
+                    </div>
+                    <div class="FeeTransport_FooterCheckout">
+                        <span>Phí vận chuyển: </span>
+                        <span id="FeeTransport">32.000<span class="text-decoration-underline">đ</span></span>
+                    </div>
+                    @*
+                    <div class="ValueVoucher_FooterCheckout">
+                        <span>Giảm giá: </span>
+                        <span id="ValueVoucher">0 đ</span>
+                    </div> *@
+                    <div class="TotalPay_FooterCheckout">
+                        <span>Tổng thanh toán: </span>
+                        <span id="totalMoneyPayCheckout">@totalMoneyOrder.ToString("n0")<span class="text-decoration-underline">đ</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_FooterCheckout">
+                    <div class="NoticeCheckout"><p>Nhấn đặt hàng đồng nghĩa với việc bạn đồng ý tuân theo <span style="color:  #93c355;"> Điều khoản của Natural Shop</span></p></div>
+                <div class="BtnSubmitCheckout">
+                    <button type="submit" id="SubmitOrder" class="btn">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</div>      

@@ -21,18 +21,18 @@
     }
 
     .container_content div p{
-            color: #b66dff
+            color: #000
     }
 
     .action i{
-        color: #b66dff;
+        color: var(--colorPage);
     }
     .action i:hover{
-            color: #6921b1;
+            color: var(--colorHoverPage);
     }
 
     .action .fa-trash {
-        color: #6921b1;
+        color: var(--colorPage);
     }
     .action .fa-trash:hover{
             color: #cc0000;
@@ -42,7 +42,7 @@
     <div class="text-center"><p class="fs-4 fw-bold">Danh mục sản phẩm</p></div>
 
     <p>
-        <a href="@Url.Action("create","categories",new {area = "admin"})" class="btn btn-gradient-primary mt-4">Thêm mới</a>
+        <a href="@Url.Action("create","categories",new {area = "admin"})" class="btn btn-green mt-4">Thêm mới</a>
     </p>
     <hr />
     <div class="table-responsive">

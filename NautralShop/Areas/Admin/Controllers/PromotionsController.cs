@@ -16,9 +16,9 @@ namespace NautralShop.Areas.Admin.Controllers
             this._context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? search)
         {
-            var _product = await _context.GetListPromotions();
+            var _product = await _context.GetListPromotions(search??"");
             return View(_product);
         }
 

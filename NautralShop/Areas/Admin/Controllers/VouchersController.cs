@@ -17,10 +17,10 @@ namespace NautralShop.Areas.Admin.Controllers
             this._context = context;
         }
 
-        public async Task <IActionResult> Index()
+        public async Task <IActionResult> Index(string? search)
         {
-            var _voucher = await _context.GetListVouchers(); 
-            return View(_voucher);
+           var _voucher = await _context.GetListVouchers(search??"");
+           return View(_voucher);
         }
 
         public async Task<IActionResult> DetailVoucher(string? id)

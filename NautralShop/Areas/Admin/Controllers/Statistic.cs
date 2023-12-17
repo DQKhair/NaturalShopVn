@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using NautralShop.Models;
-using static NuGet.Packaging.PackagingConstants;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
@@ -43,12 +43,20 @@ namespace NautralShop.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetOrdersByPercent(int year)
         {
-            var count_StatusSuccess = _context.Orders.Count(order => order.StatusOrderId == 5 && order.OrderDate.Year == year);
+            var count_StatusSuccess = _context.Orders.Count(o => o.StatusOrderId == 5 && o.OrderDate.Year == year);
             var count_StatusCancel = _context.Orders.Count(order => order.StatusOrderId == 6 && order.OrderDate.Year == year);
-            double percentSuccess = Convert.ToDouble(( Convert.ToDouble(count_StatusSuccess) / (Convert.ToDouble(count_StatusSuccess) + Convert.ToDouble(count_StatusCancel)))) * 100;
-            double percentCancel = Convert.ToDouble((Convert.ToDouble(count_StatusCancel) / (Convert.ToDouble(count_StatusSuccess) + Convert.ToDouble(count_StatusCancel)))) * 100;
+            double totalOrders = count_StatusSuccess + count_StatusCancel;
 
-            return Json(new { percentSuccess = percentSuccess, percentCancel = percentCancel });
+            double percentSuccess = totalOrders != 0 ? (double)count_StatusSuccess / totalOrders * 100 : 0;
+            double percentCancel = totalOrders != 0 ? (double)count_StatusCancel / totalOrders * 100 : 0;
+
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
+            };
+
+            var result = new JsonResult(new { percentSuccess = percentSuccess, percentCancel = percentCancel }, options);
+            return result;
         }
     }
 }

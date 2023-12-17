@@ -12,10 +12,15 @@
         // Lấy các claim từ Identity
         var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
         var role = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
+        var userId = claimsIdentity.FindFirst("EmployeeId")?.Value;
         ViewBag.Name = userName;
+        ViewBag.employeeId = userId;
         // Sử dụng thông tin claim theo nhu cầu của bạn
     }
     var name = ViewBag.Name;
+    var employeeId = ViewBag.employeeId;
+    var controllerName = ViewContext.RouteData.Values["controller"] as string;
+    var actionName = ViewContext.RouteData.Values["action"] as string;
 }
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -27,12 +32,12 @@
             <span class="mdi mdi-menu"></span>
         </button>
         <div class="search-field d-none d-md-block">
-            <form class="d-flex align-items-center h-100" action="#">
+            <form class="d-flex align-items-center h-100" asp-action="@actionName" asp-controller="@controllerName" method="get">
                 <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
                         <i class="input-group-text border-0 mdi mdi-magnify"></i>
                     </div>
-                    <input type="text" class="form-control bg-transparent border-0" placeholder="Search">
+                    <input type="text" class="form-control bg-transparent border-0" placeholder="Search" name="search">
                 </div>
             </form>
         </div>
@@ -48,7 +53,7 @@
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" asp-action="index" asp-controller="infomations" asp-route-employeeId=@employeeId>
                         <i class="mdi mdi-cached me-2 text-success"></i> Thông tin cá nhân
                     </a>
                     <div class="dropdown-divider"></div>

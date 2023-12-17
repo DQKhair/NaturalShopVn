@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Quản lý voucher";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    DateTime currentDate = DateTime.Now;
 }
 
 <style>
@@ -23,31 +24,30 @@
     }
 
         .container_content div p {
-            color: #b66dff
+            color: #000;
         }
 
     .action i {
-        color: #b66dff;
+        color: var(--colorPage);
     }
 
         .action i:hover {
-            color: #6921b1;
+            color: var(--colorHoverPage);
         }
 
     .action .fa-trash {
-        color: #6921b1;
+        color: var(--colorPage);
     }
 
         .action .fa-trash:hover {
             color: #cc0000;
         }
-
 </style>
 <div class="container_content">
     <div class="text-center"><p class="fs-4 fw-bold">Quản lý Voucher</p></div>
 
     <p>
-        <a href="@Url.Action("CreateVoucher","vouchers",new {area = "admin"})" class="btn btn-gradient-primary mt-4">Thêm mới</a>
+        <a href="@Url.Action("CreateVoucher","vouchers",new {area = "admin"})" class="btn btn-green mt-4">Thêm mới</a>
     </p>
     <hr />
     <div class="table-responsive">
@@ -66,6 +66,9 @@
                     <th>
                         <p class="fs-5">@Html.DisplayName("Số lượng")</p>
                     </th>
+                    <th>
+                        <p>Tình trạng</p>
+                    </th>
                     <th> <p class="fs-5">Thao tác</p></th>
                 </tr>
             </thead>
@@ -76,7 +79,6 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-
                         <td>
                             @{
                                 ++count;
@@ -92,7 +94,9 @@
                         <td>
                             <p> @Html.DisplayFor(modelItem => item.VoucherQuantity) </p>
                         </td>
-                        
+                        <td>
+                            <p @(item.DateExpire < currentDate ? "class=text-danger": "" )>  @(item.DateExpire < currentDate ? "Hết thời hạng" : "Còn thời hạng") </p>
+                        </td>
                         <td>
                             <div class="fs-5 action">
                                 <a asp-action="DetailVoucher" asp-controller="vouchers" asp-area="admin" asp-route-id="@item.VoucherId" class="btnInfVoucher"><i class="fa-solid fa-circle-info"></i></a>

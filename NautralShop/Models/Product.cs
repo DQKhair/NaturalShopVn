@@ -27,7 +27,7 @@ public partial class Product
 
     public bool ProductStatus { get; set; }
     public int? CategoryId { get; set; }
-    public string? CategoryName { get; set; } = string.Empty!;
+    //public string? CategoryName { get; set; } = string.Empty!;
     public int ProductQuantity { get; set; } = 0!;
     public string? ProductImage2 { get; set; } = string.Empty!;
     public string? ProductImage3 { get; set; } = string.Empty!;

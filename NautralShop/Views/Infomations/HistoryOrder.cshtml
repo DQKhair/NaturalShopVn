@@ -1,0 +1,106 @@
+﻿@model IEnumerable<NautralShop.Models.Order>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Lịch sử đặt hàng";
+    int countIndex = 0;
+}
+<div class="container">
+    <div class="table table-responsive">
+        <table class="table table-borderless text-center">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tên khách hàng</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Ngày</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@(++countIndex)</td>
+                        <td>@item.OrderCustomerName</td>
+                        <td>@item.OrderTotalQuantity</td>
+                        <td>@item.OrderTotalPrice.ToString("n0")<span class="text-decoration-underline">đ</span></td>
+                        <td>@(item.OrderDate.ToString("dd/MM/yyy HH:mm:ss"))</td>
+                        <td>@item.StatusOrder!.StatusOrderName</td>
+                        <td><a onclick="DisplayHistoryOrderDetail(this)" class="text-primary text-decoration-underline" data-orderId="@item.OrderId" data-bs-toggle="modal" data-bs-target="#detailHistoryOrder">Chi tiết</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="detailHistoryOrder" tabindex="-1" aria-labelledby="detailHistoryOrderModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Chi tiết đơn hàng</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="infomationCustomer">
+                    <p class="fw-bold">Tên khách hàng: <span class="fw-normal" id="customerName"></span></p>
+                    <p class="fw-bold">Địa chỉ: <span class="fw-normal" id="customerAddress"></span></p>
+                    <p class="fw-bold">Số điện thoại: <span class="fw-normal" id="customerPhone"></span></p>
+                    <p class="fw-bold">Ngày: <span class="fw-normal" id="orderDate"></span></p>
+                    <p class="fw-bold">Trạng thái đơn hàng: <span class="fw-normal" id="orderStatus"></span></p>
+                    <p class="fw-bold">Mã đơn hàng: <span class="fw-normal" id="orderId"></span></p>
+                </div>
+                <div class="table table-responsive">
+                    <table class="table table-borderless text-center">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listHistoryOrderDetail">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+        function DisplayHistoryOrderDetail(tagA) {
+            const orderId = tagA.getAttribute('data-orderId');
+            $.get(`/HistoryOrderDetail/orderId=${orderId}`, (res) => {
+                $("#listHistoryOrderDetail").empty();
+                $.each(res, (index, data) => {
+                    const tr = $("<tr></tr>");
+                        const td_index = $("<td></td>").text(index)
+                        const td_ProductName = $("<td></td>").text(data.productName)
+                        const td_Quantity = $("<td></td>").text(data.orderDetailQuantity)
+                        const td_TotalMoney = $("<td></td>").text(data.orderDetailPrice+"đ")
+                        tr.append(td_index, td_ProductName, td_Quantity, td_TotalMoney)
+                        $("#listHistoryOrderDetail").append(tr);
+
+                        $("#customerName").text(data.customerName);
+                        $("#customerAddress").text(data.customerAddress)
+                        $("#customerPhone").text(data.customerPhone);
+                        $("#orderDate").text(data.orderDate);
+                        $("#orderStatus").text(data.orderStatus);
+                        $("#orderId").text(data.orderId)
+                })
+
+            })
+        }
+</script>
+
+     

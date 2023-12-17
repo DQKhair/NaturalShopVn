@@ -1,4 +1,33 @@
-﻿<!DOCTYPE html>
+﻿@using NaturalShop.Models;
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json;
+
+@{
+    var data = Context.Session.GetString("cart");
+
+    int coutCart = 0;
+    if (data == null)
+    {
+        coutCart = 0;
+    }
+    else
+    {
+        var data2 = Context.Session.GetString("cart");
+        if(data2 == null)
+        {
+            data2 = "";
+        }
+        List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(data2)?? new List<Cart>();
+        foreach (var item in dataCart)
+        {
+            coutCart += item.Quantity;
+        }
+
+    }
+
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,8 +45,10 @@
         {
             var userName = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
             var role = claimsIdentity.FindFirst(ClaimTypes.Role)?.Value;
+            var userId = claimsIdentity.FindFirst("CustomerId")?.Value;
             ViewBag.UserName = userName;
             ViewBag.Role = role;
+            ViewBag.CustomerId = userId;
         }
     }
 </head>
@@ -35,8 +66,8 @@
                 </div>
            </div>
            <div class="search_header mx-3" style="width:35%">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                <form class="d-flex" role="search" asp-action="FindProduct" asp-controller="home" method="get">
+                    <input class="form-control me-2" name="search" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
                     <button class="btn btn-green" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
            </div>
@@ -48,10 +79,10 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Hello! @ViewBag.UserName</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#scrollspyHeading3">Thông tin cá nhân</a></li>
-                                <li><a class="dropdown-item" href="#scrollspyHeading4">Lịch sử đặt hàng</a></li>
+                                <li><a class="dropdown-item" asp-action="index" asp-controller="infomations" asp-route-customerId=@ViewBag.CustomerId >Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item" asp-action="historyOrder" asp-controller="infomations" asp-route-customerId=@ViewBag.CustomerId>Lịch sử đặt hàng</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" asp-action="Logout" asp-controller="login">Đăng xuất</a></li>
+                                <li><a class="dropdown-item" asp-action="Logout" asp-controller="login">Đăng xuất</a></li>
                             </ul>
                             </li>
                        </ul>
@@ -60,8 +91,8 @@
                         <a asp-action="login" asp-controller="login">Đăng nhập</a>
                     }
                </div>
-               <div>
-                    <a href="#">Giỏ hàng <i class="fa-solid fa-cart-shopping"></i></a>
+               <div class="m-2">
+                    <a asp-action="index" asp-controller="Cart">Giỏ hàng <i class="fa-solid fa-cart-shopping"><span class="bg-danger text-white rounded" style="position:relative; left:-5px; top:5px;font-size:10px; padding:2px">@coutCart</span></i></a>
                </div>
            </div>
        </div>
@@ -117,7 +148,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://kit.fontawesome.com/fbda8849fb.js"
             crossorigin="anonymous"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

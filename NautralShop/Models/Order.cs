@@ -5,8 +5,8 @@ namespace NautralShop.Models;
 
 public partial class Order
 {
-    public string OrderId { get; set; } = null!;
-
+    public string OrderId { get; set; } = string.Empty;
+        
     public DateTime OrderDate { get; set; }
 
     public int OrderTotalQuantity { get; set; }
@@ -22,14 +22,14 @@ public partial class Order
     public string? CustomerId { get; set; }
 
     public string? EmployeeId { get; set; }
-
+        
     public int? PaymentMethodId { get; set; }
 
-    public string PaymentMethodName { get; set; } = string.Empty;
+    //public string? PaymentMethodName { get; set; } = string.Empty;
 
     public int? StatusOrderId { get; set; }
 
-    public string StatusOrderName { get; set; } = string.Empty;
+    //public string? StatusOrderName { get; set; } = string.Empty;
 
     public virtual Customer? Customer { get; set; }
 

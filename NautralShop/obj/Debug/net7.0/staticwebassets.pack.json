@@ -921,6 +921,10 @@
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\layoutAdmin.css",
+      "PackagePath": "staticwebassets\\css\\layoutAdmin.css"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -933,20 +937,16 @@
       "PackagePath": "staticwebassets\\images\\134a108d-a0f1-4300-8ff6-8f5097d842b7_MAT-NA-NGU-3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\1a67e7ea-bf16-401f-83e9-9ccb6c773229_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
-      "PackagePath": "staticwebassets\\images\\1a67e7ea-bf16-401f-83e9-9ccb6c773229_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
-    },
-    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
       "PackagePath": "staticwebassets\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg",
-      "PackagePath": "staticwebassets\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\47d7938a-52e2-44d8-b681-e43b93c96928_DanXaKhoTinhChatBuoi2.jpg",
+      "PackagePath": "staticwebassets\\images\\47d7938a-52e2-44d8-b681-e43b93c96928_DanXaKhoTinhChatBuoi2.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\4e926272-c21d-4a2d-9d27-77f455e2fd36_DanXaKhoTinhChatBuoi2.jpg",
-      "PackagePath": "staticwebassets\\images\\4e926272-c21d-4a2d-9d27-77f455e2fd36_DanXaKhoTinhChatBuoi2.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg",
+      "PackagePath": "staticwebassets\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\5b629ae6-587e-4ec2-9e0c-9c147e923340_quantum_beauty_world_matnanguloveworldhoahong.jpg",
@@ -957,12 +957,12 @@
       "PackagePath": "staticwebassets\\images\\6bead991-8489-4faa-afb1-00c2f385e081_TAY-TE-BAO-CHET-VA-THAI-DOC-DA-3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg",
-      "PackagePath": "staticwebassets\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\79159435-b098-4d4e-a732-df09fe36642f_DAU-XA-KHO-3.jpg",
+      "PackagePath": "staticwebassets\\images\\79159435-b098-4d4e-a732-df09fe36642f_DAU-XA-KHO-3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\962b65ff-260e-45f7-96df-c1ed893ee39d_DAU-XA-KHO-3.jpg",
-      "PackagePath": "staticwebassets\\images\\962b65ff-260e-45f7-96df-c1ed893ee39d_DAU-XA-KHO-3.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg",
+      "PackagePath": "staticwebassets\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\9cb400b6-30bf-4eb6-a255-5c4690ddf063_TayTeBaoChetTinhChatrauMa2.jpg",
@@ -975,6 +975,10 @@
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\c40d4516-f9a4-4982-bde2-82094f977cb6_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
       "PackagePath": "staticwebassets\\images\\c40d4516-f9a4-4982-bde2-82094f977cb6_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\e10eeb8b-0c02-4a1f-bd63-ae3ad986a144_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
+      "PackagePath": "staticwebassets\\images\\e10eeb8b-0c02-4a1f-bd63-ae3ad986a144_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\f05c11d4-08b3-4401-840c-b56e94503960_MatNaNgu2.jpg",

@@ -56,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Areas/Admin/Views/Infomations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5mb21hdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Areas/Admin/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -136,8 +140,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVm91Y2hlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Checkout/CheckoutOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ2hlY2tvdXRPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Checkout/CheckoutOrderFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ2hlY2tvdXRPcmRlckZhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Checkout/CheckoutOrderSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ2hlY2tvdXRPcmRlclN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Checkout/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Home/AboutUs.cshtml]
@@ -156,6 +180,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvcjQwNC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Home/FindProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaW5kUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -170,6 +198,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Home/_PartialSlider.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfUGFydGlhbFNsaWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Infomations/HistoryOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb21hdGlvbnNcSGlzdG9yeU9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Infomations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb21hdGlvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Du_an_Website/DotNet/NaturalShop/NaturalShop/NautralShop/Views/Login/Login.cshtml]

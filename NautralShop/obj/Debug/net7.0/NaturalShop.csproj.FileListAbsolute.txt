@@ -526,3 +526,7 @@ D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\ref
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\NaturalShop.pdb
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\NaturalShop.genruntimeconfig.cache
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\ref\NaturalShop.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\JetBrains.Annotations.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\X.PagedList.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\NaturalShop.MvcApplicationPartsAssemblyInfo.cs

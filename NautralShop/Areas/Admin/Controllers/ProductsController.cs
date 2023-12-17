@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using NautralShop.Areas.Admin.Models;
 using NautralShop.Models;
 using System.Net.WebSockets;
+using X.PagedList;
 
 namespace NautralShop.Areas.Admin.Controllers
 {
@@ -21,10 +22,14 @@ namespace NautralShop.Areas.Admin.Controllers
             this._webHostEnvironment = _webHostEnvironment;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page,string? search)
         {
-			ViewData["ProductList"] = await _context.GetListProducts();
-			return View();
+			var product = await _context.Products.Where(p => p.ProductStatus == true && p.ProductName.Contains(search??"")).Include(c => c.Category).ToListAsync();
+            var pageSize = 8;
+            var pageNumber = page ?? 1;
+            var pageList = product.ToPagedList(pageNumber, pageSize);
+            ViewData["ProductList"] = pageList;
+            return View();
         }
 
         public IActionResult Create()

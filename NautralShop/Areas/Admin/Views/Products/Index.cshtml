@@ -1,4 +1,6 @@
-﻿@model IEnumerable<NautralShop.Models.Product>
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@model IEnumerable<NautralShop.Models.Product>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -23,31 +25,59 @@
     }
 
         .container_content div p {
-            color: #b66dff;
+            color: #000;
         }
 
     .action i {
-        color: #b66dff;
+        color: var(--colorPage);
     }
 
         .action i:hover {
-            color: #6921b1;
+            color: var(--colorHoverPage);
         }
 
     .action .fa-trash {
-        color: #6921b1;
+        color: var(--colorPage);
     }
 
         .action .fa-trash:hover {
             color: #cc0000;
         }
 
+    .pagination-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .pagination-container .pagination {
+            display: inline-block;
+        }
+
+            .pagination-container .pagination li {
+                display: inline;
+                margin: 0 5px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .pagination-container .pagination .disabled {
+                color: #ccc;
+                pointer-events: none;
+            }
+
+            .pagination-container .pagination .active {
+                background-color: #007bff;
+                color: #fff;
+                border-color: #007bff;
+            }
+
 </style>
 <div class="container_content">
     <div class="text-center"><p class="fs-4 fw-bold">Danh mục sản phẩm</p></div>
 
     <p>
-        <a href="@Url.Action("create","products",new {area = "admin"})" class="btn btn-gradient-primary mt-4">Thêm mới</a>
+        <a href="@Url.Action("create","products",new {area = "admin"})" class="btn btn-green mt-4">Thêm mới</a>
     </p>
     <hr />
     <div class="table-responsive">
@@ -76,46 +106,55 @@
             </tr>
         </thead>
         <tbody>
-            @{var count = 0;}
-                @foreach (var item in ViewData["ProductList"] as IEnumerable<NautralShop.Models.Product>?? new List<NautralShop.Models.Product>())
-            {
-                    <tr>
-                    
-                        <td>
-                            @{
-                                ++count;
-                            }
-                            <p>@Convert.ToInt32(count) </p>
-                        </td>
-                        <td>
-                            <p>@Html.DisplayFor(modelItem => item.ProductName) </p>
-                        </td>
-                    <td>
-                            @{
-                                string pathImg = "https://localhost:7234";
-                            }
-                            <div class="imgProduct w-25 mx-auto">
-                                <img src="@pathImg@Html.DisplayFor(modelItem => item.ProductImage)" alt="Hình sản phẩm" class="w-100 rounded h-100" />
-                            </div>
-                    </td>
-                    <td>
-                        <p>@Html.DisplayFor(modelItem => item.ProductQuantity)</p>
-                    </td>
-                    <td>
-                        <p>@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
-                    </td>
-                    <td>
-                        <p>@Html.DisplayFor(modelItem => item.CategoryName)</p>
-                    </td>
-                    <td>
-                        <div class="fs-5 action">
-                            <a asp-action="EditProduct" asp-route-id="@item.ProductId" class="btnEditProduct"><i class="fa-regular fa-pen-to-square me-3"></i></a>
-                                <a asp-action="DeleteProduct" asp-route-id="@item.ProductId" class="DeleteProduct"><i class="fa-solid fa-trash"></i></a>
-                        </div>
-                    </td>
-                </tr>
-            }
+            @{
+                var count = 0;
+                var productList = ViewData["ProductList"] as X.PagedList.IPagedList<NautralShop.Models.Product>;
+             }
+                @if (productList != null)
+                {
+                    @foreach (var item in productList)
+                    {
+                        <tr>
+
+                            <td>
+                                @{
+                                    ++count;
+                                }
+                                <p>@Convert.ToInt32(count) </p>
+                            </td>
+                            <td>
+                                <p>@Html.DisplayFor(modelItem => item.ProductName) </p>
+                            </td>
+                            <td>
+                                @{
+                                    string pathImg = "https://localhost:7234";
+                                }
+                                <div class="imgProduct w-25 mx-auto">
+                                    <img src="@pathImg@Html.DisplayFor(modelItem => item.ProductImage)" alt="Hình sản phẩm" class="w-100 rounded h-100" />
+                                </div>
+                            </td>
+                            <td>
+                                <p>@Html.DisplayFor(modelItem => item.ProductQuantity)</p>
+                            </td>
+                            <td>
+                                <p>@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                            </td>
+                            <td>
+                                <p>@Html.DisplayFor(modelItem => item.Category.CategoryName)</p>
+                            </td>
+                            <td>
+                                <div class="fs-5 action">
+                                    <a asp-action="EditProduct" asp-route-id="@item.ProductId" class="btnEditProduct"><i class="fa-regular fa-pen-to-square me-3"></i></a>
+                                    <a asp-action="DeleteProduct" asp-route-id="@item.ProductId" class="DeleteProduct"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
         </tbody>
     </table>
     </div>
+</div>
+<div class="pagination-container">
+    @Html.PagedListPager(productList, page => Url.Action("Index", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
 </div>

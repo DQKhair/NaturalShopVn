@@ -1,0 +1,311 @@
+﻿@using NaturalShop.Models
+@using Microsoft.AspNetCore.Http;
+@using Newtonsoft.Json;
+@{
+    ViewData["Title"] = "Giỏ hàng";
+
+    var data = Context.Session.GetString("cart");
+
+    int coutCart = 0;
+    double totoalMoney = 0;
+    if (data == null)
+    {
+        coutCart = 0;
+        totoalMoney = 0;
+    }
+    else
+    {
+        var data2 = Context.Session.GetString("cart");
+        if (data2 == null)
+        {
+            data2 = "";
+        }
+        List<Cart> dataCart = JsonConvert.DeserializeObject<List<Cart>>(data2) ?? new List<Cart>();
+        foreach (var item in dataCart)
+        {
+            coutCart += item.Quantity;
+            totoalMoney += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice));
+        }
+
+    }
+}
+
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+    .container_cart{
+        background-color: #f5f5f5;
+        padding:20px;
+        width:95%;
+        margin:20px auto 20px auto;
+        
+
+    }
+    .descriptionVoucher{
+        border:1px solid #93c355;
+        display:flex;
+        justify-content:flex-start; 
+        align-items:center;
+        border-radius: 5px;
+    }
+
+    p{
+        margin:0px;
+    }
+
+    .imgFreeShip{
+        width:3rem;
+    }
+
+    .headerTitleCart{
+        display:flex;
+        margin:20px auto 20px auto;
+        border: 1px solid #ccc;
+        align-items:center;
+        align-content:center;
+        padding:10px;
+        background-color:#fff;
+        border-radius:5px;
+    }
+
+    .bodyCart{
+        display: flex;
+        margin: 20px auto 20px auto;
+        border: 1px solid #ccc;
+        align-items: center;
+        align-content: center;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+    .bodyCart .productBodyCart {
+        flex: 3;
+        display:flex;
+        justify-content:start;
+    }
+
+    #inputQuantity{
+        width:3rem;
+    }
+
+    .productImg{
+        width:5rem;
+    }
+
+    .fa-trash-can{
+        cursor:pointer;
+        color: #000;
+    }
+    .fa-trash-can:hover{
+        color:red;
+    }
+
+    .TotalOrder {
+        border: 1px solid #93c355;
+        border-radius: 5px;
+    }
+
+
+    .footerCart {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+
+        .footerCart .totalItem {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            align-items: flex-start;
+            margin:10px 0px 10px 30px;        
+        }
+
+        .footerCart .btn_Buy {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+    .voucherApply {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10px 0;
+        padding:10px;
+    }
+
+        .voucherApply .headerVoucherApply {
+            text-align: center;
+        }
+
+            .voucherApply .headerVoucherApply i {
+                color: #93c355;
+                font-size: 1.2rem;
+            }
+
+            .voucherApply .headerVoucherApply span {
+                font-size: 1.2rem;
+            }
+
+        .voucherApply .footerVoucherApply {
+            margin-left: 30px;
+        }
+
+            .voucherApply .footerVoucherApply #AddVoucherApply {
+                text-align: center;
+                color: blue;
+                cursor: pointer;
+            }
+</style>
+<div class="container container_cart">
+    <div class="descriptionVoucher w-100 bg-white p-2">
+        <img class="imgFreeShip" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2Ffreeship.png?alt=media&token=3dcbc10a-4244-4bcb-9116-7d469dbc3757" alt="freeship" />
+        <p>Mua nhiều sản phẩm để được miễn phí vận chuyển bạn nhé!</p>
+    </div>
+
+    <div class="table-responsive bg-white my-2">
+        <table class="table table-borderless text-center align-items-center ">
+            <thead>
+                <tr>
+                    <th>
+                        <p>Sản phẩm</p>
+                    </th>
+                    <th>
+                        <p>Hình ảnh</p>
+                    </th>
+                    <th>
+                        <p>Đơn giá</p>
+                    </th>
+                    <th>
+                        <p>Số lượng</p>
+                    </th>
+                    <th>
+                        <p>Số tiền</p>
+                    </th>
+                    <th>
+                        <p>Thao tác</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in ViewData["carts"] as List<Cart> ?? new List<Cart>())
+             {
+                    <tr>
+                        @{
+                            string productId = item.Product!.ProductId;
+                            int price = Convert.ToInt32(item.Product!.ProductPrice);
+                        int quantity = Convert.ToInt32(item.Quantity);
+                        double totalMoney = price * quantity;
+                   }
+                <td> <p>@item.Product!.ProductName</p></td>
+                <td> <img class="productImg mx-3" src="@item.Product.ProductImage" alt="imgProduct" /></td>
+                        <td><p>@price.ToString("n0")<span class="text-decoration-underline">đ</span></p></td>
+                <td>
+                    <div class="d-inline-block">
+                        <button onclick="MinusQuantity(this)" data-productId=@productId data-quantity=@item.Quantity class="btn" style="border:1px solid #ccc">-</button>
+                    </div>
+                    <div class="d-inline-block">
+                       <input id="inputQuantity" class="form-control text-center" type="text" value="@item.Quantity" maxlength="2" min="1" readonly />
+                    </div>
+                    <div class="d-inline-block">
+                                <button onclick="PlusQuantity(this)" data-productId=@productId data-quantity=@item.Quantity class="btn" style="border:1px solid #ccc">+</button>
+                    </div>
+                </td>
+                        <td><p class="text-danger">@totalMoney.ToString("n0")<span class="text-decoration-underline">đ</span></p></td>
+                <td>
+                       <a asp-controller="cart" asp-action="DeleteCart" asp-route-productId=@item.Product.ProductId><i class="fa-solid fa-trash-can"></i></a>
+                </td>
+            </tr>
+            }
+            <tbody>
+        </table>
+    </div>
+
+    <div class="TotalOrder">
+        <div class="voucherApply">
+            <div class="headerVoucherApply">
+                <i class="fa-solid fa-tag"></i>
+                <span>Natural Shop @* voucher *@: </span>
+                <span id="codeVoucherSpan"></span>
+            </div>
+            <div class="footerVoucherApply">
+                @* <p id="AddVoucherApply">Choose voucher</p> *@
+            </div>
+
+        </div>
+        <div class="footerCart">
+            <div class="totalItem">
+                <p id="TotalQuantityPay">Tổng số lượng đơn hàng: @coutCart (Sản phẩm)</p>
+                <p>Vouchers giảm giá: <span id="codeVoucherValue">0</span>đ</p>
+                <p id="TotalMoneyPay" class="text-danger">Tổng tiền đơn hàng: @totoalMoney.ToString("n0")<span class="text-decorations-underline">đ</span> </p>
+            </div>
+           
+                <div class="btn_Buy">
+                @if (data != null)
+                {
+                    <a asp-action="index" asp-controller="Checkout" class="btn btn-green w-50 m-0" style="height: 50px;">Mua sản phẩm</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        function PlusQuantity(button) {
+
+            const productId = button.getAttribute('data-productId');
+            let quantity = parseInt(button.getAttribute('data-quantity')) + 1;
+            if (parseInt(quantity) <= 99) {
+                const dataJson = {
+                    "productId": productId,
+                    "quantity": quantity
+                }
+
+                $.ajax({
+                    url: `/UpdateCart/productId=${productId}&&quantity=${quantity}`,
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify(dataJson),
+                    success: (res) => {
+                        console.log(res);
+                        location.reload();
+                    },
+                    error: (err) => {
+                        console.error("Error update quantity", err)
+                    }
+                })
+            }
+        }
+        function MinusQuantity(button) {
+
+            const productId = button.getAttribute('data-productId');
+            let quantity = parseInt(button.getAttribute('data-quantity')) - 1;
+            if (parseInt(quantity) <= 99) {
+                const dataJson = {
+                    "productId": productId,
+                    "quantity": quantity
+                }
+
+                $.ajax({
+                    url: `/UpdateCart/productId=${productId}&&quantity=${quantity}`,
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify(dataJson),
+                    success: (res) => {
+                        console.log(res);
+                        location.reload();
+                    },
+                    error: (err) => {
+                        console.error("Error update quantity", err)
+                    }
+                })
+            }
+        }
+</script>

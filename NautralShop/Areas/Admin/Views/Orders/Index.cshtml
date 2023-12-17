@@ -1,6 +1,7 @@
-﻿@model IEnumerable<NautralShop.Models.Order>
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@model X.PagedList.IPagedList<NautralShop.Models.Order>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
 @{
     ViewData["Title"] = "Quản lý đơn hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -23,25 +24,54 @@
     }
 
         .container_content div p {
-            color: #b66dff
+            color: #000;
         }
 
     .action i {
-        color: #b66dff;
+        color: var(--colorPage);
     }
 
         .action i:hover {
-            color: #6921b1;
+            color: var(--colorHoverPage);
         }
 
     .action .fa-trash {
-        color: #6921b1;
+        color: var(--colorPage);
     }
 
         .action .fa-trash:hover {
             color: #cc0000;
         }
 
+
+
+    .pagination-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .pagination-container .pagination {
+            display: inline-block;
+        }
+
+            .pagination-container .pagination li {
+                display: inline;
+                margin: 0 5px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .pagination-container .pagination .disabled {
+                color: #ccc;
+                pointer-events: none;
+            }
+
+            .pagination-container .pagination .active {
+                background-color: #007bff;
+                color: #fff;
+                border-color: #007bff;
+            }
 </style>
 <div class="container_content">
     <div class="text-center"><p class="fs-4 fw-bold">Quản lý đơn hàng</p></div>
@@ -101,13 +131,13 @@
                             <p>@price.ToString("n0") VNĐ</p>
                         </td>
                         <td>
-                            <p> @Html.DisplayFor(modelItem => item.OrderDate) </p>
+                            <p> @item.OrderDate.ToString("dd/MM/yyyy HH:mm:ss") </p>
                         </td>
                         <td>
-                            <p> @Html.DisplayFor(modelItem => item.PaymentMethodName) </p>
+                            <p> @Html.DisplayFor(modelItem => item.PaymentMethod!.PaymentMethodName) </p>
                         </td>
                         <td>
-                            <p> @Html.DisplayFor(modelItem => item.StatusOrderName) </p>
+                            <p> @Html.DisplayFor(modelItem => item.StatusOrder!.StatusOrderName) </p>
                         </td>
                         <td>
                             <div class="fs-5 action">
@@ -119,4 +149,7 @@
             </tbody>
         </table>
     </div>
+</div>
+<div class="pagination-container">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
 </div>
