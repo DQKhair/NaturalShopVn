@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using NaturalShop.Models;
 using NautralShop.Models;
+using NaturalShop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,9 +33,9 @@ builder.Services.AddAuthorization(option =>
 builder.Services.AddSession(option =>
 {
     option.IdleTimeout = TimeSpan.FromDays(1);
-}); 
+});
 
-
+builder.Services.AddTransient<Mail>();
 
 builder.Services.AddHttpContextAccessor();
 

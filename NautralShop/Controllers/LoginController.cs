@@ -5,16 +5,22 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
+using MailKit.Net.Smtp;
+using MimeKit;
+using System.Net.Mail;
+using NaturalShop.Services;
 
 namespace NautralShop.Controllers
 {
     public class LoginController : Controller
     {
         private readonly NaturalShopContext _context;
+		private readonly Mail _mail;
 
-        public LoginController(NaturalShopContext context) 
+		public LoginController(NaturalShopContext context,Mail mail) 
         {
             this._context = context;
+            this._mail = mail;
         }
 
         public IActionResult Login()
@@ -158,5 +164,54 @@ namespace NautralShop.Controllers
             return View();
 		}
 
+        //forgot passwork
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword(string emailForgot)
+        {
+          try
+            {
+
+				if (emailForgot == null)
+				{
+					return NotFound("Lỗi không tìm thấy");
+				}
+				var customer = await _context.Customers.SingleOrDefaultAsync(c => c.CustomerEmail!.Equals(emailForgot));
+				if (customer == null)
+				{
+					ModelState.AddModelError("", "Email không tồn tại !");
+				}
+				else
+				{
+					string subject = "Reset Mật khẩu";
+					string message = "Mật khẩu là Naturalshop123 ";
+
+					if (customer.CustomerEmail != null)
+					{
+						string salt = BCrypt.Net.BCrypt.GenerateSalt(12);
+						await _mail.SendEmailAsync(customer.CustomerEmail, subject, message);
+
+                        customer.CustomerPassword = BCrypt.Net.BCrypt.HashPassword("Naturalshop123",salt);
+                        _context.SaveChanges();
+						ModelState.AddModelError("", "Mật khẩu đã được gửi vào mail");
+
+						return View();
+					}
+
+				}
+            return View();
+
+			}catch(Exception ex)
+            {
+                return View("Error forgot password " + ex);
+            }
+
+
+		}
 	}
 }

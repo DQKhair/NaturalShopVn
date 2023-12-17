@@ -530,3 +530,8 @@ D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\Jet
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\X.PagedList.dll
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
 D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\obj\Debug\net7.0\NaturalShop.MvcApplicationPartsAssemblyInfo.cs
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\MailKit.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\MimeKit.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\Du_an_Website\DotNet\NaturalShop\NaturalShop\NautralShop\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
