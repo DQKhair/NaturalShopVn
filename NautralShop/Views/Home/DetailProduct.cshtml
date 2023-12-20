@@ -42,7 +42,8 @@
 
         <div class="col-md-8 my-3">
             <h3>@Html.DisplayFor(model => model.ProductName)</h3>
-            <h4 class="text-danger">@Convert.ToInt32(Model.ProductPrice).ToString("n0") VNĐ</h4>
+            <h4 class="text-danger">@Convert.ToInt32(Model.ProductPrice - Model.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></h4>
+            <p class="text-secondary">Số lượng còn lại: <span id="productQuantity">@Model.ProductQuantity</span></p>
             @{
                 if (!String.IsNullOrEmpty(Model.ProductUseful) && !String.IsNullOrEmpty(Model.ProductUserManual) && String.IsNullOrEmpty(Model.ProductIngredient))
                 {
@@ -95,8 +96,8 @@
                 <button id="plusQuantity" class="border border-1 px-2 up_qty" style="cursor: pointer;">+</button>
             </div>
             <div class="my-3">
-                <a class="btn btn-green" href="#">Mua sản phẩm</a>
-                <a class="btn btn-danger" id="addToCart">Thêm vào giỏ</a>
+                @* <a class="btn btn-green" href="#">Mua sản phẩm</a> *@
+                <a class="btn btn-danger" id="addToCart">Mua sản phẩm</a>
             </div>
         </div>
     </div>

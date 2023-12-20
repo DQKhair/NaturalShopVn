@@ -11,27 +11,31 @@
         $("#addToCart").click(() => {
 
             var quantity = document.getElementById('inputQuantity').value;
-
+            var productQuantity = document.getElementById('productQuantity').innerText;
             const dataJson = {
                 "productId": productId,
                 "quantity": quantity
             }   
-
-             $.ajax({
-                 type: "POST",
-                 url: `/AddToCart/productId=${productId}&&quantity=${quantity}`,
-                 dataType: "json",
-                 contentType: "application/json",
-                 data: JSON.stringify(dataJson), 
-                 success: (res) => {
-                     console.log(res.value)
-                     alert("Thêm vào giỏ hàng thành công");
-                     location.reload();
-                 },
-                 error: (error) => {
-                     console.error("Error add to cart", error);
-                 }
-             })
+            if (productQuantity > 0 && productQuantity > quantity) {
+                $.ajax({
+                    type: "POST",
+                    url: `/AddToCart/productId=${productId}&&quantity=${quantity}`,
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify(dataJson),
+                    success: (res) => {
+                        console.log(res.value)
+                        alert("Sản phẩm đã được thêm vào giỏ hàng");
+                        location.reload();
+                    },
+                    error: (error) => {
+                        console.error("Error add to cart", error);
+                    }
+                })
+            } else {
+                alert('Sản phẩm không đủ số lượng');
+            }
+             
         })
     }
 })

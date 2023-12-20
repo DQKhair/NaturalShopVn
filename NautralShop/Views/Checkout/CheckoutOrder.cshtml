@@ -19,7 +19,7 @@
         foreach (var item in dataCart)
         {
             coutCart += item.Quantity;
-            totalMoneyProduct += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice));
+            totalMoneyProduct += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice - item.Product.ProductValuePromotion));
         }
     }
     double totalMoneyOrder = totalMoneyProduct + 32000;
@@ -124,7 +124,7 @@
                     <tr>
                         @{
                             string productId = item.Product!.ProductId;
-                            int price = Convert.ToInt32(item.Product!.ProductPrice);
+                            int price = Convert.ToInt32(item.Product!.ProductPrice - item.Product.ProductValuePromotion);
                             int quantity = Convert.ToInt32(item.Quantity);
                             double totalMoney = price * quantity;
                         }
@@ -164,11 +164,12 @@
                         <span>Phí vận chuyển: </span>
                         <span id="FeeTransport">32.000<span class="text-decoration-underline">đ</span></span>
                     </div>
-                    @*
+                    
                     <div class="ValueVoucher_FooterCheckout">
-                        <span>Giảm giá: </span>
-                        <span id="ValueVoucher">0 đ</span>
-                    </div> *@
+                        <span>Voucher giảm giá: </span>
+                        <span id="ValueVoucher">0<span class="text-decoration-underline">đ</span></span>
+                    </div>
+
                     <div class="TotalPay_FooterCheckout">
                         <span>Tổng thanh toán: </span>
                         <span id="totalMoneyPayCheckout">@totalMoneyOrder.ToString("n0")<span class="text-decoration-underline">đ</span></span>

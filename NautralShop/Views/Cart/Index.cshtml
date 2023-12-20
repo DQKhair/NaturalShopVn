@@ -24,7 +24,7 @@
         foreach (var item in dataCart)
         {
             coutCart += item.Quantity;
-            totoalMoney += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice));
+            totoalMoney += (Convert.ToDouble(item.Quantity) * Convert.ToDouble(item.Product!.ProductPrice - item.Product.ProductValuePromotion));
         }
 
     }
@@ -198,9 +198,9 @@
                     <tr>
                         @{
                             string productId = item.Product!.ProductId;
-                            int price = Convert.ToInt32(item.Product!.ProductPrice);
+                            int price = Convert.ToInt32(item.Product!.ProductPrice - item.Product.ProductValuePromotion);
                         int quantity = Convert.ToInt32(item.Quantity);
-                        double totalMoney = price * quantity;
+                        double totalMoney = price *  quantity ;
                    }
                 <td> <p>@item.Product!.ProductName</p></td>
                 <td> <img class="productImg mx-3" src="@item.Product.ProductImage" alt="imgProduct" /></td>
@@ -248,7 +248,7 @@
                 <div class="btn_Buy">
                 @if (data != null)
                 {
-                    <a asp-action="index" asp-controller="Checkout" class="btn btn-green w-50 m-0" style="height: 50px;">Mua sản phẩm</a>
+                    <a asp-action="index" asp-controller="Checkout" class="btn btn-green w-50 m-0 p-2">Mua sản phẩm</a>
                 }
             </div>
         </div>

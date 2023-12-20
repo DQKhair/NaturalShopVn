@@ -40,8 +40,8 @@
                         <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
                         <div class="card-body">
                             <h5 class="card-title text-dark">@item.ProductName</h5>
-                            <p class="card-text text-secondary text-decoration-line-through">Giá góc @Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
-                            <p class="card-text text-danger ">Chỉ còn @Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0") VNĐ</p>
+                            <p class="card-text text-secondary text-decoration-line-through">Giá góc @Convert.ToInt32(item.ProductPrice).ToString("n0")<span class="text-decoration-underline">đ</span></p>
+                            <p class="card-text text-danger ">Chỉ còn @Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                             @Html.ActionLink("Mua sản phẩm", "index", "DetailProduct", new { id = @item.ProductId }, new { @class = "btn btn-green mt-2 my-2" })
                         </div>
                     </div>

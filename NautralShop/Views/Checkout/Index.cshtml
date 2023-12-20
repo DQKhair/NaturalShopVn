@@ -15,6 +15,7 @@
         firstName = fullName.Substring(spaceIndex + 1); // Cắt từ vị trí dấu cách đến hết chuỗi
     }
     string customerPhone = customer?.CustomerPhone ?? "";
+    string customerEmail = customer?.CustomerEmail ?? "";
 
 }
     
@@ -36,6 +37,10 @@
         <div class="col-md-6">
             <label for="phoneCustomer" class="form-label">Số điện thoại</label>
             <input class="form-control" name="phoneCustomer" id="phoneCustomer" type="tel" value="@customerPhone" placeholder="Số điện thoại" pattern="((\+84)|(0))(\d{9,10})" title="Số điện thoại không hợp lệ" required>
+        </div>
+        <div class="col-md-6">
+            <label for="emailCustomer" class="form-label">Email</label>
+            <input class="form-control" name="emailCustomer" id="emailCustomer" type="tel" value="@customerEmail" placeholder="Nhập email" required>
         </div>
         <div class="col-6">
             <label for="inputAddressStreet" class="form-label">Địa chỉ</label>

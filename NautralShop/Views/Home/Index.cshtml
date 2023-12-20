@@ -24,7 +24,7 @@
                                 <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
-                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
                                 <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id =@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
                             </div>
@@ -50,7 +50,7 @@
                                 <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
-                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
                                 <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
                             </div>
@@ -75,7 +75,7 @@
                                 <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
-                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
                                 <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
                             </div>
@@ -100,7 +100,7 @@
                                 <img src="@item.ProductImage" class="card-img-top" alt="ảnh sản phẩm">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
-                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice).ToString("n0") VNĐ</p>
+                                    <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
                                 <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
                             </div>

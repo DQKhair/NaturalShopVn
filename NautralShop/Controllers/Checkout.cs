@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NaturalShop.Models;
+using NaturalShop.Services;
 using NautralShop.Models;
 using Newtonsoft.Json;
 using System.Security.Claims;
@@ -9,10 +10,12 @@ namespace NaturalShop.Controllers
     public class Checkout : Controller
     {
         private readonly NaturalShopContext _context;
+        private readonly Mail _mail;
 
-        public Checkout(NaturalShopContext context)
+        public Checkout(NaturalShopContext context, Mail mail)
         {
             this._context = context;
+            this._mail = mail;
         }
         public IActionResult Index()
         {
@@ -43,6 +46,7 @@ namespace NaturalShop.Controllers
                         inf.FName = form["fNameCustomer"]!;
                         inf.LName = form["lNameCustomer"]!;
                         inf.Phone = form["phoneCustomer"]!;
+                        inf.Email = form["emailCustomer"]!;
                         inf.AddressStreet = form["inputAddressStreet"]!;
                         inf.AddressWard = form["inputAddressWard"]!;
                         inf.AddressDistrict = form["inputAddressDistrict"]!;
@@ -61,6 +65,7 @@ namespace NaturalShop.Controllers
                         inf.FName = form["fNameCustomer"]!;
                         inf.LName = form["lNameCustomer"]!;
                         inf.Phone = form["phoneCustomer"]!;
+                        inf.Email = form["emailCustomer"]!;
                         inf.AddressStreet = form["inputAddressStreet"]!;
                         inf.AddressWard = form["inputAddressWard"]!;
                         inf.AddressDistrict = form["inputAddressDistrict"]!;
@@ -119,7 +124,7 @@ namespace NaturalShop.Controllers
                 foreach (var item in dataCart)
                 {
                     coutCart += item.Quantity;
-                    totalMoneyProduct += (Convert.ToInt32(item.Quantity) * Convert.ToInt32(item.Product!.ProductPrice));
+                    totalMoneyProduct += (Convert.ToInt32(item.Quantity) * Convert.ToInt32(item.Product!.ProductPrice - item.Product.ProductValuePromotion));
                 }
                 int totalMoneyOrder = totalMoneyProduct + 32000;
 
@@ -164,6 +169,8 @@ namespace NaturalShop.Controllers
                             }
                             //_context.SaveChange();
                             await _context.SaveChangesAsync();
+                            string subject = "Đơn hàng đã đặt";
+                            await _mail.SendEmailAsyncForProduct(dataInfoCus.Email, subject, totalMoneyOrder, dataCart,dataInfoCus);
                             //Clear session cart and infoCus
                             HttpContext.Session.Remove("infCheckout");
                             HttpContext.Session.Remove("cart");
