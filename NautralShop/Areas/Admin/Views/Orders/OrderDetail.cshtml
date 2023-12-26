@@ -139,7 +139,6 @@
                 dataType:"json",
                 success:  (result) => {
                     console.log(result);
-                    alert("Đơn hàng đã được cập nhật")
                     window.location.href="/admin/orders/index";
                 },
                 error: (error) => {
@@ -157,7 +156,6 @@
                 dataType: "json",
                 success: (result) => {
                     console.log(result);
-                    alert("Hủy đơn thành công")
                     window.location.href = "/admin/orders/index";
                 },
                 error: (error) => {

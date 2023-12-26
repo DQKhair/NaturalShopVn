@@ -25,7 +25,7 @@
                     data: JSON.stringify(dataJson),
                     success: (res) => {
                         console.log(res.value)
-                        alert("Sản phẩm đã được thêm vào giỏ hàng");
+                        //alert("Sản phẩm đã được thêm vào giỏ hàng");
                         location.reload();
                     },
                     error: (error) => {

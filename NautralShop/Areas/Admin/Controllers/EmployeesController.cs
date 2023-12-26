@@ -77,6 +77,7 @@ namespace NautralShop.Areas.Admin.Controllers
                     if (_employeeCheck == null && _employeeCheckEmail == null)
                     {
                         await _context.AddEmployee(Guid.NewGuid().ToString(), lname +" "+ fname, employeeVM.EmployeeAddress??"", employeeVM.EmployeeEmail?? "", employeeVM.EmployeePhone ?? "", employeeVM.EmployeeUsername!, BCrypt.Net.BCrypt.HashPassword(pass, salt));
+                        TempData["SuccessMessage"] = "Thêm nhân mới viên thành công";
                         return RedirectToAction(nameof(Index));
                     }
                     else
@@ -107,6 +108,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return BadRequest();
             }
             await _context.ResetPassword(id);
+            TempData["SuccessMessage"] = "Đặt lại mật khẩu thành công với mật khẩu là Nv@123";
             return RedirectToAction(nameof(Index));
 
         }
@@ -124,6 +126,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return BadRequest();
             }
             await _context.OffAccountEmployee(id);
+            TempData["SuccessMessage"] = "Tài khoản đã ngừng hoạt động";
             return Json(_employee);
         }
 
@@ -140,6 +143,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return BadRequest();
             }
             await _context.OnAccountEmployee(id);
+            TempData["SuccessMessage"] = "Tài khoản đã hoạt động";
             return Json(_employee);
         }
 

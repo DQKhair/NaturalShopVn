@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Đặt hàng thành công";
+    var successMessage = TempData["SuccessMessage"] as string;
 }
 <style>
     .container_success{
@@ -7,7 +8,7 @@
         margin:20px auto 20px auto;
         border:1px solid #ccc;
         padding:20px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     .header_Success{
@@ -35,3 +36,34 @@
         <p>Cám ơn quý khách đã đặt hàng tại <span class="nameShop">Natural Shop</span></p>
     </div>
 </div>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="notice" class="position-fixed" role="alert" style="z-index:1000; top:5%; right:2%; background-color: rgba(36, 200, 104, 0.8); border-radius: 2.5rem;">
+        <div class="d-flex justify-content-around align-items-center p-3">
+
+            <div>
+                <i class="fas fa-check fs-2" style="background-color: rgba(36, 200, 104, 1); border-radius:50%; color:white;"></i>
+            </div>
+
+            <div>
+                <p class="text-white mb-0 ms-3">@successMessage</p>
+            </div>
+
+        </div>
+    </div>
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+
+        //alert success
+        if ($("#notice").is(':visible')) {
+            $("#notice").css({ "position": "fixed", "top": "5%", "right": "2%" })
+
+            $("#notice").fadeIn(3000, function () {
+                $("#notice").fadeOut(5000)
+            });
+        }
+    });
+</script>

@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Thông tin cá nhân";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var successMessage = TempData["SuccessMessage"] as string;
 }
 <style>
     .form-control:focus {
@@ -32,7 +33,7 @@
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row formInfo">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style="width:50%" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">@Html.DisplayFor(e => e.EmployeeName)</span><span class="text-black-50">@Html.DisplayFor(e => e.EmployeeEmail)</span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" style="width:50%" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FUser-glasses-profile.jpg?alt=media&token=b1da3481-8352-4603-aef8-1c7fa67cd5e8"><span class="font-weight-bold">@Html.DisplayFor(e => e.EmployeeName)</span><span class="text-black-50">@Html.DisplayFor(e => e.EmployeeEmail)</span><span> </span></div>
         </div>
         <div class="col-md-5 border-right">
             <form asp-action="ChangeInfomation" asp-controller="infomations">
@@ -100,6 +101,22 @@
     </div>
 </div>
 
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="notice" class="position-fixed" role="alert" style="z-index:10000; top:5%; right:2%; background-color: rgba(36, 200, 104, 0.8); border-radius: 2.5rem;">
+        <div class="d-flex justify-content-around align-items-center p-3">
+
+            <div>
+                <i class="fas fa-check fs-2" style="background-color: rgba(36, 200, 104, 1); border-radius:50%; color:white;"></i>
+            </div>
+
+            <div>
+                <p class="text-white mb-0 ms-3">@successMessage</p>
+            </div>
+
+        </div>
+    </div>
+}
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -120,7 +137,7 @@
                     data: JSON.stringify({}),
                     success: (res) => {
                         console.log(res);
-                        alert("Đổi mật khẩu thành công");
+                        location.reload();
                         $("#containerChangePassword").hide();
                         $(".modal-backdrop").hide();
                         $("body").removeClass("modal-open").removeAttr("style");
@@ -137,5 +154,14 @@
                 alert("Mật khẩu không trùng khớp")
             }
         })
+
+        //alert success
+        if ($("#notice").is(':visible')) {
+            $("#notice").css({ "position": "fixed", "top": "5%", "right": "2%" })
+
+            $("#notice").fadeIn(3000, function () {
+                $("#notice").fadeOut(5000)
+            });
+        }
     })
 </script>

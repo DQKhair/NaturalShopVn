@@ -933,52 +933,144 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\0a0f1d91-080c-440a-8a7d-efe96df54d00_tieu_dung_xanh_aori_bbcreamaori.jpg",
+      "PackagePath": "staticwebassets\\images\\0a0f1d91-080c-440a-8a7d-efe96df54d00_tieu_dung_xanh_aori_bbcreamaori.jpg"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\134a108d-a0f1-4300-8ff6-8f5097d842b7_MAT-NA-NGU-3.jpg",
       "PackagePath": "staticwebassets\\images\\134a108d-a0f1-4300-8ff6-8f5097d842b7_MAT-NA-NGU-3.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\1a2fd61a-aff2-4495-971e-a41a00530a36_EnzimRuaThucPham1.jpg",
+      "PackagePath": "staticwebassets\\images\\1a2fd61a-aff2-4495-971e-a41a00530a36_EnzimRuaThucPham1.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\1d17a75e-df9e-4896-9ee7-d09c54ccbd3f_tieu_dung_xanh_aori_bbcreamaori.jpg",
+      "PackagePath": "staticwebassets\\images\\1d17a75e-df9e-4896-9ee7-d09c54ccbd3f_tieu_dung_xanh_aori_bbcreamaori.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\229f1b9c-0411-4d6f-b34d-4436de6d8e85_Coffee3.jpg",
+      "PackagePath": "staticwebassets\\images\\229f1b9c-0411-4d6f-b34d-4436de6d8e85_Coffee3.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\246f5312-d149-4b92-a0e0-ca1dea24971b_DAU-GOI-2048x1449.jpg",
+      "PackagePath": "staticwebassets\\images\\246f5312-d149-4b92-a0e0-ca1dea24971b_DAU-GOI-2048x1449.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
       "PackagePath": "staticwebassets\\images\\26f09c74-c250-4cc7-a59d-ec4acfcdd027_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\47d7938a-52e2-44d8-b681-e43b93c96928_DanXaKhoTinhChatBuoi2.jpg",
-      "PackagePath": "staticwebassets\\images\\47d7938a-52e2-44d8-b681-e43b93c96928_DanXaKhoTinhChatBuoi2.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\46ee43bf-48e6-404b-a12e-5ce0d31212c7_DanXaKhoTinhChatBuoi2.jpg",
+      "PackagePath": "staticwebassets\\images\\46ee43bf-48e6-404b-a12e-5ce0d31212c7_DanXaKhoTinhChatBuoi2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\4963797b-29e6-47eb-b3cb-4a1101cd43d3_DAU-XA-KHO-3.jpg",
+      "PackagePath": "staticwebassets\\images\\4963797b-29e6-47eb-b3cb-4a1101cd43d3_DAU-XA-KHO-3.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg",
       "PackagePath": "staticwebassets\\images\\4d0c9236-faf2-4633-afb4-85f350516819_SuaRuaMatTraiNhau2.jpg"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\543d24d8-f209-4e78-8b7b-816471dc0f1f_quantum_daily_world_nuocruadanangloveworld.jpg",
+      "PackagePath": "staticwebassets\\images\\543d24d8-f209-4e78-8b7b-816471dc0f1f_quantum_daily_world_nuocruadanangloveworld.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\5b3b9ea4-ea37-4dc4-adb6-423a479b69f7_quantum_beauty_world_daugoidauloveworldbuoi.jpg",
+      "PackagePath": "staticwebassets\\images\\5b3b9ea4-ea37-4dc4-adb6-423a479b69f7_quantum_beauty_world_daugoidauloveworldbuoi.jpg"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\5b629ae6-587e-4ec2-9e0c-9c147e923340_quantum_beauty_world_matnanguloveworldhoahong.jpg",
       "PackagePath": "staticwebassets\\images\\5b629ae6-587e-4ec2-9e0c-9c147e923340_quantum_beauty_world_matnanguloveworldhoahong.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\6bb70a0d-07ed-4199-b7f2-69e9003895c4_EnzimRuaThucPham2.jpg",
+      "PackagePath": "staticwebassets\\images\\6bb70a0d-07ed-4199-b7f2-69e9003895c4_EnzimRuaThucPham2.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\6bead991-8489-4faa-afb1-00c2f385e081_TAY-TE-BAO-CHET-VA-THAI-DOC-DA-3.jpg",
       "PackagePath": "staticwebassets\\images\\6bead991-8489-4faa-afb1-00c2f385e081_TAY-TE-BAO-CHET-VA-THAI-DOC-DA-3.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\79159435-b098-4d4e-a732-df09fe36642f_DAU-XA-KHO-3.jpg",
-      "PackagePath": "staticwebassets\\images\\79159435-b098-4d4e-a732-df09fe36642f_DAU-XA-KHO-3.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\739b76f5-64b8-4672-8d0b-f71abbe6bbe4_KEM-DANH-RANG-2048x1448.jpg",
+      "PackagePath": "staticwebassets\\images\\739b76f5-64b8-4672-8d0b-f71abbe6bbe4_KEM-DANH-RANG-2048x1448.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\73a73d14-18fe-4465-ba87-aac79ea557fe_ENZYME-RUA-DA-NANG-2048x1448.jpg",
+      "PackagePath": "staticwebassets\\images\\73a73d14-18fe-4465-ba87-aac79ea557fe_ENZYME-RUA-DA-NANG-2048x1448.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\73d8c92c-e6cb-4a65-8b55-5b549983c283_tieu_dung_xanh_aori_bbcreamaori.jpg",
+      "PackagePath": "staticwebassets\\images\\73d8c92c-e6cb-4a65-8b55-5b549983c283_tieu_dung_xanh_aori_bbcreamaori.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\80659972-4f42-4f46-912d-fc0eabce1b81_Coffee2.jpg",
+      "PackagePath": "staticwebassets\\images\\80659972-4f42-4f46-912d-fc0eabce1b81_Coffee2.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg",
       "PackagePath": "staticwebassets\\images\\8231303f-0790-4180-9d33-473d35b0cf9c_quantum_beauty_world_suaruamatloveworldnhau.jpg"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8cd07cc3-7c4d-41b2-ae97-cf90e38a6358_BBCream2.jpg",
+      "PackagePath": "staticwebassets\\images\\8cd07cc3-7c4d-41b2-ae97-cf90e38a6358_BBCream2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8f829612-9a7b-43f0-b2f1-4df01a19c0cf_NuocRuaDaNang2.jpg",
+      "PackagePath": "staticwebassets\\images\\8f829612-9a7b-43f0-b2f1-4df01a19c0cf_NuocRuaDaNang2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\98ac7f8a-daa3-468a-ab0e-da4e25118836_quantum_daily_world_nuoclausankhangkhuanloveworld.jpg",
+      "PackagePath": "staticwebassets\\images\\98ac7f8a-daa3-468a-ab0e-da4e25118836_quantum_daily_world_nuoclausankhangkhuanloveworld.jpg"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\9cb400b6-30bf-4eb6-a255-5c4690ddf063_TayTeBaoChetTinhChatrauMa2.jpg",
       "PackagePath": "staticwebassets\\images\\9cb400b6-30bf-4eb6-a255-5c4690ddf063_TayTeBaoChetTinhChatrauMa2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\a39fd26d-d175-4e4b-8e8e-110a5f0fac4a_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
+      "PackagePath": "staticwebassets\\images\\a39fd26d-d175-4e4b-8e8e-110a5f0fac4a_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\a9ea19b6-1d48-40f8-af17-39be3c068cf2_ENZYME-RUA-THUC-PHAM-2048x1449.jpg",
+      "PackagePath": "staticwebassets\\images\\a9ea19b6-1d48-40f8-af17-39be3c068cf2_ENZYME-RUA-THUC-PHAM-2048x1449.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\b79939a4-8016-459d-8616-82f31312e07a_quantum_healthy_world_coffee.png",
+      "PackagePath": "staticwebassets\\images\\b79939a4-8016-459d-8616-82f31312e07a_quantum_healthy_world_coffee.png"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\bg-01.jpg",
       "PackagePath": "staticwebassets\\images\\bg-01.jpg"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\c0849112-fedf-463d-91d2-a6e40154e6cf_DauGoiBuoi2.jpg",
+      "PackagePath": "staticwebassets\\images\\c0849112-fedf-463d-91d2-a6e40154e6cf_DauGoiBuoi2.jpg"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\c40d4516-f9a4-4982-bde2-82094f977cb6_quantum_beauty_world_taytebaochetloveworldrauma.jpg",
       "PackagePath": "staticwebassets\\images\\c40d4516-f9a4-4982-bde2-82094f977cb6_quantum_beauty_world_taytebaochetloveworldrauma.jpg"
     },
     {
-      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\e10eeb8b-0c02-4a1f-bd63-ae3ad986a144_quantum_beauty_world_dauxakholoveworldbuoi.jpg",
-      "PackagePath": "staticwebassets\\images\\e10eeb8b-0c02-4a1f-bd63-ae3ad986a144_quantum_beauty_world_dauxakholoveworldbuoi.jpg"
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\c9eef84e-b59a-4005-8591-76b090a09283_GEL-LAU-SAN-2048x1449.jpg",
+      "PackagePath": "staticwebassets\\images\\c9eef84e-b59a-4005-8591-76b090a09283_GEL-LAU-SAN-2048x1449.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\cacdf79a-22fc-4305-88f5-9ad06e5bc260_KemDanhRang2.jpg",
+      "PackagePath": "staticwebassets\\images\\cacdf79a-22fc-4305-88f5-9ad06e5bc260_KemDanhRang2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\d690a726-6058-4d6c-81db-d49c7ec4e15e_bb-cream-01-1-2048x1449.jpg",
+      "PackagePath": "staticwebassets\\images\\d690a726-6058-4d6c-81db-d49c7ec4e15e_bb-cream-01-1-2048x1449.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\df773803-89af-48dc-8bc1-8bfe211d62b7_NuocLauSanKhangKhuan2.jpg",
+      "PackagePath": "staticwebassets\\images\\df773803-89af-48dc-8bc1-8bfe211d62b7_NuocLauSanKhangKhuan2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\ee6ce63f-92ef-4c6b-9ce5-799b3599e97c_quantum_beauty_world_kemdanhranghuongthaoloveworld.jpg",
+      "PackagePath": "staticwebassets\\images\\ee6ce63f-92ef-4c6b-9ce5-799b3599e97c_quantum_beauty_world_kemdanhranghuongthaoloveworld.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\f05c11d4-08b3-4401-840c-b56e94503960_MatNaNgu2.jpg",
@@ -987,6 +1079,10 @@
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\fb992a81-9915-4d48-a5d7-2d15cfc90e6e_SUA-RUA-MAT-TRAI-NHAU-3.jpg",
       "PackagePath": "staticwebassets\\images\\fb992a81-9915-4d48-a5d7-2d15cfc90e6e_SUA-RUA-MAT-TRAI-NHAU-3.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\ffec1b44-8258-4f04-9953-789164ecf7a7_quantum_beauty_world_bbcreamloveworldhoahongspf30+.jpg",
+      "PackagePath": "staticwebassets\\images\\ffec1b44-8258-4f04-9953-789164ecf7a7_quantum_beauty_world_bbcreamloveworldhoahongspf30+.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\js\\site.js",

@@ -72,6 +72,7 @@ namespace NaturalShop.Controllers
                 }
                 HttpContext.Session.SetString("cart", JsonConvert.SerializeObject(dataCart));
             }
+            TempData["SuccessMessage"] = "Sản phẩm đã được thêm vào giỏ hàng";
             return Json(Ok("Thêm vào giỏ thành công"));
         }
 

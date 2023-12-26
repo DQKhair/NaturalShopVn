@@ -40,7 +40,8 @@ namespace NautralShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                 await _context.AddCategory(category.CategoryName);
+                await _context.AddCategory(category.CategoryName);
+                TempData["SuccessMessage"] = "Thêm danh mục thành công";
                 return RedirectToAction(nameof(Index));
             }
             return View(category);
@@ -75,6 +76,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 try
                 {
                    await _context.EditCategory(id,category.CategoryName);
+                   TempData["SuccessMessage"] = "Sửa danh mục thành công";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -117,6 +119,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return NotFound();
             }
             await _context.DeleteCategory(id);
+            TempData["SuccessMessage"] = "Xóa danh mục thành công";
             return RedirectToAction(nameof(Index));
         }
 

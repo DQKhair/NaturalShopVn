@@ -66,6 +66,7 @@ namespace NautralShop.Areas.Admin.Controllers
             }
             string employeeId = claimsIdentity.FindFirst("EmployeeId")!.Value;
             await _context.ConfirmOrder(orderId,employeeId);
+            TempData["SuccessMessage"] = "Cập nhật trạng thái đơn thành công";
             return Json(_order);
         }
 
@@ -88,6 +89,7 @@ namespace NautralShop.Areas.Admin.Controllers
             }
             string employeeId = claimsIdentity.FindFirst("EmployeeId")!.Value;
             await _context.CancelOrder(orderId,employeeId);
+            TempData["SuccessMessage"] = "Hủy đơn thành công";
             return Json(_order);
         }
     }

@@ -46,6 +46,7 @@ namespace NaturalShop.Areas.Admin.Controllers
             _employee.EmployeeAddress = employee.EmployeeAddress;
             _employee.EmployeeEmail = employee.EmployeeEmail;
             await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Lưu thông tin thành công";
             return RedirectToAction(nameof(Index),new {employeeId = _employee.EmployeeId});
         }
 
@@ -64,6 +65,7 @@ namespace NaturalShop.Areas.Admin.Controllers
 
                     employee.EmployeePassword = BCrypt.Net.BCrypt.HashPassword(newPass, salt);
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Đổi mật khẩu thành công";
                     return Json(Ok());                   
             }
             else

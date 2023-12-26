@@ -1,6 +1,24 @@
 ﻿@model NautralShop.Models.Product
 @{
     ViewData["title"] = "Chi tiết sản phẩm";
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="notice" class="position-fixed" role="alert" style="z-index:1000; top:5%; right:2%; background-color: rgba(36, 200, 104, 0.8); border-radius: 2.5rem;">
+        <div class="d-flex justify-content-around align-items-center p-3">
+
+            <div>
+                <i class="fas fa-check fs-2" style="background-color: rgba(36, 200, 104, 1); border-radius:50%; color:white;"></i>
+            </div>
+
+            <div>
+                <p class="text-white mb-0 ms-3">@successMessage</p>
+            </div>
+
+        </div>
+    </div>
 }
 
 <div class="container my-3">
@@ -47,45 +65,45 @@
             @{
                 if (!String.IsNullOrEmpty(Model.ProductUseful) && !String.IsNullOrEmpty(Model.ProductUserManual) && String.IsNullOrEmpty(Model.ProductIngredient))
                 {
-                                                                <h5>Công dụng</h5>
-                                                                <p>&#9752;@Model.ProductUseful</p>
-                                                                <br />
-                                                                <h5>Hướng dẫn sử dụng :</h5>
-                                                                <p>&#10146;@Model.ProductUserManual</p>
+                                                                    <h5>Công dụng</h5>
+                                                                    <p>&#9752;@Model.ProductUseful</p>
+                                                                    <br />
+                                                                    <h5>Hướng dẫn sử dụng :</h5>
+                                                                    <p>&#10146;@Model.ProductUserManual</p>
                 }
                 else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUserManual) && String.IsNullOrEmpty(Model.ProductUseful))
                 {
-                                                                <h5>Thành Phần</h5>
-                                                                <p>&#9752;@Model.ProductIngredient</p>
-                                                                <br />
-                                                                <h5>Hướng dẫn sử dụng :</h5>
-                                                                <p>&#10146;@Model.ProductUserManual</p>
+                                                                    <h5>Thành Phần</h5>
+                                                                    <p>&#9752;@Model.ProductIngredient</p>
+                                                                    <br />
+                                                                    <h5>Hướng dẫn sử dụng :</h5>
+                                                                    <p>&#10146;@Model.ProductUserManual</p>
                 }
                 else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUseful) && String.IsNullOrEmpty(Model.ProductUserManual))
                 {
-                                                                <h5>Thành Phần</h5>
-                                                                <p>&#9752;@Model.ProductIngredient</p>
-                                                                <br />
-                                                                <h5>Công dụng</h5>
-                                                                <p>&#9752;@Model.ProductUseful</p>
+                                                                    <h5>Thành Phần</h5>
+                                                                    <p>&#9752;@Model.ProductIngredient</p>
+                                                                    <br />
+                                                                    <h5>Công dụng</h5>
+                                                                    <p>&#9752;@Model.ProductUseful</p>
                 }
                 else if (!String.IsNullOrEmpty(Model.ProductIngredient) && !String.IsNullOrEmpty(Model.ProductUseful) && !String.IsNullOrEmpty(Model.ProductUserManual))
                 {
-                                                                <h5>Thành Phần</h5>
-                                                                <p>&#9752;@Model.ProductIngredient</p>
-                                                                <br />
-                                                                <h5>Công dụng</h5>
-                                                                <p>&#9752;@Model.ProductUseful</p>
-                                                                <br />
-                                                                <h5>Hướng dẫn sử dụng :</h5>
-                                                                <p>&#10146;@Model.ProductUserManual</p>
+                                                                    <h5>Thành Phần</h5>
+                                                                    <p>&#9752;@Model.ProductIngredient</p>
+                                                                    <br />
+                                                                    <h5>Công dụng</h5>
+                                                                    <p>&#9752;@Model.ProductUseful</p>
+                                                                    <br />
+                                                                    <h5>Hướng dẫn sử dụng :</h5>
+                                                                    <p>&#10146;@Model.ProductUserManual</p>
                 }
                 //tinh dau
-                if (Html.DisplayFor(model => model.ProductName).ToString() == "DẦU TI&#202;U")
+                if (Model.ProductName == "DẦU TIÊU")
                 {
-                                                                <h5>Lưu ý:</h5>
-                                                                <p>Không được uống</p>
-                                                                <p>Tránh tiếp xúc với mắt , vết thương hở</p>
+                                                                    <h5>Lưu ý:</h5>
+                                                                    <p>Không được uống</p>
+                                                                    <p>Tránh tiếp xúc với mắt , vết thương hở</p>
                 }
             }
             <hr>
@@ -103,50 +121,50 @@
     </div>
     <div>
         @{
-            if (Html.DisplayFor(model => model.CategoryId).ToString() != "4")
+            if (Model.CategoryId != 4)
             {
-                                                            <h3>Mô tả</h3>
-                                                            <hr>
-                                                            <p>@Model.ProductDescription</p>
-                                                            <img class="my-3" style="width: 100%;" src="@Html.DisplayFor(model => model.ProductImage3)" alt="anh san pham">
+                                                                <h3>Mô tả</h3>
+                                                                <hr>
+                                                                <p>@Model.ProductDescription</p>
+                                                                <img class="my-3" style="width: 100%;" src="@Html.DisplayFor(model => model.ProductImage3)" alt="anh san pham">
                 if (String.IsNullOrEmpty(Html.DisplayFor(model => model.ProductDetailDescription).ToString()))
                 {
-                                                                <div></div>
+                                                                    <div></div>
                 }
                 else
                 {
-                                                                <h5 class="text-uppercase fw-bold">Thông tin sản phẩm</h5>
-                                                                <p>@Model.ProductDetailDescription</p>
+                                                                    <h5 class="text-uppercase fw-bold">Thông tin sản phẩm</h5>
+                                                                    <p>@Model.ProductDetailDescription</p>
                 }
-                if (Html.DisplayFor(model => model.ProductName).ToString() == "Coffee")
+                if (Model.ProductName == "Coffee")
                 {
-                                                                <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
-                                                                <ul>
-                                                                    <li>- Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</li>
-                                                                </ul>
+                                                                    <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
+                                                                    <ul>
+                                                                        <li>- Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</li>
+                                                                    </ul>
                 }
                 else
                 {
-                                                                <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
-                                                                <ul>
-                                                                    <li>- Nắp kín, để ở nơi khô ráo thoáng mát.</li>
-                                                                    <li>- Để xa tầm với của trẻ em. Nếu sản phẩm rơi vào mắt hãy rửa sạch bằng nước.</li>
-                                                                </ul>
+                                                                    <h5 class="text-uppercase fw-bold">Hướng dẫn bảo quản</h5>
+                                                                    <ul>
+                                                                        <li>- Nắp kín, để ở nơi khô ráo thoáng mát.</li>
+                                                                        <li>- Để xa tầm với của trẻ em. Nếu sản phẩm rơi vào mắt hãy rửa sạch bằng nước.</li>
+                                                                    </ul>
                 }
-                                                            <p>Xuất xứ: Việt Nam</p>
-                                                            <p>HSD: 3 năm kể từ ngày sản xuất</p>
-                                                            <p>NSX: Xem trên bao bì</p>
-                                                            <h5 class="text-uppercase fw-bold">Thông tin thương hiệu</h5>
-                                                            <p>Sau rất nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe và làm đẹp của đội ngũ sáng lập, Love World bắt đầu với ước mơ mang những sản phẩm thiên nhiên chất lượng cao đến với mọi người dân trên toàn thế giới. </p>
-                                                            <p>Ứng dụng Cơ lượng tử đột phá cùng nguồn nguyên liệu 100% từ thiên nhiên, các sản phẩm Chăm sóc sức khoẻ & Làm đẹp của thương hiệu Love World Việt Nam NÓI KHÔNG với hoá chất độc hại mà đảm bảo an toàn với sức khỏe người tiêu dùng và thân thiện môi trường.</p>
-                                                            <img style="width: 100%;" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FGiayCongNhan.jpg?alt=media&token=b2ea44dc-b2e2-4319-add0-2cf38fd08c9d" alt="giaycongnhan">
+                                                                <p>Xuất xứ: Việt Nam</p>
+                                                                <p>HSD: 3 năm kể từ ngày sản xuất</p>
+                                                                <p>NSX: Xem trên bao bì</p>
+                                                                <h5 class="text-uppercase fw-bold">Thông tin thương hiệu</h5>
+                                                                <p>Sau rất nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe và làm đẹp của đội ngũ sáng lập, Love World bắt đầu với ước mơ mang những sản phẩm thiên nhiên chất lượng cao đến với mọi người dân trên toàn thế giới. </p>
+                                                                <p>Ứng dụng Cơ lượng tử đột phá cùng nguồn nguyên liệu 100% từ thiên nhiên, các sản phẩm Chăm sóc sức khoẻ & Làm đẹp của thương hiệu Love World Việt Nam NÓI KHÔNG với hoá chất độc hại mà đảm bảo an toàn với sức khỏe người tiêu dùng và thân thiện môi trường.</p>
+                                                                <img style="width: 100%;" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FGiayCongNhan.jpg?alt=media&token=b2ea44dc-b2e2-4319-add0-2cf38fd08c9d" alt="giaycongnhan">
             }
         }
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(()=> {
+    $(document).ready(() => {
 
         HandleQuantityProduct();
 
@@ -163,5 +181,14 @@
                     $("#inputQuantity").val(++count)
             })
         }
-    })
+
+        //alert success
+        if ($("#notice").is(':visible')) {
+            $("#notice").css({ "position": "fixed", "top": "5%", "right": "2%" })
+
+            $("#notice").fadeIn(3000, function () {
+                $("#notice").fadeOut(5000)
+            });
+        }
+    });
 </script>

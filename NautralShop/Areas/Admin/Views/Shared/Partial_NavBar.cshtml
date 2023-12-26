@@ -22,8 +22,13 @@
     var controllerName = ViewContext.RouteData.Values["controller"] as string;
     var actionName = ViewContext.RouteData.Values["action"] as string;
 }
+<style>
+    .profileList a:hover {
+        color:#000 !important;
+    }
+</style>
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center mt-2">
         <a class="navbar-brand brand-logo" href="@Url.Action("index","PageAdmin",new {area = "Admin"})"><img  style="height: 80px" src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FlogoNaturalShop.png?alt=media&token=04c3a5b4-6740-4191-8408-fd6172665132" alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="@Url.Action("index","PageAdmin",new {area = "Admin"})"><img src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FlogoNaturalShop.png?alt=media&token=04c3a5b4-6740-4191-8408-fd6172665132" alt="logo" /></a>
     </div>
@@ -45,14 +50,14 @@
             <li class="nav-item nav-profile dropdown">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="nav-profile-img">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2Fuser.png?alt=media&token=03924762-a010-47a4-8626-32ed19b2e587" alt="user">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/sanphamtieudung-2bc7e.appspot.com/o/Picture_SanPhamTieuDung%2FUser-glasses-profile.jpg?alt=media&token=b1da3481-8352-4603-aef8-1c7fa67cd5e8" alt="user">
                         <span class="availability-status online"></span>
                     </div>
                     <div class="nav-profile-text">
                         <p class="mb-1 text-black">@name</p>
                     </div>
                 </a>
-                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <div class="dropdown-menu navbar-dropdown profileList" aria-labelledby="profileDropdown">
                     <a class="dropdown-item" asp-action="index" asp-controller="infomations" asp-route-employeeId=@employeeId>
                         <i class="mdi mdi-cached me-2 text-success"></i> Thông tin cá nhân
                     </a>

@@ -47,8 +47,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return BadRequest();
             }
             await _context.OffAccountCustomer(id);
-            //_customer.CustomerStatus = false;
-            //await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Tài khoản đã ngừng hoạt động";
             return Json(_customer);
         }
 
@@ -65,8 +64,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 return BadRequest();
             }
             await _context.OnAccountCustomer(id);
-            //_customer.CustomerStatus = true;
-            //await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Tài khoản đã hoạt động";
             return Json(_customer);
         }
     }

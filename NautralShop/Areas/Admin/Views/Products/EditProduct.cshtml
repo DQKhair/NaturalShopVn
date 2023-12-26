@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Chỉnh sửa sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var productVMId = ViewBag.ProductVMId;
 }
 <style>
     * {
@@ -39,6 +40,7 @@
 </style>
 <div class="container_content">
     <div class="text-center header_EditCate"><p class="fw-bold fs-4">Sửa sản phẩm</p></div>
+    <div><a class="btn btn-green" asp-action="EditTextProduct" asp-controller="Products" asp-area="admin" asp-route-id=@productVMId>Chỉ sửa thông tin</a></div>
     <hr />
     <div class="container_bodyEdit">
         <div class="col-md-8">

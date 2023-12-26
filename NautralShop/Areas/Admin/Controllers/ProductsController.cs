@@ -76,8 +76,10 @@ namespace NautralShop.Areas.Admin.Controllers
                     string ProductImage2 = "/images/" + uniqueFileName2;
                     string ProductImage3 = "/images/" + uniqueFileName3;
                     await _context.AddProduct(Guid.NewGuid().ToString(), productsVM.ProductName, (double)productsVM.ProductPrice!,productsVM.ProductQuantity, ProductImage, ProductImage2, ProductImage3, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0),productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                    TempData["SuccessMessage"] = "Thêm sản phẩm mới thành công";
 
-                }catch
+                }
+                catch
                 {
                     return BadRequest("Lỗi khi lưu trữ hình ảnh: ");
                 }
@@ -101,6 +103,7 @@ namespace NautralShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewBag.ProductVMId = id;
             ProductsVM productsVM = new ProductsVM();
             productsVM.ProductName = _product.ProductName;
             productsVM.ProductPrice = _product.ProductPrice;
@@ -168,6 +171,7 @@ namespace NautralShop.Areas.Admin.Controllers
                             string ProductImage3 = "/images/" + uniqueFileName3;
 
                             await _context.EditProduct(id, productsVM.ProductName, (double)productsVM.ProductPrice!,productsVM.ProductQuantity, ProductImage, ProductImage2, ProductImage3, true, Convert.ToDouble(productsVM.ProductValuePromotion ?? 0), productsVM.ProductIngredient ?? "", productsVM.ProductUseful ?? "", productsVM.ProductUserManual ?? "", productsVM.ProductDescription ?? "", productsVM.ProductDetailDescription ?? "", (int)productsVM.CategoryId!);
+                            TempData["SuccessMessage"] = "Thông tin sản phẩm đã lưu thành công";
                             return RedirectToAction(nameof(Index));
                         }
                         catch
@@ -212,9 +216,63 @@ namespace NautralShop.Areas.Admin.Controllers
                 return NotFound();
             }else
             {
-               await _context.DeleteProduct(id);
+                await _context.DeleteProduct(id);
+                TempData["SuccessMessage"] = "Xóa sản phẩm thành công";
                 return RedirectToAction(nameof(Index));
             }
+        }
+
+        public async Task<IActionResult> EditTextProduct(string? id)
+        {
+            if (String.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+            var _product = await _context.GetProductById(id);
+            if (_product == null)
+            {
+                return NotFound();
+            }
+            ProductsVM productsVM = new ProductsVM();
+            productsVM.ProductName = _product.ProductName;
+            productsVM.ProductPrice = _product.ProductPrice;
+            productsVM.ProductQuantity = _product.ProductQuantity;
+            productsVM.ProductValuePromotion = _product.ProductValuePromotion;
+            productsVM.ProductUseful = _product.ProductUseful;
+            productsVM.ProductUserManual = _product.ProductUserManual;
+            productsVM.ProductIngredient = _product.ProductIngredient;
+            productsVM.ProductDescription = _product.ProductDescription;
+            productsVM.ProductDetailDescription = _product.ProductDetailDescription;
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", productsVM.CategoryId);
+            return View(productsVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTextProduct(string? id, [FromForm] ProductsVM productsVM)
+        {
+            if (String.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+            var _product = await _context.Products.SingleOrDefaultAsync(p => p.ProductId == id);
+            if (_product == null)
+            {
+                return NotFound();
+            }
+            _product.ProductName = productsVM.ProductName;
+            _product.ProductPrice = productsVM.ProductPrice;
+            _product.ProductValuePromotion = productsVM.ProductValuePromotion;
+            _product.ProductQuantity = productsVM.ProductQuantity;
+            _product.CategoryId = productsVM.CategoryId;
+            _product.ProductIngredient = productsVM.ProductIngredient;
+            _product.ProductUseful = productsVM.ProductUseful;
+            _product.ProductUserManual = productsVM.ProductUserManual;
+            _product.ProductDescription = productsVM.ProductDescription;
+            _product.ProductDetailDescription = productsVM.ProductDetailDescription;
+            await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Thông tin sản phẩm đã được lưu";
+            return RedirectToAction(nameof(Index));
         }
 
     }

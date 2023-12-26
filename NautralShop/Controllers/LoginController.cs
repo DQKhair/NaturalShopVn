@@ -72,6 +72,7 @@ namespace NautralShop.Controllers
                             IsPersistent = userLogin.RememberMe,
                         };
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+                        TempData["SuccessMessage"] = "Đăng nhập thành công";
                         return RedirectToAction("Index", "Home");
                     }else
                     {
@@ -98,11 +99,12 @@ namespace NautralShop.Controllers
                             IsPersistent = userLogin.RememberMe,
                         };
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), properties);
+                        TempData["SuccessMessage"] = "Đăng nhập thành công";
                         return RedirectToAction("Index", "PageAdmin",new {area = "admin"});
                     }else
                     {
                         ModelState.AddModelError("", "Tài khoản đã bị khóa !");
-                    }    
+                    }   
                 }
 				ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không đúng !");
 			}
@@ -113,7 +115,8 @@ namespace NautralShop.Controllers
         {
             //handle logout
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction(nameof(Login));
+			TempData["SuccessMessage"] = "Đăng xuất thành công";
+			return RedirectToAction(nameof(Login));
 		}
 
         public IActionResult SignUp()
@@ -153,7 +156,8 @@ namespace NautralShop.Controllers
 					if (_customerCheck == null && _customerCheckEmail == null)
                     {
                         await _context.SignupCustomer(Guid.NewGuid().ToString(), lname +" "+ fname, customerVM.CustomerAddress??"", customerVM.CustomerEmail??"", customerVM.CustomerPhone??"", customerVM.CustomerUsername!, BCrypt.Net.BCrypt.HashPassword(pass, salt));
-                        return RedirectToAction(nameof(Login));
+						TempData["SuccessMessage"] = "Đăng ký thành công";
+						return RedirectToAction(nameof(Login));
                     }else
                     {
                         ModelState.AddModelError("", "Tài khoản hoặc email đã tồn tại !");

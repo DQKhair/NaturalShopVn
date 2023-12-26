@@ -49,6 +49,7 @@ namespace NaturalShop.Controllers
             _customer.CustomerAddress = customer.CustomerAddress;
             _customer.CustomerEmail = customer.CustomerEmail;
             await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Lưu thành công";
             return RedirectToAction(nameof(Index), new { customerId = _customer.CustomerId });
         }
 
@@ -66,6 +67,7 @@ namespace NaturalShop.Controllers
 
                 customer.CustomerPassword = BCrypt.Net.BCrypt.HashPassword(newPass, salt);
                 await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Đổi mật khẩu thành công";
                 return Json(Ok());
             }
             else

@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Quản lý nhân viên";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var successMessage = TempData["SuccessMessage"] as string;
 }
 
 <style>
@@ -128,8 +129,39 @@
         </table>
     </div>
 </div>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="notice" class="position-fixed" role="alert" style="z-index:10000; top:5%; right:2%; background-color: rgba(36, 200, 104, 0.8); border-radius: 2.5rem;">
+        <div class="d-flex justify-content-around align-items-center p-3">
+
+            <div>
+                <i class="fas fa-check fs-2" style="background-color: rgba(36, 200, 104, 1); border-radius:50%; color:white;"></i>
+            </div>
+
+            <div>
+                <p class="text-white mb-0 ms-3">@successMessage</p>
+            </div>
+
+        </div>
+    </div>
+}
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+    $(document).ready(() => {
+
+        //alert success
+        if ($("#notice").is(':visible')) {
+            $("#notice").css({ "position": "fixed", "top": "5%", "right": "2%" })
+
+            $("#notice").fadeIn(3000, function () {
+                $("#notice").fadeOut(5000)
+            });
+        }
+    });
+
     function HandlechangeSwitch(checkbox) {
         const employeeId = checkbox.getAttribute("data-employee-id");
         const isChecked = checkbox.checked;
@@ -165,5 +197,7 @@
                 }
             });
         }
+
+
     }
 </script>

@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Trang chủ";
+    var successMessage = TempData["SuccessMessage"] as string;
 }
 
 <partial name="_PartialSlider.cshtml" />
@@ -26,7 +27,7 @@
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
                                     <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
-                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id =@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                                @* <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id =@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div> *@
                             </div>
                         </a>
                     </div>
@@ -35,7 +36,7 @@
         </div>
         <!-- QUANTUM DAILY WORLD -->
         <div class="container mt-5">
-            <h2 class="text-uppercase" style="text-align: center;">QUANTUM BEAUTY WORLD</h2>
+            <h2 class="text-uppercase" style="text-align: center;">QUANTUM DAILY WORLD</h2>
             <div class="progress mx-auto" style="height: 2px;width: 30%;">
                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -52,7 +53,7 @@
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
                                     <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
-                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                                @* <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div> *@
                             </div>
                         </a>
                     </div>
@@ -77,7 +78,7 @@
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
                                     <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
-                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                                @* <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div> *@
                             </div>
                         </a>
                     </div>
@@ -102,7 +103,7 @@
                                     <h5 class="card-title text-dark">@item.ProductName</h5>
                                     <p class="card-text text-danger">@Convert.ToInt32(item.ProductPrice - item.ProductValuePromotion).ToString("n0")<span class="text-decoration-underline">đ</span></p>
                                 </div>
-                                <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div>
+                                @* <div class="card-footer bg-white border-top-0 pb-3"><a class="btn btn-green mt-2" asp-action="DetailProduct" asp-controller="home" asp-route-id=@item.ProductId><i class="fa-solid fa-cart-shopping"></i> Mua sản phẩm</a></div> *@
                             </div>
                         </a>
                     </div>
@@ -113,3 +114,35 @@
     </main>
     <partial name="_PartialCusSayAboutMe" />
 </div>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div id="notice" class="position-fixed" role="alert" style="z-index:1000; top:5%; right:2%; background-color: rgba(36, 200, 104, 0.8); border-radius: 2.5rem;">
+        <div class="d-flex justify-content-around align-items-center p-3">
+
+            <div>
+                <i class="fas fa-check fs-2" style="background-color: rgba(36, 200, 104, 1); border-radius:50%; color:white;"></i>
+            </div>
+
+            <div>
+                <p class="text-white mb-0 ms-3">@successMessage</p>
+            </div>
+
+        </div>
+    </div>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+
+        //alert success
+        if ($("#notice").is(':visible')) {
+            $("#notice").css({ "position": "fixed", "top": "5%", "right": "2%" })
+
+            $("#notice").fadeIn(3000, function () {
+                $("#notice").fadeOut(5000)
+            });
+        }
+    });
+</script>

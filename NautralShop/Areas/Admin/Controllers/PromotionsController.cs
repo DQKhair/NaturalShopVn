@@ -42,6 +42,7 @@ namespace NautralShop.Areas.Admin.Controllers
             else
             {
                 await _context.AddAndEditPromotion(id,Convert.ToDouble(product.ProductValuePromotion)!);
+                TempData["SuccessMessage"] = "Sản phẩm đã được thêm khuyến mãi";
                 return RedirectToAction(nameof(Index));
             }    
         }
@@ -76,6 +77,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 }else
                 {
                     await _context.AddAndEditPromotion(id,Convert.ToDouble(product.ProductValuePromotion)!);
+                    TempData["SuccessMessage"] = "Khuyến mãi đã được sửa đổi thành công";
                 }    
             }catch
             {
@@ -106,6 +108,7 @@ namespace NautralShop.Areas.Admin.Controllers
                     return NotFound();
                 }
                 await _context.DeletePromotion(id);
+                TempData["SuccessMessage"] = "Xóa khuyến mãi sản phẩm thành công";
             }
             catch
             {

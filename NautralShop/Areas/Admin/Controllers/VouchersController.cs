@@ -52,6 +52,7 @@ namespace NautralShop.Areas.Admin.Controllers
             if (voucher != null)
             {
                 await _context.AddVoucher(Guid.NewGuid().ToString(), voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity, Convert.ToDateTime(voucher.DateExpire), EmployeeId);
+                TempData["SuccessMessage"] = "Voucher đã được tạo";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -71,7 +72,7 @@ namespace NautralShop.Areas.Admin.Controllers
             if(_voucher == null)
             {
                 return NotFound();
-            }    
+            }
             return View(_voucher);
         }
 
@@ -91,6 +92,7 @@ namespace NautralShop.Areas.Admin.Controllers
             }else
             {
                 await _context.EditVoucher(id, voucher.VoucherName, voucher.VoucherValue, Convert.ToInt32(voucher.VoucherPoint), voucher.VoucherQuantity,Convert.ToDateTime(voucher.DateExpire));
+                TempData["SuccessMessage"] = "Lưu chỉnh sửa voucher thành công";
                 return RedirectToAction(nameof(Index));
             }    
         }
@@ -124,6 +126,7 @@ namespace NautralShop.Areas.Admin.Controllers
             }else
             {
                await _context.DeleteVoucher(id);
+                TempData["SuccessMessage"] = "Xóa voucher thành công";
                 return RedirectToAction(nameof(Index));
             }    
         }

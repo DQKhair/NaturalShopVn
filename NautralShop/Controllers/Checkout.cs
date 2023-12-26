@@ -166,6 +166,14 @@ namespace NaturalShop.Controllers
                                 orderDetail.ProductId = item.Product.ProductId;
                                 //_context.DetailOrder.add(DetailOrder);
                                 _context.OrderDetails.Add(orderDetail);
+
+                            //handle minus quantity product
+                                var product = _context.Products.Where(p => p.ProductId == item.Product.ProductId).SingleOrDefault();
+                                if(product != null)
+                                {
+                                    product.ProductQuantity -= item.Quantity;
+
+                                }
                             }
                             //_context.SaveChange();
                             await _context.SaveChangesAsync();
@@ -175,7 +183,8 @@ namespace NaturalShop.Controllers
                             HttpContext.Session.Remove("infCheckout");
                             HttpContext.Session.Remove("cart");
                             //transaction.Commit();
-                            return RedirectToAction(nameof(CheckoutOrderSuccess));
+                            TempData["SuccessMessage"] = "Đặt hàng thành công";
+                        return RedirectToAction(nameof(CheckoutOrderSuccess));
                         }
                         catch
                         {
