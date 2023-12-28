@@ -81,7 +81,7 @@ namespace NautralShop.Areas.Admin.Controllers
                 }
                 catch
                 {
-                    return BadRequest("Lỗi khi lưu trữ hình ảnh: ");
+                    return BadRequest("Lỗi khi lưu trữ hình ảnh ");
                 }
             }else
             {
@@ -176,7 +176,7 @@ namespace NautralShop.Areas.Admin.Controllers
                         }
                         catch
                         {
-                            return BadRequest("Lỗi khi lưu trữ hình ảnh: ");
+                            return BadRequest("Lỗi khi lưu trữ hình ảnh");
                         }
                     }
                     else
