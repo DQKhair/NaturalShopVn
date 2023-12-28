@@ -97,6 +97,7 @@ namespace NaturalShop.Controllers
                     HttpContext.Session.SetString("cart", JsonConvert.SerializeObject(dataCart));
                 }
                 var cart2 = HttpContext.Session.GetString("cart");
+                TempData["SuccessMessage"] = "Số lượng đã được cập nhật";
                 return Ok(quantity);
             }
             return BadRequest();
@@ -118,6 +119,7 @@ namespace NaturalShop.Controllers
                     }
                 }
                 HttpContext.Session.SetString("cart", JsonConvert.SerializeObject(dataCart));
+                TempData["SuccessMessage"] = "Sản phẩm đã được xóa khỏi giỏ hàng";
                 return RedirectToAction(nameof(Index));
             }
             return RedirectToAction(nameof(Index));

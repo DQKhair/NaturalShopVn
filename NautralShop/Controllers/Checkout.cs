@@ -182,13 +182,16 @@ namespace NaturalShop.Controllers
                             //_context.SaveChange();
                             await _context.SaveChangesAsync();
                             string subject = "Đơn hàng đã đặt";
+                            //send mail to customer
                             await _mail.SendEmailAsyncForProduct(dataInfoCus.Email, subject, totalMoneyOrder, dataCart,dataInfoCus);
+                            //send mail to employee
+                            await _mail.SendEmailAsyncForEmployee(totalMoneyOrder, dataCart, dataInfoCus);
                             //Clear session cart and infoCus
                             HttpContext.Session.Remove("infCheckout");
                             HttpContext.Session.Remove("cart");
                             //transaction.Commit();
                             TempData["SuccessMessage"] = "Đặt hàng thành công";
-                            if (paymentMethod == 2)
+                            if (paymentMethod == 3)
                             {
                                 var url = UrlPayment(0,1, order.OrderId);
                                 return Redirect(url);

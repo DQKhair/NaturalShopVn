@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N1cfv1H2VLCHR05V9vESmmsUf0ufWoNz94ijrerh8sU=",
+  "Hash": "AaUY/edR4CuQTe0KXcbzbGUG0Xd9v6mwu+Ujwb676eA=",
   "Source": "NaturalShop",
   "BasePath": "_content/NaturalShop",
   "Mode": "Default",
@@ -2210,6 +2210,23 @@
       "OriginalItemSpec": "wwwroot\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\contactPhone.css",
+      "SourceId": "NaturalShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\",
+      "BasePath": "_content/NaturalShop",
+      "RelativePath": "css/contactPhone.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contactPhone.css"
+    },
+    {
       "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\layoutAdmin.css",
       "SourceId": "NaturalShop",
       "SourceType": "Discovered",
@@ -2497,6 +2514,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\324e9c81-ba87-410d-91db-c0be00fa0aa4_XitHongHomie2.jpg"
+    },
+    {
+      "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\3973caba-f57b-4e86-83b6-76e3eda7d232_DauGoiPhuBac3.jpg",
+      "SourceId": "NaturalShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\",
+      "BasePath": "_content/NaturalShop",
+      "RelativePath": "images/3973caba-f57b-4e86-83b6-76e3eda7d232_DauGoiPhuBac3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3973caba-f57b-4e86-83b6-76e3eda7d232_DauGoiPhuBac3.jpg"
     },
     {
       "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\46ee43bf-48e6-404b-a12e-5ce0d31212c7_DanXaKhoTinhChatBuoi2.jpg",
@@ -2854,6 +2888,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\854b2e7c-3532-4f6d-a15d-3668ff5b4b15_dautieu2.jpg"
+    },
+    {
+      "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\894eb51f-1ee1-41a4-b4ba-01195f81010a_DauGoiPhuBac2.jpg",
+      "SourceId": "NaturalShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\",
+      "BasePath": "_content/NaturalShop",
+      "RelativePath": "images/894eb51f-1ee1-41a4-b4ba-01195f81010a_DauGoiPhuBac2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\894eb51f-1ee1-41a4-b4ba-01195f81010a_DauGoiPhuBac2.jpg"
     },
     {
       "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8cd07cc3-7c4d-41b2-ae97-cf90e38a6358_BBCream2.jpg",
@@ -3313,6 +3364,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\cc3b21cd-15bc-4420-990a-55e849b2825f_DETOXPRO2.jpg"
+    },
+    {
+      "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\cd524733-cbc3-4c93-a156-ee09d7973b95_quantum_beauty_world_daugoiphubacloveworldthantrucnhat.png",
+      "SourceId": "NaturalShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\",
+      "BasePath": "_content/NaturalShop",
+      "RelativePath": "images/cd524733-cbc3-4c93-a156-ee09d7973b95_quantum_beauty_world_daugoiphubacloveworldthantrucnhat.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cd524733-cbc3-4c93-a156-ee09d7973b95_quantum_beauty_world_daugoiphubacloveworldthantrucnhat.png"
     },
     {
       "Identity": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\d690a726-6058-4d6c-81db-d49c7ec4e15e_bb-cream-01-1-2048x1449.jpg",

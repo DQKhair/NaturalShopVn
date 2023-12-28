@@ -921,6 +921,10 @@
       "PackagePath": "staticwebassets\\adminAssets\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\contactPhone.css",
+      "PackagePath": "staticwebassets\\css\\contactPhone.css"
+    },
+    {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\css\\layoutAdmin.css",
       "PackagePath": "staticwebassets\\css\\layoutAdmin.css"
     },
@@ -987,6 +991,10 @@
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\324e9c81-ba87-410d-91db-c0be00fa0aa4_XitHongHomie2.jpg",
       "PackagePath": "staticwebassets\\images\\324e9c81-ba87-410d-91db-c0be00fa0aa4_XitHongHomie2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\3973caba-f57b-4e86-83b6-76e3eda7d232_DauGoiPhuBac3.jpg",
+      "PackagePath": "staticwebassets\\images\\3973caba-f57b-4e86-83b6-76e3eda7d232_DauGoiPhuBac3.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\46ee43bf-48e6-404b-a12e-5ce0d31212c7_DanXaKhoTinhChatBuoi2.jpg",
@@ -1071,6 +1079,10 @@
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\854b2e7c-3532-4f6d-a15d-3668ff5b4b15_dautieu2.jpg",
       "PackagePath": "staticwebassets\\images\\854b2e7c-3532-4f6d-a15d-3668ff5b4b15_dautieu2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\894eb51f-1ee1-41a4-b4ba-01195f81010a_DauGoiPhuBac2.jpg",
+      "PackagePath": "staticwebassets\\images\\894eb51f-1ee1-41a4-b4ba-01195f81010a_DauGoiPhuBac2.jpg"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\8cd07cc3-7c4d-41b2-ae97-cf90e38a6358_BBCream2.jpg",
@@ -1179,6 +1191,10 @@
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\cc3b21cd-15bc-4420-990a-55e849b2825f_DETOXPRO2.jpg",
       "PackagePath": "staticwebassets\\images\\cc3b21cd-15bc-4420-990a-55e849b2825f_DETOXPRO2.jpg"
+    },
+    {
+      "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\cd524733-cbc3-4c93-a156-ee09d7973b95_quantum_beauty_world_daugoiphubacloveworldthantrucnhat.png",
+      "PackagePath": "staticwebassets\\images\\cd524733-cbc3-4c93-a156-ee09d7973b95_quantum_beauty_world_daugoiphubacloveworldthantrucnhat.png"
     },
     {
       "Id": "D:\\Du_an_Website\\DotNet\\NaturalShop\\NaturalShop\\NautralShop\\wwwroot\\images\\d690a726-6058-4d6c-81db-d49c7ec4e15e_bb-cream-01-1-2048x1449.jpg",

@@ -20,13 +20,25 @@ namespace NautralShop.Areas.Admin.Controllers
             this._context = context;
         }
 
-        public async Task<IActionResult> Index(int? page, string? search)
+        public async Task<IActionResult> Index(int? page, string? search, int? orderStatusId)
         {
-                var _order = await _context.Orders.Include(m => m.PaymentMethod).Include(s => s.StatusOrder).OrderByDescending(o => o.OrderDate).Where(s => s.OrderCustomerName.Contains(search??"")).ToListAsync();
+            if(orderStatusId == null)
+            {
+                var _order = await _context.Orders.Include(m => m.PaymentMethod).Include(s => s.StatusOrder).OrderByDescending(o => o.OrderDate).Where(s => s.OrderCustomerName.Contains(search ?? "")).ToListAsync();
                 var pageSize = 8;
                 var pageNumber = page ?? 1;
                 var pageList = _order.ToPagedList(pageNumber, pageSize);
                 return View(pageList);
+            }
+            else
+            {
+                var _order = await _context.Orders.Include(m => m.PaymentMethod).Include(s => s.StatusOrder).OrderByDescending(o => o.OrderDate).Where(s => s.OrderCustomerName.Contains(search ?? "") && s.StatusOrderId == orderStatusId).ToListAsync();
+                var pageSize = 8;
+                var pageNumber = page ?? 1;
+                var pageList = _order.ToPagedList(pageNumber, pageSize);
+                return View(pageList);
+            }
+           
            
         }
 

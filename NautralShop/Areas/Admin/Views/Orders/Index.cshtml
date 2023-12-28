@@ -77,6 +77,20 @@
 <div class="container_content">
     <div class="text-center"><p class="fs-4 fw-bold">Quản lý đơn hàng</p></div>
     <hr />
+    <div>
+        <form asp-action="index" asp-controller="orders" asp-area="admin">
+            <div class="d-inline-block col -md-4 me-3">
+                <select class="form-select" name="orderStatusId" aria-label="Default select">
+                    <option selected>Lọc đơn hàng</option>
+                    <option value="1">Đơn hàng chờ xác nhận</option>
+                    <option value="2">Đơn hàng đã xác nhận</option>
+                    <option value="3">Đơn hàng đang giao</option>
+                    <option value="4">Đơn hàng đã giao</option>
+                </select>
+            </div>
+            <button class="btn btn-green" type="submit">Tìm đơn</button>
+        </form>
+    </div>
     <div class="table-responsive">
         <table class="table table-borderless text-center">
             <thead>
